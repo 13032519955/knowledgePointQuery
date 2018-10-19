@@ -1,0 +1,71 @@
+<!doctype html>
+	<html>
+		<head>
+		<meta charset="UTF-8">
+		<meta name="Generator" content="Editplus">
+		<meta name="Author" content="">
+		<meta name="Keywords" content="关键字，关键词">
+		<meta name="Description" content="描述">
+		<title>overflow文本溢出处理</title>
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			body{background-image:url("images/94067_top.webp.jpg");background-position:top center;background-repeat:no-repeat;background-size:cover;background-attachment:fixed;}
+			.box{min-height:10px;width:985px;margin-left:10px;font-size:24px;font-family:"楷体";background:rgba(0,0,0,0.6);color:#fff;padding-left:5px;
+			margin-top:5px;}
+			h1{padding-left:10px;}
+			.visible,.hidden,.scroll,.auto{width:400px;height:200px;border:1px solid #000;margin:20px 100px 20px 20px;float:left;background:rgba(0,0,0,0.3);}
+			.visible{overflow:visible;}
+			.hidden{overflow:hidden;}
+			.scroll{overflow:scroll;}
+			.auto{overflow:auto;}
+					
+		</style>
+		</head>
+		
+		<body>
+		<h1>overflow文本溢出处理：</h1>
+		<div class="box">
+		<pre>
+overflow规定当内容溢出元素框时发生的事情。
+这个属性定义溢出元素内容区的内容会如何处理。如果值为 scroll，
+不论是否需要用户代理都会提供
+一种滚动机制 ;
+有可能即使元素框中可以放下所有内容也会出现滚动条 ;
+
+参数介绍：
+	visible：内容不会被修剪，会呈现在元素框之外。
+	hidden：内容会被修剪，但是浏览器不会显示供查看内容的滚动条。
+	scroll：内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。
+	auto：由浏览器决定如何显示。如果需要，则显示滚动条。
+	contenteditable="true" div 文本输入  
+		</pre>
+		</div>
+		<div class="visible">
+			visible：内容不会被修剪，会呈现在元素框之外。visible：内容不会被修剪，会呈现在元素框之外。visible：内容不会被修剪，会呈现在元素框之外。visible：内容不会被修剪，会呈现在元素框之外。visible：内容不会被修剪，会呈现在元素框之外。visible：内容不会被修剪，会呈现在元素框之外。visible：内容不会被修剪，会呈现在元素框之外。visible：内容不会被修剪，会呈现在元素框之外。visible：内容不会被修剪，会呈现在元素框之外。visible：内容不会被修剪，会呈现在元素框之外。visible：内容不会被修剪，会呈现在元素框之外。visible：内容不会被修剪，会呈现在元素框之外。visible：内容不会被修剪，会呈现在元素框之外。
+		</div>
+		<div class="hidden">
+			hidden：内容会被修剪，但是浏览器不会显示供查看内容的滚动条。<hr />内容会被修剪，但是浏览器不会显示供查看内容的滚动条。<hr />内容会被修剪，但是浏览器不会显示供查看内容的滚动条。<hr />内容会被修剪，但是浏览器不会显示供查看内容的滚动条。<hr />内容会被修剪，但是浏览器不会显示供查看内容的滚动条。<hr />内容会被修剪，但是浏览器不会显示供查看内容的滚动条。<hr />内容会被修剪，但是浏览器不会显示供查看内容的滚动条。<hr />内容会被修剪，但是浏览器不会显示供查看内容的滚动条。<hr />内容会被修剪，但是浏览器不会显示供查看内容的滚动条。<hr />内容会被修剪，但是浏览器不会显示供查看内容的滚动条。<hr />内容会被修剪，但是浏览器不会显示供查看内容的滚动条。<hr />内容会被修剪，但是浏览器不会显示供查看内容的滚动条。<hr />内容会被修剪，但是浏览器不会显示供查看内容的滚动条。<hr />内容会被修剪，但是浏览器不会显示供查看内容的滚动条。<hr />内容会被修剪，但是浏览器不会显示供查看内容的滚动条。<hr />
+		</div>
+		<div style="clear:both"></div>
+		<div class="scroll">
+		scroll：内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。<br />scroll：内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。<br />scroll：内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。<br />scroll：内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。<br />scroll：内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。<br />scroll：内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。<br />scroll：内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。<br />scroll：内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。<br />scroll：内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。<br />scroll：内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。<br />scroll：内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。<br />scroll：内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。<br />scroll：内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。<br />scroll：内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。<br />scroll：内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。<br />scroll：内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。<br />scroll：内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。<br />scroll：内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。<br />scroll：内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。<br />
+		</div>
+		<div class="auto" contenteditable="true">
+		由浏览器决定如何显示。如果需要，则显示滚动条。<hr />
+		contenteditable="true"属性  div文本输入<hr />
+		由浏览器决定如何显示。如果需要，则显示滚动条。<hr />
+		contenteditable="true"属性  div文本输入<hr />
+		由浏览器决定如何显示。如果需要，则显示滚动条。<hr />
+		contenteditable="true"属性  div文本输入<hr />
+		由浏览器决定如何显示。如果需要，则显示滚动条。<hr />
+		contenteditable="true"属性  div文本输入<hr />
+		由浏览器决定如何显示。如果需要，则显示滚动条。<hr />
+		contenteditable="true"属性  div文本输入<hr />
+		由浏览器决定如何显示。如果需要，则显示滚动条。<hr />
+		contenteditable="true"属性  div文本输入<hr />
+		
+		
+		</div>
+		<div style="clear:both"></div>
+		</body>
+	</html>

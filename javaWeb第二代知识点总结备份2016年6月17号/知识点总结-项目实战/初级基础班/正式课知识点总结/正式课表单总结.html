@@ -1,0 +1,264 @@
+<!doctype html>
+	<html>
+		<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords"content="关键词，关键字">		
+		<meta name="Descriotion"content="描述">	
+		<title>表单知识点总结</title>
+		<!--js,css-->
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			body{background:url("images/德玛西亚.jpg")no-repeat center fixed;
+			background-size:100%100%;}
+			h1{text-align:center;color:#ffff00;line-height:80px;}
+			h2{line-height:70px;color:#ff0000;margin:0px 30px;}
+			h3{margin:0px 30px;line-height:50px;}
+			form{margin:0px 30px;}
+			.biaoTou{border:1px solid #ff0000;width:600px;height:700px;position:absolute;padding:5px;background:rgba(99,184,255,0.5)}
+			.biaoTou_a{border:1px solid #ff0000;position:absolute;width:56px;top:100px;left:50px;}
+			.biaoTou_aa{border:1px solid #ff33cc;position:absolute;top:-2px;left:58px;}
+			.biaoTou_niCheng{border:1px solid #00ffcc;width:56px;position:absolute;top:140px;left:50px;}
+			.biaoTou_niCheng_a{border:1px solid #cc66ff;position:absolute;left:58px;top:-2px;}
+			.biaoTou_miMa{border:1px solid #ff33cc;width:56px;position:absolute;top:180px;left:50px;}
+			.biaoTou_miMa_a{border:1px solid #cc66ff;position:absolute;left:58px;top:-2px;}
+			.biaoTou_xingBie{border:1px solid #ff33cc;width:56px;position:absolute;top:220px;left:50px;}
+			.biaoTou_xingBie_a{border:1px solid #0033ff;position:absolute;left:58px;top:-1px;width:84px;}
+			.biaoTou_shengRi{border:1px solid #ff6699;width:56px;position:absolute;top:260px;left:50px;}
+			.biaoTou_shengRi_a{border:1px solid #660099;position:absolute;left:58px;top:-2px;}
+			.biaoTou_shengRi_nian{border:1px solid #660099;position:absolute;left:115px;top:-2px;}
+			.biaoTou_shengRi_nian_yue{border: 1px solid #0033ff;position:absolute;top:-2px;left:187px; }
+			.biaoTou_shengRi_nian_yue_ri{border: 1px solid #0033ff;position:absolute;top:-2px;left:245px;}
+			.biaoTou_aiHao{border:1px solid #660099;width:56px;position:absolute;top:300px;left:50px;}
+			.biaiTou_aiHao_a{border:1px solid #6699ff;position:absolute;top:0px;top:-1px;left:58px;width:280px; }
+			.biaotou_zhaoPian{border:1px solid #996699;position:absolute;top:340px;left:35px;width:72px;}
+			.biaotou_zhaoPian_shangChuan{border:1px solid #6633cc;position:absolute;top:-2px;left:74px;}
+			.biaoTou_liuYanBan{border:1px solid #ff00ff;position:absolute;top:380px;left:50px;width:58px;}
+			.biaoTou_liuYanBan_a{border:1px solid #9966cc;position:absolute;top:19px;left:-1px;height:77px;}
+			.biaoTou_liuYanBan_faBiao{border:1px solid #ff3399;position:absolute;top:98px;left:-1px;line-height:0px;}
+			.biaoTou_liuYanBan_quXiao{border:1px solid #cc33cc;position:absolute;top:98px;left:30px;line-height:0px;}
+			.biaoTou_chongZhi{border:1px solid #cc33cc;position:absolute;top:600px;left:150px;border-radius:20px;line-height:0px;}
+			.biaoTou_chongZhi input{width:50px;height:25px;border-radius:20px;font-family:"楷体";}
+			.biaoTou_tiJiao{border:1px solid #cc33cc;position:absolute;top:600px;left:210px;border-radius:20px;line-height:0px;}
+			.biaoTou_tiJiao button{width:50px;height:25px;border-radius:20px;font-family:"楷体";}
+			
+			
+			
+							
+		</style>
+		</head>
+
+		<body>
+			<h1>表单总结</h2>
+			<h2>表单是一个包含表单元素的区域,表单元素是允许用户在表单中（比如：文本域、下拉列表、单选框、复选框等等）</h2>
+			<h3>申请表单项目实战案例:</h3>
+			
+			<form action="#" method="get">
+				<div class="biaoTou">
+				<h1>申请表单、div，绝对定位、实战案例:</h1>
+					<div class="biaoTou_a">
+						<label for="YHM">用户名:</label>
+						<div class="biaoTou_aa">
+							<input type="text" name="yongHuMing" value=""id="YHM">
+						</div>
+					</div>
+					<div class="biaoTou_niCheng">
+						<label for="NC">呢&nbsp;称:</label>
+						<div class="biaoTou_niCheng_a">
+							<input type="text" name="niCheng" value="" id="NC">
+						</div>
+					</div>
+					<div class="biaoTou_miMa">
+						<label for="miMa">密&nbsp;码:</label>
+						<div class="biaoTou_miMa_a">
+							<input type="password" name="miMa" value="" id="miMa">
+						</div>
+					</div>
+					<div class="biaoTou_xingBie">
+						<label>性&nbsp;别:</label>
+						<div class="biaoTou_xingBie_a">
+							<label for="nan">男</label><input type="radio" name="xingBie" value="" id="nan">&nbsp;
+							<label for="nv">女</label><input type="radio" name="xingBie" value="" id="nv">
+						</div>
+					</div>
+					<div class="biaoTou_shengRi">
+						<label>生&nbsp;日:</label>
+						<div class="biaoTou_shengRi_a">
+							<select name="yinLi_yangLi" >
+								<option>公历</option>
+								<option>农历</option>
+							</select>
+						</div>
+						<div class="biaoTou_shengRi_nian">
+							<select name="nian">
+								<option>2016年</option>
+								<option>2015年</option>
+								<option>2014年</option>
+								<option>2013年</option>
+								<option>2012年</option>
+								<option>2011年</option>
+								<option>2010年</option>
+								<option>2000年</option>
+								<option>1995年</option>
+								<option>1990年</option>
+							</select>	
+						</div>
+						<div class="biaoTou_shengRi_nian_yue">
+							<select name="yue">
+								<option>12月</option>
+								<option>11月</option>
+								<option>10月</option>
+								<option>08月</option>
+								<option>07月</option>
+								<option>06月</option>
+								<option>05月</option>
+								<option>04月</option>
+								<option>03月</option>
+								<option>02月</option>
+								<option>01月</option>
+							</select>
+						</div>
+						<div class="biaoTou_shengRi_nian_yue_ri">
+							<select name="ri">
+								<option>31日</option>
+								<option>30日</option>
+								<option>29日</option>
+								<option>等等</option>
+							</select>
+						</div>
+					</div>					
+					<div class="biaoTou_aiHao">
+						<label>爱&nbsp;好:</label>
+						<div class="biaiTou_aiHao_a">
+							<label for="heCha">喝茶</label><input type="checkbox" name="aiHao" value="" id="heCha">	&nbsp;
+							<label for="youXi">游戏</label><input type="checkbox" name="aiHao" value="" id="youXi">	&nbsp;	
+							<label for="jianShen">健身</label><input type="checkbox" name="aiHao" value="" id="jianShen">&nbsp;	
+							<label for="meiShi">美食</label><input type="checkbox" name="aiHao" value="" id="meiShi">		
+						</div>
+					</div>
+					<div class="biaotou_zhaoPian">
+						<label for="shangChuan">添加照片:</label>
+						<div class="biaotou_zhaoPian_shangChuan">
+							<input type="file" id="shangChuan">
+						</div>
+					</div>
+					<div class="biaoTou_liuYanBan">
+						<label for="liuYanBan">留言板:</label>
+						<div class="biaoTou_liuYanBan_a">
+							<textarea rows="5" cols="40" id="liuYanBan"></textarea>
+						</div>
+						<div class="biaoTou_liuYanBan_faBiao">
+							<input type="button" value="发表">
+						</div>
+						<div class="biaoTou_liuYanBan_quXiao">
+							<input type="button" value="取消">
+						</div>	
+					</div>
+
+					<div class="biaoTou_chongZhi">
+						<input type="reset" name="chongZhi" value="重置" />
+					</div>
+
+					<div class="biaoTou_tiJiao">
+						<button>提交</button>
+					<div>
+				</div>
+			</form>
+		</body>
+	</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!--
+
+				<pre class="zhishidian">
+		<h4>   form.html表单标签:</h4>
+		1.表单是一个包含表单元素的区域,表单元素是允许用户在表单中（比如：文本域、下拉列表、单选框、复选框等等）
+		  输入信息的元素。<br />
+		2.使用表单标签（&lt;form&gt;）定义。&lt;form&gt表单元素&lt;/form&gt
+	
+		<h4>创建一个表单:</h4>							
+		&lt;from&gt											<from>
+		用户名:&lt;input type="text" name="username" /&gt    用户名:<input type="text" name="username" />
+		密  码:&lt;input type="text" name="password" /&gt    密  码:<input type="password" name="password" />
+		&lt;/from&gt;										</from>
+
+	    <h4>表单的动作属性Action与提交方式:</h4>             <form action="提交地址" method="get/post">
+		&lt;form action="提交地址" method="get/post"&gt;	用户名:<input type="text" name="username" />
+		 用户名:&lt;input type="text" name="username" /&gt;	密  码:<input type="password" name="password" />
+		 密  码:&lt;input type="text" name="password" /&gt;	       <input type="submit" value="登陆" />
+		 &lt;input type="submit" value="登陆" /&gt;		   </form>                &lt;/form&gt;							                 
+		get方式提交:
+		 1.不安全(所有的参数都会暴露在url里面) 2.url长度有限制
+		post提交方式:
+		 1.安全性高 2.没有长度限制
+
+
+	<h4>  input标签:</h4>
+	&lt;input&gt; 用于搜集用户信息。
+	input的作用主要取决里该标签里面的属性,例如我们刚刚讲到的单行文本
+	框和密码域的属性分别为type="text"和type="password".根据不同的 type 
+	属性值，输入字段拥有很多种形式。输入字段可以是文本字段、复选框、掩码
+	后的文本控件、单选按钮、按钮等等。
+
+	<h4>  单行文本框:</h4>
+	在html页面创建文本域，用户可以在文本域写入文本。   
+	语法：&lt;input type=“text” name=“自定义名字”&gt;
+	                                                  <img src="../images/图片1.png">
+
+	<h4>  密码域:</h4>
+	语法：&lt;input type=“password” name="自定义名字"&gt;
+							 <img src="../images/图片2.png">
+
+	<h4>  单选按钮:</h4>
+	当用户点击一个单选按钮时，该按钮会变为选中状态，其他所有按钮都会变为非选中状态。
+	语法：
+	&lt;input  type=&quot;radio&quot; name=&quot;自定义名字&quot; value=&quot;提交给后台的值&quot;&gt;
+	注意：有多个按钮时
+	所有按钮的name必须相同
+
+	<h4>  复选框:</h4>
+	可以选择多项
+	语法：
+	&lt;input type=&quot;checkbox&quot;name=&quot;自定义名字&quot; value=&quot;传给后台的值&quot;&gt;
+	注意：name值必须一样
+							<img src="../images/图片3.png">
+
+	<h4>  文件域:</h4>
+	文件域表单由一个文本域和一个按钮组成，单击按钮后会激活一个文件选择对话框，从本地磁盘中选择一个文件，被选中文件的路径极文件名自动填写在文本域中。
+	上传文件时，需要用到文件域。<br />
+	语法：
+		&lt;input name=&quot;doc&quot; type=&quot;file&quot;/> 
+
+
+
+
+
+
+
+
+
+
+
+
+				</pre>
+			</p>
+
+		</body>
+	</html -->

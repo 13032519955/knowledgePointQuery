@@ -1,0 +1,264 @@
+  <!doctype html>
+	<html>
+		<head>
+		<meta charset="UTF-8">
+		<meta name="Generator" content="EditPlus®">
+		<meta name="Author" content="">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>模板</title>
+		<style type="text/css">
+			/*常用属性*/
+				*{margin:0;padding:0;}
+				html,body{width:100%;height:100%;}
+				body{background:#E9E9E8;font-family:"微软雅黑";}
+				.fl{float:left;}
+				.fr{float:right;}
+				li{list-style:none}
+				a{text-decoration:none;}
+			/*顶部导航/navigation--topAction*/
+				/*top*/
+					#top{width:100%;height:60px;min-width:1280px;background:#000;z-index:10;
+					position:relative;}
+					.top_box{width:1260px;margin:0 auto;overflow:hidden;}
+				/*top_box_logo*/
+					.top_box_logo{padding-top:6px;width:300px;color:#fff;}
+					.top_box_logo img{padding-top:6px;float:left;}
+					.top_box_logo p{padding-bottom:10px;float:left;padding:21px 25px 0 22px;position:relative; }
+					.top_box_logo p:before{content:"莫";position:absolute;width:30px;left:4px;line-height:17px;}
+					.top_box_logo p:after{content:"付出不亚于任何人的努力";position:absolute;width:200px;font-size:12px;line-height:25px;padding-left:3px;
+					color:#29ded6;font-weight:bold;opacity:0.8;}
+				/*top_box_login*/
+					.top_box_login{float:right;color:#fff;width:95px;margin-top:20px;text-align:center;border:1px solid #8a8a8a;border-radius:18px;font-size:18px;}
+				/*top_box_navigation*/
+					.top_box_navigation{float:right;width:630px;}
+					.top_box_navigation ul{padding-top:12px;padding-right:20px;}
+					.top_box_navigation ul li{float:left;width:90px;text-align:center;}
+					.top_box_navigation ul li a{display:block;color:#fff;opacity:0.5;line-height:44px;}
+					.top_box_navigation ul li:nth-child(1) a{opacity:1;font-size:20px;line-height:40px;}
+				/*top_box_clock*/
+					.top_box_clock{float:right;color:#fff;width:95px;margin-top:21px;text-align:center;border:1px solid #8a8a8a;border-radius:8px;font-size:18px;}
+				/*顶部导航/navigation--topActionEnd*/
+			/*左、缩进缩出导航action*/
+				/*leftNavigation*/
+					#leftNavigation{width:180px;height:100%;background:#828282;position:fixed;left:0;top:0px;}
+				/*显示与隐藏按钮*/
+					.leftNavigation_box_navigation_button1,.leftNavigation_box_navigation_button2{
+						font-size:35px;
+						width:50px;
+						height:50px;
+						color:#fff;
+						margin-left:180px;
+						background:#000;
+						text-align:center;
+						border-radius:50%;
+						border:2px solid #fff;
+						opacity:.7;
+						position:absolute;
+						top:63px;
+						}
+					.leftNavigation_box_navigation_button2{margin:60px 0 0 180px}
+					.leftNavigation_box_navigation_button1:hover,.leftNavigation_box_navigation_button2:hover{opacity:1;cursor:pointer;}
+					.shrink1{margin-left:-180px;transition:all 0.6s ease;}
+					.shrink2{margin-left:0px;transition:all 0.6s ease;}
+				/*HTML基础知识导航*/
+					.leftNavClass{width:150px;margin:0 auto;padding-top:20px;text-align:left;cursor: pointer;}
+					.leftNavigation_box_html{width:150px;margin:0 auto;padding-top:110px;
+					text-align:left;}
+					.leftNavigation_box_html_content{width:140px;background:rgba(0,0,0,.5);
+					position:relative;left:16px;top:2px;display:none;}
+				/*左缩进缩出导航end*/
+			/*主体显示内容action*/
+					#center2{min-width:1100px;background:#ff0000;transition:all 0.6s ease;}
+					#center2_box{margin:0 auto;min-height:585px;background:#33cc99}
+					.center2_box1{width:1260px}
+					.center2_box2{width:1100px}
+
+				/*主体显示内容end*/
+			/*底部bottomAction*/
+				#bottom{margin-left:180px;min-width:1100px;transition:all 0.6s ease;background:#ffff00;}
+				#bottom_box{background:#666;margin:0 auto;}
+				.bottom_box1{width:1260px}
+				.bottom_box2{width:1100px}
+				/*底部bottomEnd*/
+		</style>
+		</head>
+
+		<body>
+			<!--body-->
+				<div class="wrap">
+					<!--顶部导航/navigation--topAction-->
+						<div id="top">
+							<div class="top_box" >
+								<div class="top_box_logo fl">
+									<img   class="fl" src="images/logo.png"/>
+									<p >丶dream</p>		
+								</div>
+								<div class="top_box_login">登入</div>
+								<div class="top_box_navigation">
+									<ul>
+										<li><a href="###">首页</a></li>
+										<li><a href="http://www.tanzhoujiaoyu.com" target="_blank">潭州官网</a></li>
+										<li><a href="http://user.qzone.qq.com/867199622/infocenter?ptsig=ktfqt6oj4Sw3jWe8qEj*thKg7BDeQh55lqM3dmr1XII_" target="_blank">QQ空间</a></li>
+										<li><a href="http://home.51.com/majianjia" target="_blank">51空间</a></li>
+										<li><a href="###">待添加</a></li>
+										<li><a href="###">待添加</a></li>		
+									</ul>
+								</div>
+								<div class="top_box_clock">00:00:00</div>
+							</div>
+						</div>
+						<!--顶部导航/navigation--topActionEnd-->
+					<!--左、缩进缩出主导航action-->
+						<div id="leftNavigation" class="">
+								<!--显示与隐藏按钮-->
+									<div class="leftNavigation_box_navigation_button1" id="leftNavigation_box_navigation_button1">≡</div>
+									<div class="leftNavigation_box_navigation_button2" id="leftNavigation_box_navigation_button2">&times</div>
+								<!--左边主导航-->
+								<div 
+									class="leftNavigation_box_html" id="HTML">HTML基础知识
+									<ul  id="HTML_ul" class="leftNavigation_box_html_content" style="">
+										<li id="HTML_one" class="HTML_one" style="">基础标签</li>
+										<li>1</li>
+										<li>1</li>
+										<li>1</li>
+										<li>1</li>
+										<li>1</li>
+										<li>1</li>
+										<li>1</li>
+									</ul>
+								</div>
+								<div class="leftNavigation_box_css leftNavClass">CSS知识总结</div>
+								<div class="leftNavigation_box_javaScriput leftNavClass">JavaScript知识总结</div>
+						</div>	
+						<!--左、缩进缩出导航end-->
+					<!--主体显示内容action-->
+						<div id="center2" style="margin-left:180px;">
+							<div class="" id="center2_box" style="" >
+								<div>
+									主体内容：待添加、。、 、 、 、 主体内容：待添加、。、 、 、 、 主体内容：待添加、。、 、 、 、 主体内容：待添加、。、 、 、 、 主体内容：待添加、。、 、 、 、
+									主体内容：待添加、。、 、 、 、 主体内容：待添加、。、 、 
+									、 、 主体内容：待添加、。、 、 、 、 主体内容：待添加、。、 、 、 、 主体内容：待添加、。、 、 、 、 主体内容：待添加、。、 、 、 、
+								</div>
+							</div>
+						</div>
+						<!--主体显示内容End-->
+					<!--底部bottomAction-->
+						<div id="bottom" style=""  >
+							<div id="bottom_box" class="" >
+							Tel:(86)130-3210-9955 &nbsp;&nbsp; Email:867199622@qq.com &nbsp;&nbsp; QQ:867199622
+								
+							</div>
+						</div>
+						<!--bottomEnd-->
+				</div>
+			<!--javascript-->
+				<script type="text/javascript">
+					//leftNavigation_box_navigation左右隐藏和显示和主体cener2与底部button左右距离增与减
+						var center2Dom = document.getElementById("center2");
+						var leftNavigationDom = document.getElementById("leftNavigation")
+						var center2_boxDom = document.getElementById("center2_box")
+						var bottomDom = document.getElementById("bottom");
+						var bottom_boxDom = document.getElementById("bottom_box");
+						//点击按钮隐藏后执行什么什么
+						document.getElementById("leftNavigation_box_navigation_button2").onclick = function(){
+							leftNavigationDom.className="shrink1";
+							center2Dom.style.marginLeft="0px"
+							center2Dom.style.minWidth="1280px"
+							center2_boxDom.className="center2_box1"
+							bottomDom.style.marginLeft="0px"
+							bottom_boxDom.className="bottom_box1"
+							
+						} 
+						//点击按钮显示后执行什么什么
+						document.getElementById("leftNavigation_box_navigation_button1").onclick = function(){
+							leftNavigationDom.className="shrink2";
+							center2Dom.style.marginLeft="180px"
+							center2Dom.style.minWidth="1100px"
+							center2_boxDom.className="center2_box2"
+							bottomDom.style.marginLeft="180px"
+							bottom_boxDom.className="bottom_box2"
+						}
+					//左导航HTML里面的子导航
+						//HTML里面的子导航 ui 显示与隐藏
+							var HTMLdom = document.getElementById("HTML");
+							var HTML_uiDom = document.getElementById("HTML_ul");
+						//悬浮在hrml上面时,字体颜色变白
+							HTMLdom.onmouseover = function(){
+								HTMLdom.style.color="#fff";
+							}
+						//点击html时，打开子导航
+							HTMLdom.onclick = function(){
+								HTML_uiDom.style.display="block";
+							}
+						//点击后在子导航区域移动
+							HTMLdom.onmousemove = function(){
+								HTML_uiDom.style.display="block";
+							}
+						//离开html时，关闭子导航
+							HTMLdom.onmouseout = function(){
+								HTML_uiDom.style.display="none";
+								HTMLdom.style.color="#000"
+							}
+					//HTML里面的子导航ui下面的li基础标签HTML_one
+						//鼠标悬浮在基础标签上HTNL_one 改变字体颜色离开时再改变回去
+							var HTML_oneDom = document.getElementById("HTML_one");
+							HTML_oneDom.onmouseover= function(){
+								HTML_oneDom.style.color="#f92f6b"
+							}
+							HTML_oneDom
+				</script>
+		</body>
+	</html>
+
+<!--知识点:-->
+	<!--日常单词:(长)
+		轮播:carousel		购物:shopping		导航:navigation		常用:common
+		属性:Properties		透明:transparent	车:trolley			封装:Encapsulation
+		验证器:validator	用户名:username		文件:document		随机的:Random
+		准备:prepare		返回:return			替换:change			改变:change
+		照片:picture		小时:Hours			分钟:minutes		秒钟:Seconds
+		乘法:multiplication	登入:login
+
+		日常单词:(短)
+		图:map		盒子:box	最少值:min	点击:click	定时器:timer	播放:play
+		内:inner	电话:phone	显示:show	获得:get	元素:element	通过:by
+		值:value	的:of		我：i		做:make		个:individual	数学:Math
+		年龄:age	钟:clock	区:district	缩:shrink
+		
+	Good morning I hope you have a good time every.and you will become you want once day
+	颜色：
+		红色:red	蓝色:blue	绿色:green	粉色:pink	白色:white	紫色:purple	黑色:black
+		灰色:gray
+
+	英文1-20：
+		01:one			02:two			03:three		04:four			05:five			06:six	07:seven		08:eight		09:nine			10:ten			11:eleven		12:twelve	13:thirteen		14:fourteen		15:fifteen		16:sixteen		17:seventeen	18:eighteen 
+		19:nineteen		20:twenty
+
+	javascipt知识点:
+		height=window.innerHeight 获取浏览器高度
+		width=window.innerWidth	  获取浏览器宽度
+		选择事件: onchange="changePeople(this)"/定义方法时changePeople(obj)
+		点击:onclick		
+		双击:ondbclick		
+		悬浮:onmouseover	
+		悬浮离开:onmouseout
+		悬浮里移动:onmousemove	
+		点击左键:onmousedown
+		点击不松:onmousepress	
+		松开左键:onmouseup		
+		松开键盘:onkeyup
+		窗口变化:onresieze	
+		加载的时候:onload		
+		按住键盘:onkeydownobkeyperss
+	
+	css知识点：
+		在前面添加一个盒子:before{content:"";}
+		在后面添加一个盒子:after{content:"";}
+			  同元素选择器:nth-child(1){}
+			  行内块级元素:display:inline-block
+					透明度:opacity
+				  清除浮动:<div style="clear:both"></div>
+					  字体:font-family:"Arial"
+		  鼠标样式跳转小手:cursor: pointer;
+		-->

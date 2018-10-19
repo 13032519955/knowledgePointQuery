@@ -1,0 +1,821 @@
+﻿<!doctype html>
+	<html>
+		<head>
+			<!--声明当前页面的编码charset=GBK,gb2312(中文编码），UTF-8(国际国际编码-->
+			<meta charset="UTF-8">
+			<title>知识点总结</title>
+			<!--js,css-->
+			<style type="text/css">
+				*{margin:0;padding:0;}
+				body{background:url("images/6.jpg") no-repeat center fixed;background-size:100% 100%;}
+				h1{background:fixed}
+				.picture{width:200px;height:212px;background:#ccccff; margin:50px auto;}
+				.picture .p_aa{width:200px;height:50px;background:#ff0033;}
+				.a{width:1050px;background-color:#4df0f0;}
+				.a_b{background-color:#6b5cf5;}
+				.a_c{background-color:#ee4653;width:300px;height:410px;float:left; }
+				.a_d{background-color:#999999;width:1050px;height:410px;float:left clear:both;}
+			</style>
+		</head>
+
+	<body >
+	
+
+<!--格局7.内框架-->
+		<a name="6"></a> 
+		<p>
+			<h5>
+			<a href="#背景设置等">锚链接：背景设置、font标签、b标签、strong标签<a/>
+			<a href="#1">div盒子的创建</a>
+			<a href="#2">p标签以及滚动标签</a>
+			<a href="#3">超链接</a>
+			<a href="#4">h1-h6</a><br /><br />
+			<a href="#5">特殊符号</a>
+			<a href="#6">内框架</a>
+			<a href="#7">无序列表</a>
+			<a href="#8">有序列表</a>
+			<a href="#9">定义列表</a>
+			<a href="#10">tabie表格</a>
+			</h5>
+		</p>
+
+		<h1 style="text-align:center;color:#0b70df;" >知识点总结<h1>
+
+		<h2 >
+			<marquee  behavior="scroll" scrollamount="10" style="color:#1193d9;" >
+				知识点总结:锚链接：背景设置、font标签、b标签、strong标签、div盒子的创建、h1-h6标签、p标签、滚动标签、超链接、照片插入img标签、
+			</marquee>
+		</h2>  
+	
+	<!--内框架-->
+		<h2>&nbsp;内框架标签：iframe</h2>
+				<div style="whdth:1050px;height:500px;">
+					<iframe src="http://image.baidu.com/"width="1045" height="615"></iframe>
+				</div>	<br/><br/><br/><br/><br/><br/><br/>
+		
+		<p>	
+			<img src="images/淫荡.gif" width="300" height="200" alt="阿里" title="淫荡"/>
+			<img src="images/阿里.gif" width="300" height="200" alt="阿里" title="阿里"/>
+			<img src="images/射箭.gif" width="300" height="200" alt="射箭" title="起飞"/>
+			<img src="images/巴掌.gif" width="300" height="200" alt="阿里" title="呼死你"/>
+		</p><br /><br />
+
+<!--格局1.锚链接：背景设置、font标签、b标签、strong标签-->11111
+		<a name="背景设置等"></a> 
+		<p>
+			<h5>
+			<a href="#背景设置等">锚链接：背景设置、font标签、b标签、strong标签<a/>
+			<a href="#1">div盒子的创建</a>
+			<a href="#2">p标签以及滚动标签</a>
+			<a href="#3">超链接</a>
+			<a href="#4">h1-h6</a><br /><br />
+			<a href="#5">特殊符号</a>
+			<a href="#6">内框架</a>
+			<a href="#7">无序列表</a>
+			<a href="#8">有序列表</a>
+			<a href="#9">定义列表</a>
+			<a href="#10">tabie表格</a>
+			</h5>
+		</p>
+
+		<h1 style="text-align:center;color:#0b70df;" >知识点总结<h1>
+
+		<h2 >
+			<marquee  behavior="scroll" scrollamount="10" style="color:#1193d9;" >
+				知识点总结:锚链接、背景设置、font标签、b标签、strong标签、div盒子的创建、p标签、滚动标签、超链接、h1-h6标签、特殊符号、
+				           内框架、无序列表、有序列表、定义列表、tabie表格标签、照片插入img标签、
+			</marquee>
+		</h2>  
+	
+	<!--背景颜色的设置、背景照片的设置：&nbsp;&lt;font&gt;标签、&nbsp;&ltb&gt;标签、&lt;strong&gt;标签-->
+		<h2>&nbsp;背景颜色的设置、背景照片的设置：&nbsp;&lt;font&gt;标签、&nbsp;&ltb&gt;标签、&lt;strong&gt;标签</h2>
+
+		<pre>
+			<b>
+				<font size="4"color="#000000"face="楷体">
+		&nbsp;背景颜色:&nbsp;<br />
+		   &nbsp;body{background-color:#9cafad}&nbsp;
+		&nbsp;背景照片:&nbsp;
+		   &nbsp;body{background:url("images/bg.jpg") no-repeat center fixed;background-size:100% 100%;}&nbsp;<br />
+		   &nbsp;body{background:url 格式&nbsp;
+		   &nbsp;("images/bg.jpg")   路径&nbsp;
+		   &nbsp;no-repeat           不重复&nbsp;
+		   &nbsp;center              居中显示&nbsp;
+		   &nbsp;fixed               静态（实验得知,不加上就不全屏！！）&nbsp;
+		   &nbsp;background-size:100% 100%;}照片的尺寸 垂直 水平都100%&nbsp;<br /><br />
+		&nbsp;&lt;font&gt;规定文本的字体、尺寸、颜色&nbsp;<br />
+		   &nbsp;colr=&quot;字体颜色&quot;
+		   &nbsp;face=&quot;字体类型&quot;
+		   &nbsp;size=&quot;数字调整大小&quot;
+		   &nbsp;face=&quot;字体类型：黑体、楷体、宋体、微软雅黑&quot;
+		   &nbsp;列：&lt；font size=&quot;4&quot; color=&quot;#000000&quot; face=&quot;楷体&quot;&gt;<br /><br />
+		&nbsp;&lt;b&gt;标签：字体加粗。
+		&nbsp;&lt;strong&gt;标签：不仅仅有加粗效果、还能提升权重值，优先没浏览器获取。
+				</font>
+			</b>
+		</pre><br />
+
+		<p>	
+			<img src="images/淫荡.gif" width="300" height="200" alt="阿里" title="淫荡"/>
+			<img src="images/阿里.gif" width="300" height="200" alt="阿里" title="阿里"/>
+			<img src="images/射箭.gif" width="300" height="200" alt="射箭" title="起飞"/>
+			<img src="images/巴掌.gif" width="300" height="200" alt="阿里" title="呼死你"/>
+		</p><br /><br /><br /><br /><br />
+
+<!--格局2.div盒子的创建-->11111
+		<a name="1"></a> 
+		<p>
+			<h5>
+			<a href="#背景设置等">锚链接：背景设置、font标签、b标签、strong标签<a/>
+			<a href="#1">div盒子的创建</a>
+			<a href="#2">p标签以及滚动标签</a>
+			<a href="#3">超链接</a>
+			<a href="#4">h1-h6</a><br /><br />
+			<a href="#5">特殊符号</a>
+			<a href="#6">内框架</a>
+			<a href="#7">无序列表</a>
+			<a href="#8">有序列表</a>
+			<a href="#9">定义列表</a>
+			<a href="#10">tabie表格</a>
+			</h5>
+		</p>
+
+		<h1 style="text-align:center;color:#0b70df;" >知识点总结<h1>
+
+		<h2 >
+			<marquee  behavior="scroll" scrollamount="10" style="color:#1193d9;" >
+				知识点总结:锚链接、背景设置、font标签、b标签、strong标签、div盒子的创建、p标签、滚动标签、超链接、h1-h6标签、特殊符号、
+				           内框架、无序列表、有序列表、定义列表、tabie表格标签、照片插入img标签、
+			</marquee>
+		</h2> 
+		
+		<p>
+			<!--div盒子的创建-->
+			<h2>&nbsp;div盒子的创建</h2>
+				<b>
+					<pre>
+						<font size="4"> 
+	&lt;body&gt;
+	 &lt;div class=&quot;picture&quot;&gt;&lt;/div&gt;
+	&lt;/body&gt;<br />	
+	&lt;!--js,css--&gt;
+	&lt;style type=&quot;text/css&quot;&gt;
+	 .picture{width:200px;height:200px;background:#ccccff;margin:50 auto;}
+	 .picture .p_aa{width:200px;height:50px;background:#ff0033;}
+	&lt;/styl&gt;
+	
+						</font>
+				</pre>
+			</b>
+		</p>
+
+		<div class="picture">
+			<div class="p_aa">
+				擦了个姨妈
+			</div>
+		</div>
+
+		<br /><br /><br /><br /><br />
+
+		<p>	
+			<img src="images/冲浪.gif" width="300" height="200" alt="阿里" title="淫荡"/>
+			<img src="images/瞪眼.gif" width="300" height="200" alt="阿里" title="阿里"/>
+			<img src="images/gif/蛋碎了.gif" width="300" height="200" alt="射箭" title="起飞"/>
+			<img src="images/gif/呵呵.gif" width="300" height="200" alt="阿里" title="呼死你"/>
+		</p>
+
+		<br /><br />
+
+<!--格局3.p标签以及滚动标签-->111111
+
+
+		<a name="2"></a> 
+		<p>
+			<h5>
+			<a href="#背景设置等">锚链接：背景设置、font标签、b标签、strong标签<a/>
+			<a href="#1">div盒子的创建</a>
+			<a href="#2">p标签以及滚动标签</a>
+			<a href="#3">超链接</a>
+			<a href="#4">h1-h6</a><br /><br />
+			<a href="#5">特殊符号</a>
+			<a href="#6">内框架</a>
+			<a href="#7">无序列表</a>
+			<a href="#8">有序列表</a>
+			<a href="#9">定义列表</a>
+			<a href="#10">tabie表格</a>
+			</h5>
+		</p>
+
+		<h1 style="text-align:center;color:#0b70df;" >知识点总结<h1>
+
+		<h2 >
+			<marquee  behavior="scroll" scrollamount="10" style="color:#1193d9;" >
+				知识点总结:锚链接、背景设置、font标签、b标签、strong标签、div盒子的创建、p标签、滚动标签、超链接、h1-h6标签、特殊符号、
+				           内框架、无序列表、有序列表、定义列表、tabie表格标签、照片插入img标签、
+			</marquee>
+		</h2>   
+	
+	<!--p标签画个盒子以及滚动标签-->
+		<h2>&nbsp;p标签以及滚动标签</h2>
+
+		<!--分清楚，标签的属性与样式  就可以随意组合嵌套标签-->
+		<p style="border:5px solid #41b7ba;text-align:center;color:#ff0000;font-size:7;">
+			p标签，默认占一行	
+		</p>
+
+		<br /><br />
+
+		<h2>&nbsp;p标签画个盒子以及滚动标签&lt; marquee&gt;</h2>
+
+		<p style="border:10px solid #41b7ba;width:200px; height:200px;">
+			<marquee direction="down"style="border:1px solid #41b7ba;">私人空间，没有门 看见没？？</marquee>
+		</p>
+
+		<span style="color:#2206bd">
+				&nbsp;&nbsp;&lt;marquee direction=&quot;down&quot;&gt;文字&lt;/marquee&gt;
+				&nbsp;&nbsp;direction=&quot;left&quot;从右到左<br />
+				&nbsp;&nbsp;direction=&quot;right&quot;从左到右<br />
+				&nbsp;&nbsp;direction=&quot;up&quot;从下往上<br />
+				&nbsp;&nbsp;direction=&quot;down&quot;从上往下<br />
+		</span>
+
+		<br />
+
+		单标签&lt;hr /&gt;<hr />
+		<!--1.滚动方向direction（包括4个值：up、 down、 left和 right）
+				语法：<marquee direction="滚动方向">...</marquee>
+
+			2.滚动方式behavior（scroll:循环滚动，默认效果； slide:只滚动一次就停止； alternate:来回交替进行滚动）
+
+			　　语法：<marquee behavior="滚动方式">...</marquee>
+
+			3.滚动速度scrollamount（滚动速度是设置每次滚动时移动的长度，以像素为单位）
+
+			　　语法：<marquee scrollamount="5">...</marquee>
+
+			4.滚动延迟scrolldelay（设置滚动的时间间隔，单位是毫秒）
+
+			　　语法：<marquee scrolldelay="100">...</marquee>
+
+			5.滚动循环loop（默认值是-1，滚动会不断的循环下去）
+
+			　　语法：<marquee loop="2">...</marquee>
+
+			6.滚动范围width、height
+
+			7.滚动背景颜色bgcolor
+
+			8.空白空间hspace、vspace-->
+
+			
+			<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+		<p>	
+			<img src="images/1.jpg" width="300" height="200" alt="阿里" title="淫荡"/>
+			<img src="images/2.gif" width="300" height="200" alt="阿里" title="阿里"/>
+			<img src="images/3.jpg" width="300" height="200" alt="射箭" title="起飞"/>
+			<img src="images/4.jpg" width="300" height="200" alt="阿里" title="呼死你"/>
+		</p>
+
+<!--格局4.超链接-->```1111
+
+		<a name="3"></a> 
+		<p>
+			<h5>
+			<a href="#背景设置等">锚链接：背景设置、font标签、b标签、strong标签<a/>
+			<a href="#1">div盒子的创建</a>
+			<a href="#2">p标签以及滚动标签</a>
+			<a href="#3">超链接</a>
+			<a href="#4">h1-h6</a><br /><br />
+			<a href="#5">特殊符号</a>
+			<a href="#6">内框架</a>
+			<a href="#7">无序列表</a>
+			<a href="#8">有序列表</a>
+			<a href="#9">定义列表</a>
+			<a href="#10">tabie表格</a>
+			</h5>
+		</p>
+
+		<h1 style="text-align:center;color:#0b70df;" >知识点总结<h1>
+
+		<h2 >
+			<marquee  behavior="scroll" scrollamount="10" style="color:#1193d9;" >
+				知识点总结:锚链接：背景设置、font标签、b标签、strong标签、div盒子的创建、h1-h6标签、p标签、滚动标签、超链接、照片插入img标签、
+			</marquee>
+		</h2>  
+	
+	<!--超链接、图片超链接-->111
+		<h2>&nbsp;超链接、图片超链接</h2>
+			<p>
+				<a href="http://www.baidu.com">
+				在当前页面打开：百度一下</a><br /><br /><br />
+
+				<a href="http://www.baidu.com"target="_blank">
+				在新的页面打开：百度一下</a><br /><br /><br />
+
+				<a href="http://mailto:304126063@qq.com"target="_blank">
+				在新的页面打开：莫丶drem的邮箱,需要下载插件</a><br /><br /><br />
+
+				<a href="http://www.baidu.com"target="_blank"><img src="images/百度一下.jpg"width="400"height="290"alt="百度搜索" title="百度一下"/></a>
+				<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+		</p>
+
+		<p>	
+			<img src="images/5.jpg" width="300" height="200" alt="阿里" title="淫荡"/>
+			<img src="images/6.jpg" width="300" height="200" alt="阿里" title="阿里"/>
+			<img src="images/8.jpg" width="300" height="200" alt="射箭" title="起飞"/>
+			<img src="images/9.jpg" width="300" height="200" alt="阿里" title="呼死你"/>
+		</p><br /><br /><br />
+
+<!--格局5.h1-h6-->1111
+		<a name="4"></a> 
+		<p>
+			<h5>
+			<a href="#背景设置等">锚链接：背景设置、font标签、b标签、strong标签<a/>
+			<a href="#1">div盒子的创建</a>
+			<a href="#2">p标签以及滚动标签</a>
+			<a href="#3">超链接</a>
+			<a href="#4">h1-h6</a><br /><br />
+			<a href="#5">特殊符号</a>
+			<a href="#6">内框架</a>
+			<a href="#7">无序列表</a>
+			<a href="#8">有序列表</a>
+			<a href="#9">定义列表</a>
+			<a href="#10">tabie表格</a>
+			</h5>
+		</p>
+
+		<h1 style="text-align:center;color:#0b70df;" >知识点总结<h1>
+
+		<h2 >
+			<marquee  behavior="scroll" scrollamount="10" style="color:#1193d9;" >
+				知识点总结:锚链接：背景设置、font标签、b标签、strong标签、div盒子的创建、h1-h6标签、p标签、滚动标签、超链接、照片插入img标签、
+			</marquee>
+		</h2>  
+	
+	<!--H1-H6-->
+		<h2>h1-h6</h2>
+			<p>
+			<span style="color:#339900;">
+				<b>
+			&nbsp;&nbsp;&nbsp;&nbsp;<h1>&lt;h1&gt;这是h1标签&lt;h1&gt;</h1><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;<h2>&lt;h2&gt;这是h2标签&lt;h2&gt;</h2><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;<h3>&lt;h3&gt;这是h3标签&lt;h3&gt;<h3><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;<h4>&lt;h4&gt;这是h4标签&lt;h4&gt;<h4><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;<h5>&lt;h5&gt;这是h5标签&lt;h5&gt;<h5><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;<h6>&lt;h6&gt;这是h6标签&lt;h6&gt;<h6><br />
+
+			<p>
+				<h2>&nbsp;span标签</h2> 
+					&nbsp;&nbsp;span标签没有具体的意义，只是用来组合行标签。
+					&nbsp;&nbsp;&nbsp;列：<span style="color:#ff0000;">改变字体颜色</span>
+					&nbsp;&nbsp;&nbsp;列：&lt;span style=&quot;color:#ff0000;&quot;&gt;改变字体颜色&lt;/span&gt;
+			</p><br /><br /><br /><br /><br /><br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> 
+		
+		<p>	
+			<img src="images/淫荡.gif" width="300" height="200" alt="阿里" title="淫荡"/>
+			<img src="images/阿里.gif" width="300" height="200" alt="阿里" title="阿里"/>
+			<img src="images/射箭.gif" width="300" height="200" alt="射箭" title="起飞"/>
+			<img src="images/巴掌.gif" width="300" height="200" alt="阿里" title="呼死你"/>
+		</p><br /><br /><br />
+
+<!--格局6.特殊符号-->1111
+		<a name="5"></a> 
+		<p>
+			<h5>
+			<a href="#背景设置等">锚链接：背景设置、font标签、b标签、strong标签<a/>
+			<a href="#1">div盒子的创建</a>
+			<a href="#2">p标签以及滚动标签</a>
+			<a href="#3">超链接</a>
+			<a href="#4">h1-h6</a><br /><br />
+			<a href="#5">特殊符号</a>
+			<a href="#6">内框架</a>
+			<a href="#7">无序列表</a>
+			<a href="#8">有序列表</a>
+			<a href="#9">定义列表</a>
+			<a href="#10">tabie表格</a>
+			</h5>
+		</p>
+
+		<h1 style="text-align:center;color:#0b70df;" >知识点总结<h1>
+
+		<h2 >
+			<marquee  behavior="scroll" scrollamount="10" style="color:#1193d9;" >
+				知识点总结:锚链接：背景设置、font标签、b标签、strong标签、div盒子的创建、h1-h6标签、p标签、滚动标签、超链接、照片插入img标签、
+			</marquee>
+		</h2>  
+	
+	<!--特殊符号-->111
+		<h2>&nbsp;特殊符号</h2>
+			<p>
+				<pre> 
+					<h3>
+						<span style="color:#0b70df">
+	&nbsp;空格： &nbsp; &nbsp;               
+	&nbsp;小于号:&lt; &lt;	&nbsp;日元:&yen; &yen;
+	&nbsp;大于号:&gt; &gt;	&nbsp;欧元:&euro; &euro;
+	&nbsp;引号： &quot; &quot;	&nbsp;小节:&sect; &sect;
+	&nbsp;版权号:&copy; &copy;	&nbsp;商标:&trade; &trade;
+	&nbsp;和号:  &amp; &amp;	&nbsp;乘号:&times;&times;
+	&nbsp;撇号:  &apos; &apos;	&nbsp;除号:&divide;&divide;
+	&nbsp;分:    &cent; &cent;               
+	&nbsp;镑：   &pound; &pound;
+						</span>
+					</h3>
+				</pre>
+			</p>	
+		</p>
+
+		<p>
+				<pre> 
+					<h3>
+						<span style="color:#0b70df">
+	空格：  nbsp;                
+	小于号: lt;		日元: yen; 
+	大于号: gt;		欧元: euro; 
+	引号：  quot;		小节: sect; 
+	版权号: copy;		商标: trade;
+	和号:   amp;		乘号: times;
+	撇号:   apos;		除号: divide;
+	分:     cent;	              
+	镑：    pound;	
+						</span>
+					</h3>
+				</pre>
+			</p><br />	<br />	<br />	<br />	
+
+		</p>
+			<img src="images/淫荡.gif" width="300" height="200" alt="阿里" title="淫荡"/>
+			<img src="images/阿里.gif" width="300" height="200" alt="阿里" title="阿里"/>
+			<img src="images/射箭.gif" width="300" height="200" alt="射箭" title="起飞"/>
+			<img src="images/巴掌.gif" width="300" height="200" alt="阿里" title="呼死你"/>
+		</p>
+
+<!--格局8.无序列表-->1111
+		<a name="7"></a> 
+		<p>
+			<h5>
+			<a href="#背景设置等">锚链接：背景设置、font标签、b标签、strong标签<a/>
+			<a href="#1">div盒子的创建</a>
+			<a href="#2">p标签以及滚动标签</a>
+			<a href="#3">超链接</a>
+			<a href="#4">h1-h6</a><br /><br />
+			<a href="#5">特殊符号</a>
+			<a href="#6">内框架</a>
+			<a href="#7">无序列表</a>
+			<a href="#8">有序列表</a>
+			<a href="#9">定义列表</a>
+			<a href="#10">tabie表格</a>
+			</h5>
+		</p>
+
+		<h1 style="text-align:center;color:#0b70df;" >知识点总结<h1>
+
+		<h2 >
+			<marquee  behavior="scroll" scrollamount="10" style="color:#1193d9;" >
+				知识点总结:锚链接：背景设置、font标签、b标签、strong标签、div盒子的创建、h1-h6标签、p标签、滚动标签、超链接、照片插入img标签、
+			</marquee>
+		</h2>  
+	
+	<!--无序列表-->
+		<h2>无序列表</h2>
+			<p>
+				<pre>
+					<font size="5" face="楷体">
+	语法：&lt; type=&quot;disc/cicle/square&quot;&gt;
+		  &lt;li&gt;one&lt;/li&gt;
+		  &lt;li&gt;two&lt;/li&gt;
+		  &lt;li&gt;three&lt;/li&gt;
+					</font>
+				</pre>
+			</p>
+
+		<div style="width:1050px;">
+			<div style="background:#82fbef;text-align:center">
+				<h1>
+					小样就不信，搞不定你
+				</h1>
+			</div>
+				<div style="background:#32a5fa;width:300px;height:410px;font-size:48px;float:left;">
+					<ul>
+						<li>就是因为这里,</li><br />
+						<li>显示不出,无序</li><br />
+						<li>列表的小符号</li><br />
+					</ul>
+				</div>
+			<div style="widrh:750px;height:410px;background:#eb8065;">
+				无序列表：NND搞半天..
+				<ul style="margin:0;font-size:50px"> 
+					<li>蓝桥老师就是帅</li>
+					<li>帅的不要不要的</li><br />
+					<li>mini老师就是靓</li>
+					<li>靓的不要不要的</li>
+				</ul>
+			</div>
+		</div><br />
+	                        
+		<p>	
+			<img src="images/淫荡.gif" width="300" height="200" alt="阿里" title="淫荡"/>
+			<img src="images/阿里.gif" width="300" height="200" alt="阿里" title="阿里"/>
+			<img src="images/射箭.gif" width="300" height="200" alt="射箭" title="起飞"/>
+			<img src="images/巴掌.gif" width="300" height="200" alt="阿里" title="呼死你"/>
+		</p>
+
+<!--格局9.有序列表-->
+		<a name="8"></a> 
+		<p>
+			<h5>
+			<a href="#背景设置等">锚链接：背景设置、font标签、b标签、strong标签<a/>
+			<a href="#1">div盒子的创建</a>
+			<a href="#2">p标签以及滚动标签</a>
+			<a href="#3">超链接</a>
+			<a href="#4">h1-h6</a><br /><br />
+			<a href="#5">特殊符号</a>
+			<a href="#6">内框架</a>
+			<a href="#7">无序列表</a>
+			<a href="#8">有序列表</a>
+			<a href="#9">定义列表</a>
+			<a href="#10">tabie表格</a>
+			</h5>
+		</p>
+
+		<h1 style="text-align:center;color:#0b70df;" >知识点总结<h1>
+
+		<h2 >
+			<marquee  behavior="scroll" scrollamount="10" style="color:#1193d9;" >
+				知识点总结:锚链接：背景设置、font标签、b标签、strong标签、div盒子的创建、h1-h6标签、p标签、滚动标签、超链接、照片插入img标签、
+			</marquee>
+		</h2>  
+	
+	<!--有序列表-->
+		<h2>&nbsp;有序列表</h2>
+		<pre>
+			<span style="">有序列表语法：</span>
+					<span>&lt;ol&gt;<span>
+					  <span>&lt;li&gt;文字&lt;li&gt;<span>
+					  <span>&lt;li&gt;文字&lt;li&gt;<span>
+					  <span>&lt;li&gt;文字&lt;li&gt;<span>
+					<span>&lt;/ol&gt;<span>
+		</pre><br/><br/><br/>
+		
+		<div class="a">
+			<div class="a_b">
+				<h1>
+				  class类型，声明盒子，用css样式，布局
+				</h1>
+			</div>
+
+			<div class="a_c">
+				<h2>有序列表</h2>	
+					<ol>
+						<li>有序列表</li>
+						<li>有序列表</li>
+						<li>有序列表</li>
+						<li>有序列表</li>.
+					</ol>	
+			</div>
+
+			<div class="a_d">
+				<h2>消除浮点</h2>
+					<ol start="9999">
+						<li>float:left</li>
+						<li>clear:both</li>
+						<li>list-style:none</li>
+						<li>莫莫</li>
+						<li>莫莫</li>
+						<li>莫莫</li>
+						<li>莫莫</li>
+					</ol>
+			</div>
+		</div><br />
+							
+
+		
+
+		<p>	
+			<img src="images/淫荡.gif" width="300" height="200" alt="阿里" title="淫荡"/>
+			<img src="images/阿里.gif" width="300" height="200" alt="阿里" title="阿里"/>
+			<img src="images/射箭.gif" width="300" height="200" alt="射箭" title="起飞"/>
+			<img src="images/巴掌.gif" width="300" height="200" alt="阿里" title="呼死你"/>
+		</p><br /><br />
+
+<!--格局10.定义列表-->
+		<a name="9"></a> 
+		<p>
+			<h5>
+			<a href="#背景设置等">锚链接：背景设置、font标签、b标签、strong标签<a/>
+			<a href="#1">div盒子的创建</a>
+			<a href="#2">p标签以及滚动标签</a>
+			<a href="#3">超链接</a>
+			<a href="#4">h1-h6</a><br /><br />
+			<a href="#5">特殊符号</a>
+			<a href="#6">内框架</a>
+			<a href="#7">无序列表</a>
+			<a href="#8">有序列表</a>
+			<a href="#9">定义列表</a>
+			<a href="#10">tabie表格</a>
+			</h5>
+		</p>
+
+		<h1 style="text-align:center;color:#0b70df;" >知识点总结<h1>
+
+		<h2 >
+			<marquee  behavior="scroll" scrollamount="10" style="color:#1193d9;" >
+				知识点总结:锚链接：背景设置、font标签、b标签、strong标签、div盒子的创建、h1-h6标签、p标签、滚动标签、超链接、照片插入img标签、
+			</marquee>
+		</h2>  
+	
+	<!--定义列表-->
+		<h2>&nbsp;定义列表</h2>
+			<pre>
+				<font size="5">
+					语法：
+					&lt;dl&gt;
+						&lt;dt&gt;&lt;/dt&gt;
+						&lt;dd&gt;&lt;/dd&gt;
+						&lt;dd&gt;&lt;/dd&gt;
+					&lt;/dl&gt;
+				</font>
+			</pre>
+
+		<div class="a">
+			<div class="a_b">
+				<h1>
+				  class类型，声明盒子，用css样式，布局
+				</h1>
+			</div>
+
+			<div class="a_c">
+				<h2>定义列表</h2>	
+					<dl>
+						<dt>定义列表</dt>
+						<dd>定义列表</dd>
+						<dd>定义列表</dd>
+						<dd>定义列表</dd>.
+					</dl>	
+			</div>
+
+			<div class="a_d">
+				<h2>定义列表</h2>
+					<dl>
+						
+							<dt>定义列表</dt>
+							<dd>莫莫</dd>
+							<dd>莫莫</dd>
+							<dd>莫莫</dd>
+							<dd>莫莫</dd>
+					</dl>
+			</div>
+		</div><br />
+
+		<p>	
+			<img src="images/淫荡.gif" width="300" height="200" alt="阿里" title="淫荡"/>
+			<img src="images/阿里.gif" width="300" height="200" alt="阿里" title="阿里"/>
+			<img src="images/射箭.gif" width="300" height="200" alt="射箭" title="起飞"/>
+			<img src="images/巴掌.gif" width="300" height="200" alt="阿里" title="呼死你"/>
+		</p>
+
+<!--格局11.tabie表格标签-->
+		<a name="10"></a> 
+		<p>
+			<h5>
+			<a href="#背景设置等">锚链接：背景设置、font标签、b标签、strong标签<a/>
+			<a href="#1">div盒子的创建</a>
+			<a href="#2">p标签以及滚动标签</a>
+			<a href="#3">超链接</a>
+			<a href="#4">h1-h6</a><br /><br />
+			<a href="#5">特殊符号</a>
+			<a href="#6">内框架</a>
+			<a href="#7">无序列表</a>
+			<a href="#8">有序列表</a>
+			<a href="#9">定义列表</a>
+			<a href="#10">tabie表格</a>
+			</h5>
+		</p>
+
+		<h1 style="text-align:center;color:#0b70df;" >知识点总结<h1>
+
+		<h2 >
+			<marquee  behavior="scroll" scrollamount="10" style="color:#1193d9;" >
+				知识点总结:锚链接：背景设置、font标签、b标签、strong标签、div盒子的创建、h1-h6标签、p标签、滚动标签、超链接、照片插入img标签、
+			</marquee>
+		</h2>  
+	<!--表格标签-->
+			<h2>&nbsp;table标签表格</h2>
+				<pre>
+	语法：
+		&lt;table&gt;
+			&lt;tr&gt;
+				&lt;th&gt;姓名&lt;/th&gt;
+				&lt;th&gt;性别&lt;/th&gt;
+				&lt;th&gt;年龄&lt;/th&gt;
+			&lt;/tr&gt;
+
+			&lt;tr&gt;
+				&lt;td&gt;马健&lt;/td&gt;
+				&lt;td&gt;男&lt;/td&gt;
+				&lt;td&gt;26&lt;/td&gt;
+			&lt;tr&gt;
+		<p>
+			<table border="1;"style="border-collapse:collapse">
+				<tr>
+					<th>货名、单价</th>
+					<th>库存</th>
+					<th>售出数</th>
+					<th>售出额</th>
+				</tr>
+
+				<tr>
+					<td>云烟 10</td>
+					<td>(20)</td>
+					<td>5</td>
+					<td>50</td>	
+				</tr>
+				<tr>
+					<td>云烟 10</td>
+					<td>(20)</td>
+					<td>5</td>
+					<td>50</td>	
+				</tr>
+				<tr>
+					<td>云烟 10</td>
+					<td>(20)</td>
+					<td>5</td>
+					<td>50</td>	
+				</tr>
+				<tr>
+					<td>云烟 10</td>
+					<td>(20)</td>
+					<td>5</td>
+					<td>50</td>	
+				</tr>
+				<tr>
+					<td>云烟 10</td>
+					<td>(20)</td>
+					<td>5</td>
+					<td>50</td>	
+				</tr>
+				<tr>
+					<td>云烟 10</td>
+					<td>(20)</td>
+					<td>5</td>
+					<td>50</td>	
+				</tr>
+				<tr>
+					<td>云烟 10</td>
+					<td>(20)</td>
+					<td>5</td>
+					<td>50</td>	
+				</tr>
+				<tr>
+					<td>云烟 10</td>
+					<td>(20)</td>
+					<td>5</td>
+					<td>50</td>	
+				</tr>
+				<tr>
+					<td>云烟 10</td>
+					<td>(20)</td>
+					<td>5</td>
+					<td>50</td>	
+				</tr>
+				<tr>
+					<td>云烟 10</td>
+					<td>(20)</td>
+					<td>5</td>
+					<td>50</td>	
+				</tr>
+				<tr>
+					<td>云烟 10</td>
+					<td>(20)</td>
+					<td>5</td>
+					<td>50</td>	
+				</tr>
+
+
+			</table>
+
+		</p>
+			
+
+				
+				</pre><br />
+		<p>	
+			<img src="images/淫荡.gif" width="300" height="200" alt="阿里" title="淫荡"/>
+			<img src="images/阿里.gif" width="300" height="200" alt="阿里" title="阿里"/>
+			<img src="images/射箭.gif" width="300" height="200" alt="射箭" title="起飞"/>
+			<img src="images/巴掌.gif" width="300" height="200" alt="阿里" title="呼死你"/>
+		</p>
+	</body>
+</html>
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+
+
+
+   
+	
+
+	
+
+			

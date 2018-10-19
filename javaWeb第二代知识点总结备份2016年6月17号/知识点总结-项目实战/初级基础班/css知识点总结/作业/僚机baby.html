@@ -1,0 +1,56 @@
+<!doctype html>
+	<html>
+		<head>
+		<meta charset="UTF-8">
+		<meta name="Generator" content="Editplus">
+		<meta name="Author" content="">
+		<meta name="Keywords" content="关键字，关键词">
+		<meta name="Description" content="描述">
+		<title>css过渡</title>
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			body{background-image:url("images/艾希.jpg");background-attachment:fixed;background-position:top center;
+			background-repeat:no-repeat;background-size:cover;font-size:26px;font-weight:bold;}
+			.box{margin-left:100px;margin-top:40px;background:rgba(255,255,255,0.7);width:1000px;position:absolute;}
+			.box p{text-indent:1em;}
+			h2{line-height:2em;}
+			.a1{width:550px;height:550px;border-radius:30%;transition:all 5s ease;text-align:center;line-height:550px;}
+			
+			.box2_wo{background:url("images/沙皇jpg.jpg");background-position:3% 52%;;position:absolute;margin:0px 50%;color:#ff0000;font-size:0px;
+			perspective:800px;perspective:800px;overflow:hidden;}
+			.box2_wo:hover{background:url("images/亚索.jpg");background-position:80% 3%;transition:all 1s ease;font-size:180px;}
+
+			.box2_ai{background-image:url("images/ez.jpg");background-position:32% 11%;position:absolute; left:100%;top:0;}
+			.box2_wo:hover .box2_ai{background-color:#ff0000;left:0%;font-size:180px;transform:rotate(360deg);
+			transition:left 1s ease 12s,font-size 1s ease 2s,transform 1s ease 12s;}
+			
+			.box2_ni{background:url("images/psbe.jpg");background-position:28% 38%;position:absolute; left:-100%;top:0;}
+			.box2_wo:hover .box2_ni{left:0%;font-size:180px;transition:all 1s ease 14s;transform:rotate(-360deg);}
+
+			.box2_bu{background:url("images/1212a.jpg");background-position:46% 11%;position:absolute; left:100%;top:100%;}
+			.box2_wo:hover .box2_bu{left:0%;top:0%;font-size:180px;transition:all 1s ease 16s;transform-style:preserve-3d;transform:rotatex(360deg);}
+
+			.box2_shi{background:url("images/psb (2).jpg");background-position:37% 0%;position:absolute; left:0;top:100%;}
+			.box2_wo:hover .box2_shi{top:0%;font-size:180px;transition:all 1s ease 18s;transform:rotatey(360deg);transform-style:preserve-3d;}
+
+			.box2_shuo1{background:url("images/1.jpg");background-position:28% 38%;position:absolute; left:-100%;top:100%;}
+			.box2_wo:hover .box2_shuo1{left:0%;top:0%;font-size:180px;transition:all 1s ease 20s;transform-style:preserve-3d;transform:rotatez(360deg);}
+		</style>
+		</head>
+
+		<body>
+			<div class="box">
+				<div class="box2_wo a1">
+					<marquee direction="rihgt" scrollamount="35">
+						 没有人不渴望得到一份完美的爱情，美丽如童话。
+						 </marquee>
+					<div class="box2_ai a1"></div>
+					<div class="box2_ni a1"></div>
+					<div class="box2_bu a1"></div>
+					<div class="box2_shi a1"></div>
+					<div class="box2_shuo1 a1"></div>
+					<div class="box2_shuo2 a1"></div>	
+				</div>
+			</div>	
+		</body>
+	</html>

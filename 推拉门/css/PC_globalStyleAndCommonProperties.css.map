@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";AACA,UAAS;EACR,KAAK,EAAC,IAAI;EACV,MAAM,EAAC,IAAI;;AAGZ,CAAC;EACA,MAAM,EAAC,CAAC;EACR,OAAO,EAAC,CAAC;EACT,WAAW,EAAC,MAAM;;AAEnB,KAAK;EACJ,UAAU,EAAC,IAAI;;AAEhB,qEAAsE;EACpE,KAAK,EAAC,IAAI;;AAEZ,+BAAgC;EAC9B,qBAAqB,EAAE,IAAI;;AAE7B,aAAc;EACZ,OAAO,EAAE,CAAC",
+"sources": ["PC_globalStyleAndCommonProperties.scss"],
+"names": [],
+"file": "PC_globalStyleAndCommonProperties.css"
+}

@@ -1,0 +1,93 @@
+<!doctype html>
+	<html>
+		<head>
+		<meta charset="UTF-8">
+		<meta name="Genertor" content="Editplus">
+		<meta name="Author" content="">
+		<meta name="Keywors" content="关键字,关键词">
+		<meta name="Description" content="描述">
+		<title>banNerMap</title>
+		<style type="text/css">
+			*{margin:0;padding:0;padding:0;}
+			li{list-style:none;}
+			body{padding:15%;}
+			#box{width:700px;height:300px;border:1px solid red;position:relative;}
+			#img{width:700px;height:300px;}
+			#box a{width:40px;height:40px;background:gray;position:absolute;top:0;bottom:0;margin:auto 0;margin-left:10px;color:#fff;font-size:24px;text-align:center;line-height:40px;font-family:"微软雅黑";font-weight:bold;}
+			#right{right:10px;}
+			#box ul{position:absolute;left:0;right:0;margin:0 auto;border:0px solid #000;height:10px;bottom:10px;}
+			#box ul li{width:10px;height:10px;background:#fff;border-radius:50%;float:left;margin-left:5px;}
+			#box ul li:nth-child(1){background:#000;}
+			#box p{text-align:center;margin:3px;}
+		</style>
+		</head>
+		<body>
+			<div id="box">
+				<img src="1.jpg" id="img"/>
+				<a id="left">&lt;</a>
+				<a id="right">&gt;</a>
+				<ul id="list">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<p>第<span id="span">1</span>页</p>
+			</div>
+			<script type="text/javascript">
+				var imgDon = document.getElementById("img");
+				var rightDom = document.getElementById("right");
+				var leftDom = document.getElementById("left")
+				var listDom = document.getElementById("list");
+				var liDom = listDom.getElementsByTagName("li")
+				var	spanDom = document.getElementById("span")
+				var num = 1;
+				//根据li的个数动态添加长度
+				listDom.style.width=15*liDom.length+5+"px"
+				rightDom.onclick = function(){
+					num++
+					if(num>liDom.length){
+						num =liDom.length-liDom.length+1;
+					}
+					imgDon.src=num+".jpg";
+					spanDom.innerHTML = num;
+					liTag();
+				}
+				leftDom.onclick = function(){
+					num--
+					if(num<liDom.length-liDom.length+1){
+						num =liDom.length;
+					}
+					imgDon.src=num+".jpg";
+					spanDom.innerHTML = num;
+					liTag();
+				}	
+				for(var i=0;i<liDom.length;i++){
+					liDom[i].index = i;
+					liDom[i].onclick = function(){
+						num =this.index+1
+						imgDon.src=num+".jpg";
+						spanDom.innerHTML = num;
+						liTag();
+						/*for(var j=0;j<liDom.length;j++){
+							if(this.index==j){
+								liDom[j].style.background="#000";
+							}else{
+								liDom[j].style.background="#fff";
+							}
+						}*/
+					}
+				}
+				function liTag(){
+					for(var j=0;j<liDom.length;j++){
+							if(num-1==j){
+								liDom[j].style.background="#000";
+							}else{
+								liDom[j].style.background="#fff";
+							}
+					}
+				}
+			</script>
+		</body>
+	</html>

@@ -1,0 +1,779 @@
+<!doctype html>
+	<html>
+		<head>
+		<meta charset="UTF-8">
+		<meta name="Generator" content="Editplus®">
+		<meta name="Author" content="">
+		<meta name="Keywords" content="关键字,关键词">
+		<meta name="Descrition" content="描述">
+		<title>项目仿锤子科技</title>
+		<style type="text/css">
+			/*Properties-Encapsulation/属性封装以及常用属性*/
+				/*commonPropertiesEncapsulation/常用属性封装*/
+					*{margin:0;padding:0;}
+					li{list-style:none;}
+					a{text-decoration:none;font-family:"微软雅黑"}
+					.fl{float:left;}
+					.fr{float:right;}
+					body{font-size:14px;color:#666;background:#e9e9e8;font-family:"微软雅黑"}
+					span{font-weight:bold;font-family:"微软雅黑"}
+				/*hover:BoxInnerShadow/hover:内阴影*/
+					.centerBox_box_ul li a:hover,.one_a:hover,.two_a:hover,.shree_a:hover,
+					.centerBox_box_four:hover,.centerBox_box_five:hover,.centerBox_box_six:hover,
+					.centerBox_box_seven_boxOne:hover,.centerBox_box_seven_boxTwo:hover,
+					.centerBox_box_seven_boxShree:hover{
+						box-shadow:0 0 20px #ccc inset;
+						transition:all 0.3s ease;
+						}
+					.centerBox_box_ul li a,.one_a,.two_a,.shree_a,.centerBox_box_four,
+					.centerBox_box_five,.centerBox_box_six,.centerBox_box_seven_boxOne,
+					.centerBox_box_seven_boxTwo,.centerBox_box_seven_boxShree{
+						transition:all 0.3s ease;
+						}
+				/*centerBox_box_seven/centerBox_box_seven的共用文字位置控制*/
+					.centerBox_box_seven_box{
+						width:300px;height:54px;
+						position:absolute;
+						bottom:40px;
+						left:40px;
+						color:#4c4c4c;
+						}
+					.centerBox_box_seven_box p{font-size:13px;padding-top:10px;color:#8b8b8b;}
+					.centerBox_box_seven_box span{
+						display:block;
+						position:absolute;
+						right:0;
+						color:#e01231;
+						font-size:22px;
+						top:29px;}
+					.centerBox_box_seven_box span:before{
+							content:"￥";
+							display:block;
+							position:absolute;
+							top: 9px;
+							left: -14px;
+							font-size: 12px;
+							}
+				/*commonProperties-End*/
+			/*nav_header0-Navigation-Action/头部导航开始*/
+				/*header~action*/
+					.nav .header{width:100%;min-width:1140px;height:100px;background:url("images/1.png")top left repeat-x;}
+					.header .header_box{width:1120px;height:75px;margin:0 auto;font-family:"微软雅黑";}
+					.header_box .box_logo{padding-top:25px;float:left;} 
+					.header_box .box_logo a{display:block;width:50px;height:50px;background-image:url("images/logo.png");
+					background-position:100% 124%;margin-left:-5px;}
+				/*nav_box*/
+					.header_box .box_one{width:724px;float:right;}
+					.box_one .one_navigation{width:565px;padding-top:36px;height:28px;}
+					.one_navigation ul li a{display:block;float:left;padding:0 20px;font-size:14px;
+					line-height:2.2;color:#fff;font-family:"Helvetica","Arial","微软雅黑",sans-serif;opacity:.6;transition:all .4s ease;}
+					.one_navigation ul li a:hover{color:#fff;opacity:1;transition:all .4s ease;}
+				/*enter_box*/
+					.box_one .one_right{float:right;margin-left: 60px;top:-64px;padding-top:39px;margin-top:-64px;}
+					.one_right .right_enter{border:1px solid #484848;width:98px;height:26px;font-size:12px;line-height:25px;text-align:center;color:#fff;
+					background:linear-gradient(#181818,#131313);border-radius:5px;cursor:pointer;opacity:.8;}
+				/*nav_header~End*/
+			/*nav_navigation-Action/第二个导航开始*/
+				/*mainBodyContent*/
+					.nav .mainBodyContent{width:100%;min-width:1140px;}
+					.mainBodyContent .mainBodyContent_box{width:1120px;height:74px;margin:0 auto;}
+				/*box_navigation*/
+					.mainBodyContent_box .box_navigation{width:673px;height:53px;}
+					.box_navigation ul{padding-top:34px;float:left;}
+					.box_navigation ul li{padding-left:35px;float:left;}
+					.box_navigation ul li a{
+					display:block;float:left;color:#666;font-size:14px;
+					font-family:"微软雅黑";transition:all 0.4s ease;
+					}
+					.box_navigation ul li a:hover{color:#3c4ef2;transition:all 0.4s ease;}
+				/*box_shoppingTrolley*/
+					.mainBodyContent_box .box_shoppingTrolley{width:114px;height:74px;}
+					.box_shoppingTrolley .shoppingTrolley_one{
+						width:104px;height:20px;margin:34px auto 0;
+						background-image:url("images/shoppingTrolley.png");
+						background-position:-28% 53%;
+						background-repeat:no-repeat;line-height:20px;position:relative;z-index:5;
+						}
+					.shoppingTrolley_one a{display:block;text-indent:2em;float:left;
+					padding-right:10px;color:#666;}
+					.shoppingTrolley_one .shoppingTrolley_two{display:inline-block;padding:0 6px;border-radius:50%;height:18px;background:#666;color:#fff;float:left;line-height:18px;font-weight:bold;border:1px solid #666;}
+					.shoppingTrolley_one .shoppingTrolley_three{
+						position:absolute;
+						top:32px;
+						left:-195px;
+						width: 312px;
+						height: 40px;
+						padding-top:118px;
+						border-radius:8px;
+						background-color:#fff;
+						background-image:url("images/shoppingTrolleyLogo.png");
+						background-repeat:no-repeat;
+						background-size:50% 50%;
+						background-position:center 30%;
+						text-align:center;
+						line-height:2.5;
+						display:none;}
+					.shoppingTrolley_one .shoppingTrolley_three:before{
+						content:"";
+						display:block;
+						position:absolute;
+						left:276px;
+						top:-18px;
+						border-top:10px solid transparent;
+						border-left:10px solid transparent;
+						border-right:10px solid transparent;
+						border-bottom:10px solid white;
+						}
+					.shoppingTrolley_one:hover .shoppingTrolley_three{display:block;}
+				/*mainBodyContentEnd*/
+			/*nav_carousel-Map-Box-Action/轮播图开始*/
+				/*carouselMapBox*/
+					.carouselMapBox{width:100%;min-width:1140px;
+					position:relative;top:-18px;}
+				/*carouselMapBox_box*/
+					.carouselMapBox_box{width:1120px;margin:0 auto;}
+				/*carouselMapBox_box-/ulOne*/
+					.carouselMapBox_box .carouselMapBox_box_ulOne{
+					position:relative;width:100%;height:460px;}
+					.carouselMapBox_box_ulOne li{position:absolute;top:0px;left:0px;display:none;} 
+					.carouselMapBox_box_ulOne li img{width:1120px;height:460px;border-radius:10px;}
+					.carouselMapBox_box_ulOne li:nth-child(1){display:block;}
+				/*carouselMapBox_box-/ulTwo*/
+					.carouselMapBox_box .carouselMapBox_box_ulTwo{width:60px;height:30px;
+					position:absolute;bottom:30px;left:0;right:0;margin:0 auto;}
+					.carouselMapBox_box_ulTwo li{width:18px;height:18px;float:left;margin:0 2px;}
+					.carouselMapBox_box_ulTwo .ulTwo_one{background-image:url("images/a1.png")}
+					.carouselMapBox_box_ulTwo .ulTwo_two{background-image:url("images/a1.png")}
+					.backgroundPosition{background-position:0% 100%;}
+				/*nav-carouselMapBoxEnd*/
+			/*nav_center-Box-Content-Action/中部主体，包裹外盒子以及内盒子的内容*/
+				/*nav_centerBox-box*/
+					.nav_centerBox{width:100%;min-width:1140px;;margin-top:-11px;}
+					.nav_centerBox .centerBox_box{width:1120px;min-height:1000px;margin:0 auto;}
+				/*centerBox_box_content*/
+					/*centerBox_box_one*/		
+						.centerBox_box_one{
+							width:745px;height:320px;
+							background-image:url("images/home-smartisan-goods-02_328371e527.png");
+							background-color:#fff;background-repeat:no-repeat;
+							background-position:100% 0%;
+							border-radius:5px;
+							}
+						.centerBox_box_one .one_a{display:block;height:100%;width:100%;}
+						.centerBox_box_one .one_a_box{
+							width:300px;height:100px;text-align:center;padding:90px 0 0 100px;font-size:16px;font-family:"微软雅黑","黑体","华文细黑",sans-serif;color:#666;
+							}
+						.one_a_box p{padding:10px 0 10px 0;font-size:13px;}
+						.one_a_box span{color:#DE4037;font-size:30px;position:relative;}
+						.one_a_box span:before{
+							content:"￥";
+							display:block;
+							position:absolute;
+							top: 7px;
+							left: -24px;
+							font-size: 23px;
+							}
+					/*centerBox_box_two*/
+						.centerBox_box_two{width:373px;height:641px;background:url("images/home-smartisan-goods-01_06fbedab47.png")#fff no-repeat bottom;
+						margin-left:1px;line-height:2.5;
+						}
+						.centerBox_box_two .two_a{display:block;height:100%;width:100%;color:#666;}
+						.two_a .two_a_content{width:300px;text-align:center;
+						padding:80px 36.5px 0}
+						.two_a .two_a_content span{font-size:32px;color:#DE4037;position:relative;font-weight:bold;}
+						.two_a .two_a_content span:before{
+							content:"￥";	
+							display:block;
+							position:absolute;
+							top: 0px;
+							left: -24px;
+							font-size: 20px;
+						}	
+					/*centerBox_box_shree*/
+						.centerBox_box_shree{width:745px;height:320px;background:url("images/home-smartisan-goods-03_2cbe8c4972.png")no-repeat right #fff;margin-top:-320px;
+						position:relative;}
+						.centerBox_box_shree .shree_a{display:block;height:100%;width:100%px;color:#666;}
+						.shree_a .shree_a_content{height:110px;width:300px;padding:130px 0 0 70px;text-align:center;}
+						.shree_a_content h2{padding-bottom:10px;}
+					/*centerBox_box_ul*/
+						/*centerBox_box_ul_li_aOfBackground*/
+							.centerBox_box_ul{width:1120px;margin-top:1px;}
+							.centerBox_box_ul li a{display:block;width:372px;height:405px;
+							float:left;margin:0 1px 01px 0;background-color:#fff;
+							background-repeat:no-repeat;color:#4d4d4d;font-size:16px;font-weight:bold;
+							font-family:"黑体";}
+							.centerBox_box_ul li .shree_a,.centerBox_box_ul li .six_a{width:373px;}
+							.centerBox_box_ul li .one_a{background:url("images/z1.png");}
+							.centerBox_box_ul li .two_a{background:url("images/z2.png");}
+							.centerBox_box_ul li .shree_a{background:url("images/z3.png");}
+							.centerBox_box_ul li .four_a{background:url("images/z4.png");}
+							.centerBox_box_ul li .five_a{background:url("images/z5.png");}
+							.centerBox_box_ul li .six_a{background:url("images/z6.png");}
+						/*centerBox_box_ui_li_a_one_content*/
+							.centerBox_box_ul_li_one_a_content,
+							.centerBox_box_ul_li_two_a_content,
+							.centerBox_box_ul_li_shree_a_content,
+							.centerBox_box_ul_li_four_a_content,
+							.centerBox_box_ul_li_five_a_content,
+							.centerBox_box_ul_li_six_a_content{
+								padding:320px 16px 0;
+								}
+							.centerBox_box_ul_li_one_a_content span,
+							.centerBox_box_ul_li_two_a_content span,
+							.centerBox_box_ul_li_shree_a_content span,
+							.centerBox_box_ul_li_four_a_content span,
+							.centerBox_box_ul_li_five_a_content span,
+							.centerBox_box_ul_li_six_a_content span{
+								color:#fc524e;padding-left:97px;font-size:25px;position:relative;
+								}
+							.centerBox_box_ul_li_one_a_content span:before,
+							.centerBox_box_ul_li_two_a_content span:before,
+							.centerBox_box_ul_li_shree_a_content span:before,
+							.centerBox_box_ul_li_four_a_content span:before,
+							.centerBox_box_ul_li_five_a_content span:before,
+							.centerBox_box_ul_li_six_a_content span:before,
+							.centerBox_box_ul_li_one_a_content span:before{
+								content:"￥";
+								display:block;
+								position:absolute;
+								top: 8px;
+								left: 74px;
+								font-size:16px;
+								}
+							.centerBox_box_ul_li_one_a_content p,
+							.centerBox_box_ul_li_two_a_content p,
+							.centerBox_box_ul_li_shree_a_content p,
+							.centerBox_box_ul_li_four_a_content p,
+							.centerBox_box_ul_li_five_a_content p,
+							.centerBox_box_ul_li_six_a_content p{
+								font-size:14px;color:#848484;font-family:"微软雅黑";
+								}
+							.centerBox_box_ul_li_five_a_content p,
+							.centerBox_box_ul_li_six_a_content p{color:#f45e2b;font-weight:100;}
+							.centerBox_box_ul_li_four_a_content span{padding-left:177px;}
+							.centerBox_box_ul_li_four_a_content span:before{left:161px;}
+					/*centerBox_box_four*/
+						.centerBox_box_four{
+							width:745px;height:320px;
+							background:url("images/x1.jpg")#fff no-repeat 89% 120%;
+							background-size:264px 264px;
+							margin-top:10px;
+							}
+						.centerBox_box_four a{display:block;height:100%;width:100%;color:#666;}
+						.centerBox_box_four_a_box{width:300px;height:188px;padding:97px 0 0 60px;
+						font-size: 16px;color: #4c4c4c;line-height: 40px;text-align:center;
+						font-family:"Arial";}
+						.centerBox_box_four_a_box p{font-weight:500;color:#a4a4a4;}
+						.centerBox_box_four_a_box span{color:#e01231;font-size:22px;position:relative;}
+						.centerBox_box_four_a_box span:before{
+							content:"￥";
+							display:block;
+							position:absolute;
+							top: -3px;
+							left: -17px;
+							font-size: 16px;
+							}
+					/*centerBox_box_five*/
+						.centerBox_box_five{width:373px;height:641px;
+						background:url("images/x2.jpg")#fff bottom no-repeat;
+						margin-right:1px;margin-top:10px;}
+
+						.centerBox_box_five a{display:block;height:100%;width:100%;color:#666;}
+						.centerBox_box_five_a_box{width:350px;height:188px;padding:100px 11.5px 0;
+						font-size: 16px;color: #4c4c4c;line-height: 40px;text-align:center;
+						font-family:"Arial";}
+						.centerBox_box_five_a_box p{font-weight:500;color:#a4a4a4;}
+						.centerBox_box_five_a_box span{color:#e01231;font-size:22px;position:relative;}
+						.centerBox_box_five_a_box span:before{
+							content:"￥";
+							display:block;
+							position:absolute;
+							top: -3px;
+							left: -17px;
+							font-size: 16px;
+							}
+					/*centerBox_box_six*/
+						.centerBox_box_six{
+							width:745px;height:320px;
+							background:url("images/x3.jpg")#fff no-repeat 436px center;
+							background-size:264px 264px;
+							margin-top:1px;
+							}
+						.centerBox_box_six a{display:block;height:100%;width:100%;color:#666;}
+						.centerBox_box_six_a_box{width:300px;height:188px;padding:97px 0 0 60px;
+						font-size: 16px;color: #4c4c4c;line-height: 40px;text-align:center;
+						font-family:"Arial";}
+						.centerBox_box_six_a_box p{font-weight:500;color:#a4a4a4;}
+						.centerBox_box_six_a_box span{color:#e01231;font-size:22px;position:relative;}
+						.centerBox_box_six_a_box span:before{
+							content:"￥";
+							display:block;
+							position:absolute;
+							top: -3px;
+							left: -17px;
+							font-size: 16px;
+							}
+					/*centerBox_box_seven*/
+						.centerBox_box_seven .centerBox_box_seven_boxOne,
+						.centerBox_box_seven .centerBox_box_seven_boxTwo,
+						.centerBox_box_seven .centerBox_box_seven_boxShree{
+							width:372px;height:400px;background:purple;margin-right:1px;margin-top:1px;
+							position:relative;}
+						.centerBox_box_seven .centerBox_box_seven_boxShree{padding-right:1px;}
+						.centerBox_box_seven .centerBox_box_seven_boxOne{
+							background:url("images/x4.jpg")no-repeat 41px 30px #fff;
+							background-size:76% 76%;
+							}
+						.centerBox_box_seven .centerBox_box_seven_boxTwo{
+							background:url("images/x5.jpg")no-repeat 41px 15px #fff;
+							background-size:72% 72%;
+							}
+						.centerBox_box_seven .centerBox_box_seven_boxShree{
+							background:url("images/x6.jpg")no-repeat 41px 30px #fff;
+							background-size:76% 76%;
+							}
+						.centerBox_box_seven_boxOne a,.centerBox_box_seven_boxTwo a,.centerBox_box_seven_boxShree a{display:block;height:100%;width:100%}
+					/*centerBox_box_eight*/
+						.centerBox_box_eight{position:relative;top:8px;;}
+						.centerBox_box_eight_ul{border-radius:10px;overflow:hidden;}
+						.centerBox_box_eight_ul li{width:280px;height:153px;float:left;
+						background:#fff;text-align:center;line-height:20px;}
+						.backgound{width:36px;height:36px;background-image:url("images/c1.png");
+						margin:31px auto 0}
+						.centerBox_box_eight_ul_liTwo .backgound{background-position:28% 0;}
+						.centerBox_box_eight_ul_liShtee .backgound{background-position:56% 0;}
+						.centerBox_box_eight_ul_liFour .backgound{background-position:90% 0;}
+						 .centerBox_box_eight ul li a{
+						 display:block;width:100%;height:100%;position:relative;bottom:67px;
+						color:#4b4b4b;}
+						.centerBox_box_eight ul li a h6{position:absolute;left:0;right:0;bottom:33px;margin:0 auto;color:#919191;}
+						.centerBox_box_eight ul li a h5{position:absolute;left:0;right:0;bottom:57px;margin:0 auto;}
+				/*nav_centerBoxContentEnd*/
+			/*nav_bottomAction/底部开始*/
+				/*nav_bottomBox*/
+					.nav_bottomAction{width:100%;min-width:1140px;margin-top:40px;background:#fff;}
+					.nav_bottomAction .nav_bottomAction_box{width:1120px;height:362px;margin:0 auto;}
+					.nav_bottomAction_box_boxOne{padding:60px 0 42px 0;}
+				/*nav_bottomAction_box_boxOne_dl dt dd*/
+					.nav_bottomAction_box_boxOne .boxOne_dl dl{width:173px;float:left;}
+					.nav_bottomAction_box_boxOne .boxOne_dl dl dt{font-size:18px;color:#6d6d6d; s;padding-bottom:10px;}
+					.nav_bottomAction_box_boxOne .boxOne_dl dl dd{padding:5px 0;}
+					.nav_bottomAction_box_boxOne .boxOne_dl dl dd a{color:#666;font-weight:500;    font-family:"微软雅黑";transition:all 0.5s ease;}
+					.nav_bottomAction_box_boxOne .boxOne_dl dl dd a:hover{color:#3044f8;transition:all 0.5s ease;}
+				/*.nav_bottomAction_box_boxOne_phone*/
+					.nav_bottomAction_box_boxOne .box_phone{width:241px;height:103px;}
+					.box_phone ul li:nth-child(1) a{
+						width: 91px;
+						height: 34px;
+						line-height: 34px;
+						background: url("images/need-help-button_c75fd12448.png")no-repeat;
+						font-size: 16px;
+						color: #fff;
+						padding-left:26px;
+						text-align: left;
+						text-indent: 15px;
+						color: #FFF;
+						position:relative;
+						left:122px;;
+						display:block;
+						}
+						.box_phone ul li:nth-child(2){font-size: 36px;line-height: 1.5;text-align:right;
+						}
+				/*nav_bottomAction_box_boxTwo*/
+					.nav_bottomAction_box .nav_bottomAction_box_boxTwo{padding:35px 0 50px 0;}
+					.nav_bottomAction_box_boxTwo ul li{float:left;margin:0 10px;}
+					.nav_bottomAction_box_boxTwo ul li a{color:#476bfa;}
+					.nav_bottomAction_box_boxTwo .nav_bottomAction_box_boxTwo_a{display:block;color:#9b9b9b;padding-top:10px;
+					font-size:10px;}
+				/*nav_bottomEnd*/
+		</style>
+		</head>
+		<body>
+			<!--navAction-->
+				<div class="nav">
+					<!--nav_header~action-->
+						<div class="header">
+							<div class="header_box">
+								<div class="box_logo">
+									<a href="###"></a>
+								</div>
+								<div class="box_one">
+									<div class="one_navigation">
+										<ul>
+											<li><a style="opacity:1" href="###">首页</a></li>
+											<li><a href="###">Smartisan T2</a></li>
+											<li><a href="###">坚果手机</a></li>
+											<li><a href="###">欢喜云</a></li>
+											<li><a href="###">应用下载</a></li>
+											<li><a href="###">官方论坛</a></li>
+										</ul>
+									</div>
+									<div class="one_right">
+										<div class="right_enter">
+											登录
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>	
+						<!--nav_header~End-->
+					<!--mainBodyContentAction-->
+						<div class="mainBodyContent">
+							<div class="mainBodyContent_box">
+								<div class="box_navigation fl">
+									<ul>
+										<li style="padding-left:0;"><a href="###">手机</a></li>
+										<li><a href="###">耳机/音箱</a></li>
+										<li><a href="###">背壳/保护套</a></li>
+										<li><a href="###">“情怀”背壳</a></li>
+										<li><a href="###">其他周边</a></li>
+										<li><a href="###">保修服务</a></li>
+										<li><a href="###">全部商品</a></li>
+									</ul>
+								</div>
+								<div class="box_shoppingTrolley fr">
+									<div class="shoppingTrolley_one">
+										<a href="###">购物车</a>
+										<span class="shoppingTrolley_two">0</span>
+										<span class="shoppingTrolley_three">您的购物车还未添加商品</span>	
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--mainBodyContentEnd-->
+					<!--nav_carouselMapBoxAction-->
+						<div class="carouselMapBox">
+							<div class="carouselMapBox_box">
+								<ul class="carouselMapBox_box_ulOne">
+									<li><a href="###"><img src="images/2.png"/></a></li>
+									<li><a href="###"><img src="images/QQ图片20160409165841.png"/></a></li>
+								</ul>
+								<ul class="carouselMapBox_box_ulTwo">
+									<li class="ulTwo_one backgroundPosition"></li>
+									<li class="ulTwo_two"></li>
+								</ul>
+							</div>	
+						</div>
+						<!--nav_carouselMapboxEnd-->
+					<!--nav_centerBoxAction-->
+						<div class="nav_centerBox">
+							<div class="centerBox_box">
+							<!--centerBox_box_one-->
+								<div class="centerBox_box_one fl">
+									<a class="one_a" href="###" title="Smartisan T2 官方保护套" alt="Smartisan T2 官方保护套">
+										<div class="one_a_box">
+											<h2>Smartisan T2 官方保护套</h2>
+											<p>保护玻璃表面的同时，也与黑色机身相得益彰</p>
+											<span>49</span>
+										</div>
+									</a>
+								</div>
+							<!--centerBox_box_two-->
+								<div class="centerBox_box_two fl">
+									<a class="two_a" href="###" title="Smartisan S-1000 系列" alt="Smartisan S-1000 系列">
+										<div class="two_a_content">
+											<h2>Smartisan S-1000 系列</h2>
+											<p>VSONIC 创始人全程参与调音</p>
+											<span>199</span>
+										</div>
+									</a>
+								</div>
+							<!--centerBox_box_shree-->
+								<div class="centerBox_box_shree fl">
+									<a class="shree_a" href="###" title="手机意外保修服务" alt="手机保修">
+										<div class="shree_a_content">
+										<h2>手机意外保修服务</h2>
+										<p>&quot;免费更换一次主机？&quot;&quot;免费两次维修&quot;</p>
+										</div>
+									</a>
+								</div>
+								<div style="clear:both"></div>
+							<!--centerBox_box_ul-->
+								<ul class="centerBox_box_ul">
+									<!--centerBox_box_ul_li_one_a_content-->
+										<li>
+											<a class="one_a" href="###" title="Smartisan T 男款" alt="Smartisan T 男款">
+												<div class="centerBox_box_ul_li_one_a_content">
+													<h3>Smartisan T 男款</h3>
+													<p>100% 美国 SUPIMA 棉 T 恤衫<span>129</span></p>
+												</div>
+											</a>
+										</li>
+									<!--centerBox_box_ul_li_two_a_content-->
+										<li>
+											<a class="two_a" href="###"title="Smartisan T 女款" alt="Smartisan T 女款">
+												<div class="centerBox_box_ul_li_two_a_content">
+													<h3>Smartisan T 女款</h3>
+													<p>100% 美国 SUPIMA 棉 T 恤衫<span>129</span></p>
+												</div>
+											</a>
+										</li>
+									<!--centerBox_box_ul_li_shree_a_content-->
+										<li>
+											<a class="shree_a" href="###" title="“情怀”背壳系列" alt="“情怀”背壳系列">
+												<div class="centerBox_box_ul_li_shree_a_content">
+													<h3>“情怀”背壳系列</h3>
+													<p>为了那些改变人类进程的足迹<span>69</span></p>
+												</div>
+											</a>
+										</li>
+									<!--centerBox_box_ul_li_four_a_content-->
+										<li>
+											<a class="four_a" href="###" title="七款彩色不透明保护套" alt="七款彩色不透明保护套">
+												<div class="centerBox_box_ul_li_four_a_content">
+													<h3>七款彩色不透明保护套</h3>
+													<p>仅适用于坚果手机<span>15</span></p>
+												</div>
+											</a>
+										</li>
+									<!--centerBox_box_ul_li_five_a_content-->
+										<li>
+											<a class="five_a" href="###" title="坚果手机标准版七彩背壳" alt="坚果手机标准版七彩背壳">
+												<div class="centerBox_box_ul_li_five_a_content">
+													<h3>坚果手机标准版七彩背壳</h3>
+													<p>[ 满减优惠 ] 买 3 片仅需 ¥ 99<span>49</span></p>
+												</div>
+											</a>
+										</li>
+									<!--centerBox_box_ul_li_six_a_content-->
+										<li>
+											<a class="six_a" href="###" title="坚果手机文青版多彩背壳" alt="坚果手机文青版多彩背壳">
+												<div class="centerBox_box_ul_li_six_a_content">
+													<h3>坚果手机文青版多彩背壳</h3>
+													<p>[ 满减优惠 ] 买 3 片仅需 ¥ 99<span>49</span></p>
+												</div>
+											</a>
+										</li>
+									<div style="clear:both"></div>
+								</ul>
+							<!--centerBox_box_four-->
+								<div class="centerBox_box_four fl">
+									<a href="###" title="先锋 MOMO 防水蓝牙音箱" alt="先锋 MOMO 防水蓝牙音箱">
+										<div class="centerBox_box_four_a_box">
+											<h2>先锋 MOMO 防水蓝牙音箱</h2>
+											<p>IPX-7 级防水，持久续航</p>
+											<span>399</span>
+										</div>
+									</a>
+								</div>
+							<!--centerBox_box_five-->
+								<div class="centerBox_box_five fr">
+									<a href="###" title="UA&JBL Wireless 运动耳机" alt="UA&JBL Wireless 运动耳机">
+										<div class="centerBox_box_five_a_box">
+											<h2>UA&JBL Wireless 运动耳机</h2>
+											<p>库里代言专业运动耳机</p>
+											<span>1198</span>
+										</div>
+									</a>
+								</div>
+							<!--centerBox_box_six-->
+								<div class="centerBox_box_six fl">
+									<a href="###" title="Libratone Zipp 无线音箱" alt="Libratone Zipp 无线音箱">
+										<div class="centerBox_box_six_a_box">
+											<h2>Libratone Zipp 无线音箱</h2>
+											<p>来自北欧的无线音箱</p>
+											<span>1980</span>
+										</div>
+									</a>
+								</div>
+								<div style="clear:both"></div>
+							<!--centerBox_box_seven-->
+								<div class="centerBox_box_seven">
+									<div class="centerBox_box_seven_boxOne  fl">
+										<a href="###" title="暴风魔镜 4 黄金版 Android" alt="暴风魔镜 4 黄金版 Android">
+											<div class="centerBox_box_seven_box">
+												<h2>暴风魔镜 4 黄金版 Android</h2>
+												<p>沉浸式全景游戏体验<span>499</span></p>
+											</div>
+										</a>
+									</div>
+									<div class="centerBox_box_seven_boxTwo fl">
+										<a href="###" title="猎奇 LQ-016 手机外置镜头" alt="猎奇 LQ-016 手机外置镜头">
+											<div class="centerBox_box_seven_box">
+												<h2>猎奇 LQ-016 手机外置镜头</h2>
+												<p>智能手机通用<span>259</span></p>
+											</div>
+										</a>
+									</div>
+									<div class="centerBox_box_seven_boxShree fl">
+										<a href="###" title="智能体质分析仪青春版" alt="智能体质分析仪青春版">
+											<div class="centerBox_box_seven_box">
+												<h2>MO 智能体质分析仪青春版</h2>
+												<p>2016 红点奖获奖产品<span>399</span></p>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div style="clear:both"></div>
+							<!--centerBox_box_eightUl-->
+								<div class="centerBox_box_eight">
+									<ul class="centerBox_box_eight_ul">
+										<li class="centerBox_box_eight_ul_liOne">
+											<div class="backgound"></div>
+											<a href="###">
+												<h5>在线客服</h5>
+												<h6>周一至周日 9:00-18:00</h6>
+											</a>
+										</li>
+										<li class="centerBox_box_eight_ul_liTwo">
+											<div class="backgound"></div>
+											<a href="###">
+												<h5>7 天无理由退货</h5>
+												<h6>7 天无理由退货 请放心购买</h6>
+											</a>
+										</li>
+										<li class="centerBox_box_eight_ul_liShree">
+											<div class="backgound"></div>
+											<a href="###">
+												<h5>15 天免费换货</h5>
+												<h6>15 天内如遇质量问题 免费换货</h6>
+											</a>
+										</li>
+										<li class="centerBox_box_eight_ul_liFour">
+											<div class="backgound"></div>
+											<a href="###">
+												<h5>满 150 元免运费</h5>
+												<h6>全场使用顺丰快递</h6>
+											</a>
+										</li>
+									</ul>
+									<div style="clear:both"></div>
+								</div>
+							</div>
+						</div>	
+						<!--nav_centerBoxEnd-->
+					<!--nav_bottomAction-->
+						<div class="nav_bottomAction">
+							<div class="nav_bottomAction_box">
+								<div class="nav_bottomAction_box_boxOne">
+									<div class="boxOne_dl">
+										<dl>
+											<dt><span>订单服务</span></dt>
+											<dd><a href="###">购买指南</a></dd>
+											<dd><a href="###">支付方式</a></dd>
+											<dd><a href="###">送货政策</a></dd>
+										</dl>
+										<dl>
+											<dt><span>服务支持</span></dt>
+											<dd><a href="###">售后服务</a></dd>
+											<dd><a href="###">维修门店</a></dd>
+											<dd><a href="###">零售门店</a></dd>
+										</dl>
+										<dl>
+											<dt><span>媒体中心</span></dt>
+											<dd><a href="###">新闻动态</a></dd>
+											<dd><a href="###">官方视频</a></dd>
+											<dd><a href="###">图片资源</a></dd>
+										</dl>
+										<dl>
+											<dt><span>关于公司</span></dt>
+											<dd><a href="###">公司简历</a></dd>
+											<dd><a href="###">加入我们</a></dd>
+											<dd><a href="###">联系我们</a></dd>
+										</dl>
+										<dl>
+											<dt><span>关注我们</span></dt>
+											<dd><a href="###">新浪微博</a></dd>
+											<dd><a href="###">官方微信</a></dd>
+											<dd><a href="###">官方贴吧</a></dd>
+										</dl>
+									</div>
+									<div class="box_phone fr">
+										<ul>
+											<li><a href="###">在线咨询</a></li>
+											<li>110-112-119</li>
+											<li>周一至周日 9:00-18:00(仅收星际话费)</li>
+										</ul>
+									</div>
+								</div>
+								<div style="clear:both"></div>
+								<div class="nav_bottomAction_box_boxTwo">
+									<p class="fl" style="font-size:10px;line-height:21px;">
+										Copyright © 2016, Smartisan Digital Co., Ltd. All Rights Reserved.北京锤子数码科技有限公司
+									</p>
+									<ul>
+										<li><a href="###">法律声明</a></li>
+										<li><a href="###">隐私条款</a></li>
+										<li><a href="###">家长监护工程</a></li>
+									</ul>
+									<div style="clear:both"></div>
+									<a class="nav_bottomAction_box_boxTwo_a" href="###">京ICP备14041720号-1&nbsp;&nbsp;&nbsp;京ICP证140622号&nbsp;&nbsp;&nbsp;京公网安备11010502025474</a>
+								</div>
+							</div>
+						</div>
+						<!--nav_bottomEnd-->
+				</div>
+				<!--navEnd-->
+			<!--js/jq-action-->
+				<script type="text/JavaScript" src="js/jquery.js"></script>
+				<script type="text/JavaScript">
+					var _index = 0;
+					var carouselMapTimer = null;
+					$(function(){
+						$(".carouselMapBox_box").find(".carouselMapBox_box_ulTwo li").click(function(){
+							$(this).addClass("backgroundPosition").siblings().removeClass("backgroundPosition");
+							_index=$(this).index();
+							$(".carouselMapBox_box").find(".carouselMapBox_box_ulOne li").eq(_index).fadeIn(500).siblings().fadeOut(500)
+							});
+						});
+				</script>
+				<!--js/jq-end-->
+		</body>
+	</html>
+	<!--知识点:-->
+		<!--日常单词:(长)
+			轮播:carousel		购物:shopping		导航:navigation		常用:common
+			属性:Properties		透明:transparent	车:trolley			封装:Encapsulation	
+			
+
+			日常单词:(短)
+			图:map		盒子:box	最少值:min	点击:click	定时器:timer	播放:play
+			内:inner	电话:phone
+
+		颜色：
+			红色:red	蓝色:blue	绿色:green	粉色:pink	白色:white	紫色:purple	黑色:black
+
+		英文1-20：
+			01:one			02:two			03:three		04:four			05:five			06:six	07:seven		08:eight		09:nine			10:ten			11:eleven		12:twelve	13:thirteen		14:fourteen		15:fifteen		16:sixteen		17:seventeen	18:eighteen 
+			19:nineteen		20:twenty
+
+		css知识点：
+			在前面添加一个盒子:before{content:"";}
+			在后面添加一个盒子:after{content:"";}
+				  同元素选择器:nth-child(1){}
+				  行内块级元素:display:inline-block
+						透明度:opacity
+					  清除浮动:<div style="clear:both"></div>
+						  字体:font-family:"Arial"
+			  鼠标样式跳转小手:cursor: pointer;
+			-->
+
+	<!--中文翻译
+				<script type="text/JavaScript" src="js/jquery.js"></script>
+					<script type="text/JavaScript">
+				声明一个变量-索引_在栈内存声明_nidex，指向堆内存_变量0 
+					var _nidex=0;
+				当网页加载完成之后执行一个方法
+					$(function(){
+				找到轮播图---------------下面的ul li-----------------------------点击---执行一个方法
+					$(".carouselMapBox_box").find(".carouselMapBox_box_ulTwo li").click(function(){
+				当点击li的时候添加一个clss(背景定位),---同时移除掉同级元素的class(背景定位)
+					$(this).addClass("backgroundPosition").siblings().removeClass("backgroundPosition")
+				获得索引下标
+					_index=$(this).index();
+				找到轮播图------------------下面的ulOne li
+					$(".carouselMapBox_box").find(".carouselMapBox_box_ulOne li")
+				通过_index来筛选，显示，同时移除同级元素
+					.eq(_index).fadeIn().siblings().fadeOut();
+						})
+					})
+				</script>
+					
+				注意:格式  function() 是一个整体	"()"好像是封装：具体等学到在再注释。。
+				$(function(){  内容  })
+				索引下标：
+					var _nidex=0;
+					$(function(){
+						_index=$(this).index();alert(_index);
+					})
+				-->	

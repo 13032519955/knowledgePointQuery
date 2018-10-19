@@ -1,0 +1,46 @@
+<!doctype html>
+	<html>
+		<head>
+			<meta charset="UTF-8">
+			<meta name="Keywords" content="关键词，关键字">
+			<meta name="Description" content="描述">
+			<title>按钮标签</title>
+			<style type="text/css">
+				*{margin:0;padding:0;}
+				body{background:url("images/德玛西亚.jpg")no-repeat center fixed;background-size:100%100%;font-size:20px;font-family:"楷体" }
+				h1{line-height:100px;}
+				pre{font-size:26px;font-family:"楷体";font-weight:bold;color:#ff0000}
+				form{margin:0px 450px;}
+				label:hover{color:#ff0000}
+			</style>
+		</head>
+		
+		<body>
+			<h1>按钮标签、button</h1>
+			<pre>				
+	语法:&lt;input type=“button” value=“自定义显示内容”&gt;（推荐使用）
+
+	或者:&lt;button type=“button”>自定义显示内容&lt;/button&gt;（不推荐使用）
+
+	注意:form表单元素中的按钮，使用input（type=button)，form之外的按钮可用button，否则会自动提交
+	   （可以理解为在form中的button默认的type是submit）
+
+	&lt;form action=&quot;#&quot; method=&quot;get &quot;&gt;
+		&lt;label&gt;用户名:&lt;/label&gt;&lt;input type=&quot;text&quot; name=&quot;yonghuming&quot;&gt;
+		&lt;label&gt;密&nbsp;&nbsp;码:&lt;/label&gt;&lt;input type=&quot;password&quot;name=&quot;mima&quot;&gt;
+		&lt;input type=&quot;button&quot; value=&quot;提交信息&quot;&gt;
+		&lt;button&gt;登入&lt;/button&gt;
+	&lt;/form&gt;
+				</pre>
+
+				<form action="#" method="get ">
+					<label>用户名:</label><input type="text" name="yonghuming"><br /><br />
+					<label>密&nbsp;&nbsp;码:</label><input type="password" name="mima"><br />
+					<input type="button" value="提交信息">
+					<button>登入</button>
+				</form>
+				
+
+			</pre>
+		</body>
+	</html>

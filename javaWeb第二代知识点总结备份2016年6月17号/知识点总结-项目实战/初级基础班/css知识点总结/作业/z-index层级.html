@@ -1,0 +1,70 @@
+<!doctype html>
+	<html>
+		<head>
+		<meta charset="UTF-8">
+		<meta name="Gemerator" content="Editplus R">
+		<meta name="Author" content="">
+		<meta name="Keywords" content="关键字，关键词">
+		<meta name="Description" content="描述">
+		<title>z-index层级佐证</title>
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			html,body{height:100%;width:100%;font-size:28px;}
+			.box{height:100%;}
+			.box .box_1{height:100%;width:50%;background:#a8a8a8;float:left;position:relative;}
+			.box .box_2{height:100%;width:50%;background:#8b8b8b;float:left;position:relative;}
+			.box .box_1 .box_1_1{height:400px;width:400px;background:#33cc00;position:absolute;z-index:1;color:#ffffff;left:220px;top:200px;}
+			.box .box_1 .box_1_2{height:400px;width:400px;background:#ff0000;position:absolute;z-index:2;color:#ffffff;left:240px;top:230px;}
+			.box .box_1 .box_1_3{height:400px;width:400px;background:#0000cc;position:absolute;z-index:3;color:#ffffff;left:260px;top:260px;}
+
+			.box .box_2 .box_2_a{height:400px;width:400px;background:#33cc00;position:absolute;color:#ffffff;left:220px;top:300px;z-index:1;}
+			.box .box_2 .box_2_a-1{height:365px;width:365px;background:#ffcc00;position:absolute;color:#ffffff;left:35px;top:35px;z-index:50;}
+			.box .box_2 .box_2_a-2{height:365px;width:365px;background:#66ffff;position:absolute;color:#ffffff;left:70px;top:70px;z-index:1;}
+
+			.box .box_2 .box_2_b{height:400px;width:400px;background:#cc3399;position:absolute;color:#ffffff;left:325px;top:405px;z-index:2;}
+			.box .box_2 .box_2_b-1{height:365px;width:365px;background:#ff0000;position:absolute;color:#ffffff;left:35px;top:35px;z-index:;}
+			.box .box_2 .box_2_b-2{height:330px;width:330px;background:#0099ff;position:absolute;color:#ffffff;left:70px;top:70px;z-index:;}
+
+
+		</style>
+		</head>
+		<body>
+			<div class="box">
+				<div class="box_1">
+					佐证：在同一个父元素看层级关系<hr />
+					个人理解：像是从天空看房子的楼层、
+					1楼在最底下、2楼在上、以此类推。<br /><br /> <hr />
+					<div class="box_1_1">我是1</div>
+					<div class="box_1_2">我是2</div>
+					<div class="box_1_3">我是3</div>
+				</div>
+
+				<div class="box_2">
+					佐证：在多个父元素、父元素与另一个父元素的子元素的层级关系<hr /><br /> 
+					假设: a里面的a-1子元素想要在第一屏、因父元素b比父元素a高一个层面、测试看a-1子元素会不会受
+					父元素a的层级限制、无法到达第一屏、<hr /><br /> 
+					测试总结：层级关系只能在同级之间有效、子元素的父元素必须高于其他父元素的层级才能在第一屏显示、否则因为父元素的层级低与其他父元素层级是无法突破自己父元素的层级在第一屏显示的。。<hr /><br /> 
+					<div class="box_2_a">
+						我是a
+						<div class="box_2_a-1">
+						我是a-1和a-2是同级
+						</div>
+						<div class="box_2_a-2">
+						我是a-2和a-1是同级
+						</div>
+					</div>
+
+					<div class="box_2_b">
+						我是b
+						<div class="box_2_b-1">
+							我是b-1和b-2是同级
+						</div>
+
+						<div class="box_2_b-2">
+							我是b-2和b-1是同级
+						</div>
+					</div>
+				</div>
+			</div>
+		</body>
+	</html>

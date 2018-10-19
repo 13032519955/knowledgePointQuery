@@ -1,0 +1,144 @@
+<!doctype html>
+	<html>
+		<head>
+		<meta charset="UTF-8">
+		<meta name="Generator" content="Editplus">
+		<meta name="Author" content="">
+		<meta name="Keywords" content="关键字,关键词">
+		<meta name="Description" content="描述">
+		<title>css变形</title>
+		<style  type="text/css">
+			*{margin:0;padding:0;}
+			body{background-image:url("images/纯背景.jpg");background-attachment:fixed;background-position:top center;background-size:cover;
+			background-repeat:no-repeat;}
+			.box{background:rgba(255,255,255,0.3);width:80%;} .box_1{margin-left:10px;}
+			table{width:100%;border:rgba(0,0,0,0.3);font-weight:bold;margin-bottom:1em;} th{background:rgba(105,105,105,0.5);width:80px;} 
+			tr{height:26px;text-align:left;} 
+			th,td{padding-left:5px;}
+			.yanShi{background:rgba(0,0,0,0.4);margin-left:-10px;padding-left:10px;}
+			.yanShi_1{width:160px;background:#0f03ed;float:left;margin-left:60px;margin-right:50px;margin-bottom:100px;margin-top:40px;
+			color:#fff;text-align:center;font-weight:bold;line-height:20px;padding-top:4em;height:136px;transition:all 3s ease}
+			h2{text-align:center;font-size:30px;}
+			.yanShi_1:nth-child(1):hover{transition:all 1s ease;transform:matrix(1,-1,1,1,10,10);}
+			.yanShi_1:nth-child(2):hover{transition:all 1s ease;transform:translate(100px,100px)}
+			.yanShi_1:nth-child(3):hover{transition:all 1s ease;transform:rotate(3600deg);transition:all 0.3s ease}
+			.yanShi_1:nth-child(4):hover{transition:all 1s ease;transform:scale(0.8)}
+			.yanShi_1:nth-child(5):hover{transition:all 1s ease;transform:skew(-20deg,50deg)}
+		</style>
+		</head>
+		<body>
+		<div class="box">&nbsp;
+			<div class="box_1">
+			<h3>css3变形:</h3>
+			<h4>css3变形是一些效果的集合,比如平移,旋转,缩放和倾斜效果等.每个效果都称之为变形函数.它们可以操控元素发生旋转等变化.<br />
+			在此之前这些效果都需要依赖图片.flash或者JavaScript.</h4><br />
+			<h4>transform 属性向元素应用 2D 或 3D 转换。该属性允许我们对元素进行旋转、缩放、移动或倾斜。</h4><br />
+			<table border="1" style="border-collapse:collapse">
+				<tr>
+					<th>值</th>
+					<th>描述</th>
+				</tr>
+				<tr>
+					<td>none</td>
+					<td>定义不进行转换、</td>
+				</tr>
+				<tr>
+					<td>matrix(n,n,n,n,n,)</td>
+					<td>定义2D转换，使用六个值的矩阵、</td>
+				</tr>
+				<tr>
+					<td>matrix3D(n,......,n)</td>
+					<td>定义3D转换，使用16个值的4&times;4矩阵、</td>
+				</tr>
+				<tr>
+					<td>translate(x,y)</td>
+					<td>定义2D转换、</td>
+				</tr>
+				<tr>
+					<td>translate3D(x,y,z)</td>
+					<td>定义3D转换</td>
+				</tr>
+				<tr>
+					<td>translatex(x)</td>
+					<td>定义3D转换，只是用X轴的值、</td>
+				</tr>
+				<tr>
+					<td>translateY(y)</td>
+					<td>定义3D转换，只是用Y轴的值、</td>
+				</tr>
+				<tr>
+					<td>translateZ(z)</td>
+					<td>定义3D转换，只是用Z的值、</td>
+				</tr>
+				<tr>
+					<td>scale(x,y)</td>
+					<td>定义2D缩放转换、</td>
+				</tr>
+				<tr>
+					<td>scale3D(x,z,y)</td>
+					<td>定义3缩放转换、</td>
+				</tr>
+				<tr>
+					<td>scaleX(x)</td>
+					<td>通过设置X轴的值来定义3D缩放转换、</td>
+				</tr>
+				<tr>
+					<td>scaleY(y)</td>
+					<td>通过设置Y轴的值来定义3D缩放转换、</td>
+				</tr>
+				<tr>
+					<td>scakeZ(z)</td>
+					<td>通过设置Z轴的值来定义3D缩放转换、</td>
+				</tr>
+				<tr>
+					<td>rotate(angle)</td>
+					<td>定义2D旋转，在参数中规定角度、</td>
+				</tr>
+				<tr>
+					<td>rotate(x,y,z,angle)</td>
+					<td>定义3D旋转</td>
+				</tr>
+				<tr>
+					<td>rotateX(angle)</td>
+					<td>定义沿着X轴的3D旋转、</td>
+				</tr>
+				<tr>
+					<td>rotateY(angle)</td>
+					<td>定义沿着Y轴的3D旋转、</td>
+				</tr>
+				<tr>
+					<td>rotateZ(angle)</td>
+					<td>定义沿着Z轴的3D旋转、</td>
+				</tr>
+				<tr>
+					<td>skew(x-angle,y-angle)</td>
+					<td>定义沿着X和Y轴的2D倾斜转换、</td>
+				</tr>
+				<tr>
+					<td>skewX(angle)</td>
+					<td>定义沿着X州的2D倾斜转换、</td>
+				</tr>
+				<tr>
+					<td>skewy(angle)</td>
+					<td>定义沿着y轴的2D倾斜转换、</td>
+				</tr>
+				<tr>
+					<td>perspective(n)</td>
+					<td>为3D转换元素定义透视视图、</td>
+				</tr>
+			</table>
+
+			<div class="yanShi">
+				<h2>演示：</h2>
+				<div>
+				<div class="yanShi_1">矩阵变换：<br />matrix<br />(1,-1,1,1,10,10)</div>
+				<div class="yanShi_1">平移：<br />translate<br />(正左，负右100px,正下，负上100)</div>
+				<div class="yanShi_1">旋转：<br />transform:<br />rotate(36000deg)</div>
+				<div class="yanShi_1">缩放：<br />scale(大于1放大，<br />小于1缩小)</div>
+				<div class="yanShi_1">扭曲：skew(-20deg,50deg)</div>
+				<div style="clear:both"></div>
+				</div>
+			</div>
+		 </div>
+		</body>
+	</html>

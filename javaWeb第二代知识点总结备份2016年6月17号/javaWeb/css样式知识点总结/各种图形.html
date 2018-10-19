@@ -1,0 +1,201 @@
+<!doctype html>
+	<html>
+		<head>
+		<meta charset="UTF-8">
+		<meta name="Generator" content="Editplus">
+		<meta name="Author" content="">
+		<meta name="Keywords" content="关键字,关键词">
+		<meta name="Description" content="描述">
+		<title>各种图形</title>
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			body{background-image:url("images/94067_top.webp.jpg");background-repeat:no-repeat;background-attachment:fixed;
+			background-position:top center;background-size:cover; }
+			h1{text-align:center;}
+			.box{border:1px solid #000;width:1400px;min-height:800px;background:rgba(255,255,255,0.2);padding-left:20px;}
+			.box_triangle,.box_parallelogram,.box_taiJi,.box_wuJiaoXing,.box_hexagram,.box_heart{float:left;margin:20px 40px;}
+			.triangle{
+				width:0px;
+				height:0px;
+				border-bottom:80px solid #ff0000;
+				border-left:80px solid transparent;
+				border-right:80px solid transparent;
+				border-top:10px solid  transparent;
+			}
+			.parallelogram{
+				width:140px;
+				height:80px;
+				background:#53d1d5;
+				transform:skew(20deg,0deg);
+				margin-top:10px;
+			}
+			.taiJi{
+			width:80px;
+			height:40px;
+			border-top:1px solid #000;
+			border-right:1px solid #000;
+			border-bottom:40px solid#000;
+			border-left:1px solid #000;
+			border-radius:50%;
+			position:relative;
+			background:#fff;
+			}
+			.taiJi:before{
+				position:absolute;
+				content:"";
+				width:8px;
+				height:8px;
+				border:16px solid #000;
+				border-radius:50%;
+				left:0px;
+				top:50%;
+				background:#fff;
+			}
+			.taiJi:after{
+				position:absolute;
+				content:"";
+				width:8px;
+				height:8px;
+				border:16px solid #fff;
+				border-radius:50%;
+				left:50%;
+				top:50%;
+				background:#000;
+			}
+			.box_wuJiaoXing{padding-left:10px;}
+			.wuJiaoXing{
+				position:relative;
+				width:0px;
+				height:0px;
+				border-top:10px solid transparent;
+				border-right:40px solid transparent;
+				border-left:40px solid transparent;
+				border-bottom:35px solid #000;
+				transform:rotate(41deg);
+				margin-top:20px;
+				
+			}
+			.wuJiaoXing:before{
+				position:absolute;
+				content:"";
+				width:0px;
+				height:0px;
+				border-top:10px solid transparent;
+				border-right:40px solid transparent;
+				border-left:40px solid transparent;
+				border-bottom:35px solid #000;
+				transform:rotate(-85deg);
+				top:0px;
+				left:-50px;
+			}
+			.wuJiaoXing:after{
+				content:"";
+				position:absolute;
+				width:0px;
+				height:0px;
+				border-top:0px solid transparent;
+				border-right:13px solid transparent;
+				border-left:13px solid transparent;
+				border-bottom:41px solid #000;
+				left:-33px;
+				top:-20px;
+				transform:rotate(-41deg);
+
+			}
+			.hexagram{
+				position:relative;
+				width:0px;
+				height:0px;
+				border-bottom:80px solid #1de2e2;
+				border-left:80px solid transparent;
+				border-right:80px solid transparent;
+				border-top:10px solid  transparent;
+			}
+			.hexagram:after{
+				content:"";
+				position:absolute;
+				width:0px;
+				height:0px;
+				border-bottom:80px solid #1de2e2;
+				border-left:80px solid transparent;
+				border-right:80px solid transparent;
+				border-top:10px solid  transparent;
+				transform: rotate(180deg);
+				top: 27px;
+				left: -78px;
+			}
+			.heart{
+				width:75px;
+				height:120px;
+				background:red;
+				position:absolute;
+				top:0;
+				left:0;
+				border-radius:50px 50px 0 0;
+				transform:rotate(-45deg);
+				position:relative;
+			}
+			.heart:after{
+				content:"";
+				width:75px;
+				height:120px;
+				background:red;
+				position:absolute;
+				top:23px;
+				left:23px;
+				border-radius: 50px 50px 0 0;
+				transform: rotate(90deg);
+}
+			}
+
+		</style>
+		</head>
+		<body>
+			<div class="box">
+				<h1>图形制作：</h1>
+				<div class="box_triangle">
+					<h2>三角形</h2>
+					<div class="triangle"></div>
+				</div>
+
+				<div class="box_parallelogram">
+					<h2>平行四边形</h2>
+					<div class="parallelogram"></div>
+				</div>
+
+				<div class="box_taiJi">
+					<h2>太极</h2>
+					<div class="taiJi"></div>
+				</div>
+				
+				<div class="box_wuJiaoXing">
+					<h2>五角星</h2>
+					<div class="wuJiaoXing"></div>&nbsp;
+				</div>
+				<div style="clear:both"></div>
+				
+				<div class="box_hexagram">
+					<h2>六角星</h2>
+					<div class="hexagram"></div>&nbsp;
+				</div>
+				<div class="box_heart">
+					<h2>爱心</h2>
+					<div class="heart"></div>&nbsp;
+				</div>
+				<div style="clear:both"></div>
+				<pre>
+	知识点：
+		在前面添加一个盒子
+		:before{
+		content:"";
+		}
+		
+		在后面添加一个盒子
+		:after{
+		content:"";
+		}
+					
+				</pre>
+			</div>
+		</body>
+	</html>

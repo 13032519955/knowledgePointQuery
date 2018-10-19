@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+    <head>
+		<!--声明当前页面的编码集:charset=gbk,gb2312(中文编码)，utf-8国际编码-->
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="关键词,关键字">
+		<meta name="Description" content="">
+		<title>HTML模版</title>
+
+		<!--css,js-->	
+		<style type="text/css">
+			*{margin:0px 10px;padding:0;}
+			body{background:url("images/德玛西亚.jpg")no-repeat center fixed;background-size:100%100%;
+			font-size:26px;font-weight:bold;font-family:"微软雅黑"}	
+			.box{border:5px solid #ff0000;width:550px;background:#7ee3f5;}
+			#xx{text-align:center}
+			
+
+			
+		</style>
+	</head>
+
+	<body>
+		<h1>表单标签 form</h1>
+		<pre style="color:#ffff00">
+1.表单是一个包含表单元素的区域,表单元素是允许用户在表单中（比如：文本域、下拉列表、单选框、复选框等等）
+  &nbsp;&nbsp;&nbsp;输入信息的元素。
+
+2.使用表单标签（from）定义
+	<form>
+		</pre>
+		<div class="box">
+			<form action="url" method="get">
+				<p id="xx">用户信息</p>
+					<pre>
+上传头像:<input name="doc" type="file"/>
+姓    名:<input type="text"     name="xingmingName" value=""/>
+呢    称:<input type="text"     name="nichengName"  value=""/>
+密    码:<input type="password" name="mimaName"     value=""/>
+
+出生日期:<select name="chuShenRiQi">
+			<option>--选择出生日期--</option>
+			<option>--1992--04--08--</option>
+			<option>--1990--07--05--</option>
+			<option>--2016--01--01--</option>
+			<option>--1982--09--13--</option>
+			<option>--1988--10--21--</option>
+			<option>--1990--08--16--</option>
+		  </select>
+
+性别：
+   男  士:<input type="radio" name="yes" value="yess"/> 女  士:<input type="radio" name="yes" value="yess"/> 萌妹子:<input type="radio" name="yes" value="yess"/>
+   女汉子:<input type="radio" name="yes" value="yess"/> 女博士:<input type="radio" name="yes" value="yess"/> 腐  女:<input type="radio" name="yes" value="yess"/>
+
+爱好： 
+    喝茶:<input type="checkbox" name="aihaoName" value="">  下棋:<input type="checkbox" name="aihaoName" value=""> lol :<input type="checkbox" name="aihaoName" value=""> 
+    编程:<input type="checkbox" name="aihaoName" value="">  学习:<input type="checkbox" name="aihaoName" value=""> 健身:<input type="checkbox" name="aihaoName" value="">
+				</pre>
+			</form>			
+		
+
+</body>
+</html>

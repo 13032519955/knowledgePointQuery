@@ -1,0 +1,172 @@
+@charset "UTF-8";
+/*@import url("globalStyleAndCommonProperties.css");*/
+@import url("PC_globalStyleAndCommonProperties.css");
+* {
+  box-sizing: border-box; }
+
+body {
+  background: url("../images/true.jpg") no-repeat;
+  background-size: 100% 100%;
+  min-width: 600px; }
+
+.wrap {
+  width: 100%;
+  height: 100%; }
+
+header {
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(rgba(0, 0, 30, 0.8), rgba(155, 155, 155, 0.3));
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  font-family: "KaiTi";
+  line-height: 50px; }
+
+section {
+  width: 100%;
+  height: auto; }
+
+.click_chouJang {
+  width: 100%;
+  height: auto;
+  background: rgba(12, 47, 53, 0.5); }
+  .click_chouJang .form {
+    width: 420px;
+    height: auto;
+    background: url("../images/a.png") no-repeat;
+    display: block;
+    background-size: cover;
+    margin: 0 auto;
+    padding: 10px;
+    padding-top: 10px;
+    border-radius: 05px;
+    color: #fff; }
+    .click_chouJang .form > p {
+      height: 50px;
+      line-height: 50px; }
+    .click_chouJang .form > :first-child {
+      height: 42px;
+      line-height: 42px; }
+      .click_chouJang .form > :first-child label {
+        height: inherit;
+        display: block; }
+        .click_chouJang .form > :first-child label > :first-child {
+          width: 85px;
+          border: 0;
+          height: 70%;
+          border-radius: 4px;
+          text-indent: 5px;
+          margin-right: 5px; }
+        .click_chouJang .form > :first-child label input {
+          height: 30px;
+          border-radius: 3px;
+          border: 0;
+          font-size: 12px;
+          padding: 0 5px; }
+          .click_chouJang .form > :first-child label input:nth-of-type(2), .click_chouJang .form > :first-child label input:last-of-type {
+            cursor: pointer; }
+            .click_chouJang .form > :first-child label input:nth-of-type(2):hover, .click_chouJang .form > :first-child label input:last-of-type:hover {
+              background: #999;
+              color: #fff; }
+          .click_chouJang .form > :first-child label input:last-of-type {
+            width: 130px; }
+
+.click_shuangseqiu {
+  width: 100%;
+  height: auto;
+  background: rgba(12, 47, 53, 0.4);
+  margin-top: 10px; }
+
+.shuangSeQiu {
+  width: 500px;
+  height: 150px;
+  background: url("../images/004.jpg") no-repeat;
+  background-size: 100% 100%;
+  margin: 0 auto;
+  border-radius: 10px;
+  position: relative; }
+  .shuangSeQiu ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    box-sizing: border-box;
+    padding: 66px 110px; }
+    .shuangSeQiu ul li {
+      width: 33px;
+      height: 33px;
+      background: #E42C2C;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 33px;
+      margin-left: 4px;
+      color: #fff;
+      font-size: 18px; }
+      .shuangSeQiu ul li:nth-child(6), .shuangSeQiu ul li:last-child {
+        position: relative;
+        left: 20px;
+        background: #1F79C7; }
+      .shuangSeQiu ul li:nth-child(1) {
+        margin-left: 12px; }
+  .shuangSeQiu button {
+    border: 0;
+    padding: 5px 10px;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    margin-top: -5px;
+    border-radius: 5px;
+    background: #FE8D13;
+    font-size: 14px;
+    color: #fff; }
+    .shuangSeQiu button:hover {
+      background: #444;
+      color: #fff; }
+
+/*报错					
+		捕获:Uncaught			引用错误:ReferenceError			定义:defined			
+		语法错误:SyntaxError	参数要求:arguments required		标记:token
+		不能:Cannot				设置:set						属性property
+		阅读:read				标识符:identifier				执行:execite
+		未能:failed				元素:element					意外:Unexpected
+		执行:implement			开始:start						保存:save 
+		用户user				省份:province							
+
+		日常单词:(长)
+			轮播:carousel			购物:shopping						导航:navigation			常用:common
+			属性:Properties			透明:transparent					车:trolley				封装:Encapsulation
+			验证器:validator		用户名:username						文件:document			随机的:Random
+			准备:prepare			返回:return							替换:change				改变:change
+			照片:picture			小时:Hours							分钟:minutes			秒钟:Seconds
+			乘法:multiplication		查询:query							过滤:filter				当前:current
+			
+		日常单词:(短)
+			图:map		盒子:box		最少值:min		点击:click		定时器:timer	播放:play
+			内:inner		电话:phone	显示:show		获得:get			元素:element	通过:by
+			值:value		的:of			我:i				做:make			个:individual	数学:Math
+			年龄:age		钟:clock		区:district		标签:tag			开始:start	
+
+
+		颜色:
+			红色:red	蓝色:blue	绿色:green	粉色:pink	白色:white	紫色:purple	黑色:black
+			灰色:gray
+
+		英文1-20:
+			01:one			02:two			03:three			04:four			05:five			06:six	
+			07:seven			08:eight			9:nine			10:ten			11:eleven		12:twelve		
+			13:thirteen		14:fourteen		15:fifteen		16:sixteen		17:seventeen	18:eighteen 
+			19:nineteen		20:twenty
+
+		css知识点:
+			在前面添加一个盒子:before{content:"";}
+			在后面添加一个盒子:after{content:"";}
+		  	同元素选择器:nth-child(1){}
+		  	行内块级元素:display:inline-block
+			透明度:opacity
+			清除浮动:<div style="clear:both"></div>
+			字体:font-family:"Arial"
+			鼠标样式跳转小手:cursor: pointer;
+			Good morning I hope you have a good time every.and you will become you want once day
+	*/
+
+/*# sourceMappingURL=case.css.map */

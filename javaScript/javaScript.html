@@ -1,0 +1,2517 @@
+<!doctype html>
+	<html>
+		<head>
+		<meta charset="UTF-8">
+		<meta name="Generator" content="Editplus®">
+		<meta name="Author" content="">
+		<meta name="Keywords" content="关键字,关键词">
+		<meta name="Description" content="描述">
+		<title>js学习笔记</title>
+<!--样式:style type-->
+		<style type="text/css">
+			/*常用属性*/
+				*{margin:0;padding:0;}
+				html,body{width:100%;height:100%;}
+				body{background:#E9E9E8;font-family:"微软雅黑";}
+				.fl{float:left;}
+				.fr{float:right;}
+				li{list-style:none}
+				a{text-decoration:none;}
+				h1 a{color:#000;}
+			/*定时改变背景图片*/
+				#box{width:100%;min-width:1250px;background:no-repeat fixed 0px 0px;background-size:101% 102%;color:#000;}
+			/*mainBodyContent*/
+				#box .box_box{
+					width:1250px;
+					min-height:100%;
+					margin:0 auto;
+					font-size:19px;
+					font-family:"微软雅黑";
+					font-weight:bold;
+					background:rgba(255,255,255,.5);
+					line-height:22px;
+					}
+				span{font-size:18px;color:#3c4ffb;}
+				.a1{color:blue; font-size:20px;}
+				input[type="text"]{width:230px;height:50px;font-size:26px;}
+				input[type="button"]{width:90px;height:50px;font-size:26px;}
+				#text_show{width:228px;height:48px;font-size:26px;border:1px solid blue;color:gray;}
+				hr{padding:4px;background:blue;margin:2px 0 20px 0;}
+				#box .hr{position:relative;left:55px;;padding:0px;margin:0;}
+				#box pre{position:relative;left:-55px;}
+				.span{margin-left:-21px;color:#ff0000;font-size:26px;}
+				h1{text-align:center;}
+				.aa{color:#590255;}
+			/*打印日期 date*/
+				#date{width:200px;height:50px;border:1px solid #bcbcbc;background:linear-gradient(#ff0099,#99cccc,#cc33ff,#cc0066);text-align:center;position:absolute;top:0;left:0;border-radius:40px;}
+			/*打印过年倒计时 countDown*/
+				#countDown{width:260px;height:50x;border:1px solid red;border-radius:40px;background:linear-gradient(#330000,#000,#33ffcc,#9966ff,#6633cc);text-align:center;color:#fddffd;font-size:18px;
+				position:absolute;top:0;left:206px;}
+				.countDown{width:260px;height:50x;border:1px solid red;margin:0 auto;border-radius:40px;background:linear-gradient(#330000,#000,#33ffcc,#9966ff,#6633cc);text-align:center;color:#fddffd;font-size:18px;}
+
+				#frontEnd{width:285px;background:linear-gradient(#929292,#000,#000,#000);position:absolute;top:0;left:477px;}
+			/*时钟;验证证明,定位px单位是绝对定位,用百分比是会根据浏览器大小而改变位置*/
+				#clock{width:180px;height:50px;background:linear-gradient(#ffff00,#33cc00,#ff0000,#000000,#1fdaef);position:absolute;top:0;left:100%;border-radius:40px;color:#fdfd9f;
+				text-align:center;line-height:50px;font-size:28px;font-family:"微软雅黑";font-weight:bold;margin-left:-180px;}
+			/*无缝轮播图*/
+				#_box{width:1200px;height:300px;margin:0px auto;border:25px ridge #8f8e7e;
+				overflow:hidden;position:relative;}
+
+				#_ulBox{list-style:none;font-size:23px;font-weight:bold;
+				font-family:"微软雅黑";position:absolute;}
+
+				#_ulBox li{width:398px;height:298px;float:left;border:1px solid #000;}
+				#_ulBox li:nth-child(1){background:url("images/6.jpg") no-repeat 58% 79%;
+				background-size:300% 137%}
+				#_ulBox li:nth-child(1) p{margin:5px 0 0 26px}
+				#_ulBox li:nth-child(1) p span{color:red}
+
+				#_ulBox li:nth-child(2){background:url("images/天使彦1.png") no-repeat 70% 100%;background-size:178% 112%}
+				#_ulBox li:nth-child(2) p{margin:73px 0px 0px 7px;font-size:15px;}
+				#_ulBox li:nth-child(2) p span{color:#ebebeb;}
+
+				#_ulBox li:nth-child(3){background:url("images/psbW15D1TES.jpg")no-repeat 76% 6%;background-size:127% 107%}
+				#_ulBox li:nth-child(3) p{margin:120px 0px 0px 7px;font-size:15px;}
+				#_ulBox li:nth-child(3) p span{color:#ffffcc}
+
+				#_ulBox li:nth-child(4){background:url("images/QQ图片20161106104213.gif") no-repeat;background-size:100% 100%}
+				#_ulBox li:nth-child(5){background:url("images/4.jpg") no-repeat;background-size:100% 100%}
+				#_ulBox li:nth-child(6){background:url("images/2.jpg")no-repeat;background-size:100% 100%}
+				/*收尾的*/
+				#_ulBox li:nth-child(7){background:url("images/6.jpg") no-repeat 58% 79%;
+				background-size:300% 137%}
+				#_ulBox li:nth-child(7) p{margin:5px 0 0 26px}
+				#_ulBox li:nth-child(7) p span{color:red}
+
+				#_ulBox li:nth-child(8){background:url("images/天使彦1.png") no-repeat 70% 100%;background-size:178% 112%}
+				#_ulBox li:nth-child(8) p{margin:73px 0px 0px 7px;font-size:15px;}
+				#_ulBox li:nth-child(8) p span{color:#ebebeb;}
+
+				#_ulBox li:nth-child(9){background:url("images/psbW15D1TES.jpg")no-repeat 76% 6%;background-size:127% 107%}
+				#_ulBox li:nth-child(9) p{margin:120px 0px 0px 7px;font-size:15px;}
+				#_ulBox li:nth-child(9) p span{color:#ffffcc}
+			/*定时器*/
+				#setInterval{width:500px;height:50px; border:1px solid red; margin:10px auto; margin-bottom:4px;text-align:center; line-height:42px; font-size:40px;}
+				#spanTag{color:#ff3366; font-size:52px; position:relative; top:4px}
+				#onclickExecite{width:200px;position:relative;left:50%;margin-left:-100px;}
+			/*最low的画图 draw*/
+				#draw{height:300px;border:1px solid yellow;padding-top:5px;margin-top:3px;background:rgba(255,255,255,0.7);overflow:hidden;}
+			/*文字打印效果*/
+				#string_DaYin_box{width:880px; min-height:100px;border:2px solid red;margin:4px auto;}	
+				#onclick_DaYin_implement{width:217px;position:relative;left:50%;margin-left:-108.5px;}
+			/*选项卡*/
+				#tab{width:100%-1px;min-height:400px;border:1px solid #fff;background:rgba(255,255,255,0.6);margin-top:4px;}
+				#tab ul li{float:left;width:80px;height:50px;background:#d8d8d8;border-right:1px solid #8a8a8a;text-align:center;line-height:50px;box-shadow:2px 2px 3px #959595;margin-left:1px;}
+				#tab ul{height:52px;background:#d0d0d0}
+				#tab ul li:last-child{border-right:0px;}
+				#tab ul li:nth-child(1){margin-left:0px;}
+				#selectThisCard .on{background:rgba(255,255,255,1)}
+				/*displayContent*/
+					#selectThisCard_conter div{display:none;min-height:350px;}
+					#selectThisCard_conter_No1,#selectThisCard_conter_No2,#selectThisCard_conter_No3,#selectThisCard_conter_No4{width:100%;min-height:100%;background:rgba(255,255,255,.6)}
+			/*simulation_qq_information_box*/
+				#simulation_qq_information_box{height:300px;}
+				#simulation_qq_information_box_show_area{width:340px;height:200px;background:#a7a7a7;margin:0 auto;overflow:auto;}
+				#simulation_qq_information_box .b123{width:340px;margin:5px auto;}
+/*css3正反面翻牌效果*/
+	#container{height:400px;width:100%-1px;border:1px solid #787878;transform-style:preserve-3d;perspective:1000px;}
+	#container .container_box{width:290px;height:380px;border:1px solid red;
+	margin:10px;float:left;position:relative;transition:all 1s linear;}
+	#container .front{width:100%;height:100%;position:absolute;z-index:1;top:0;left:0;}
+	#container .reverseSide{width:100%;height:100%;background:gray;position:absolute;top:0;left:0;z-index:0;
+	transform:rotatey(180deg);transition:all 0s linear .4s}
+	
+	#container .container_box:hover{transform:rotatey(180deg);transition:all 1s linear;}
+	#container .container_box:hover .reverseSide{z-index:2;transition:all 0s linear 0.55s}
+	#container .reverseSide p{text-align:center;}
+/*end*/
+			/*案例:随机背景颜色*/
+				#background{width:600px;height:140px;}	
+			/*案例:根据人群去查找年龄范围*/
+				select{width:250px;text-align:center;}			
+			/*案例:九九乘法表*/
+				.box_box table{padding-left:35px;margin-top:5px;}
+				.box_box table td{padding-left:6px;padding-right:6px;background:rgba(0,0,0,0.2);}
+				#multiplicationTable1{width:200px;}
+			/*案例:通过id获取ui下面的li，通过点击弹出相应的索引*/
+				#ull li{width:100px;margin-top:5px;border:1px solid #000;text-align:center;}
+			/*案例banNerMap*/
+				.banNerMapBox{border:1px solid #e5e5e5;margin-left:-350px;
+				position:relative;left:50%;width:700px;height:280px;position:relative;}
+				#banNerMap{width:700px;height:280px;}
+				.banNerMapBox a{width:40px;height:40px;display:block;background:#555;color:#fff;
+				text-align:center;font-size:22px;line-height:40px;float:left;position:absolute;top:0;
+				bottom:0;top:50%;margin-top:-20px;margin-left:10px;}
+				#right{right:10px;}
+				.pTag{text-align:center;padding-top:5px;}
+				#span1{color:black;}
+				#list{width:64px;height:12px;position:absolute;left:0;right:0;margin:0 auto;bottom:10px;}
+				#list li{width:12px;height:12px;background:gray;border-radius:50%;float:left;margin-left:4px;}
+				#list li:nth-child(1){background:#fff;}
+			/*阿斯克编码*/
+				#ask{width:1000px;height:50px;line-height:50px;background:rgba(0,0,0,0.5)}
+			/*查询需要字符串，出现在文本索引以及次数*/
+				#text_div{width:500px;height:300px;overflow:auto;border:1px solid #000;margin:20px;background:rgba(0,0,0,0.3);}
+				#show_div{border:1px solid #000;background:rgba(0,0,0,0.3);color:#000;}
+				#query1{margin-top:20px;width:300px;}
+				.query{margin-top:20px}
+			/*全选和反选复选框案例*/
+				#checkAllThree,#checkAllTwo,#checkAllOne{width:100px;height:29px;font-size:18px;
+				position:relative;left:38%;}
+				#checkbox_five{text-align:center;}
+				#checkbox_five input[type]{width:20px;height:20px;margin-top:2px;position:relative;top:4px;right:1px;}
+			/*clickReturnTop*/
+				#scrollTop{background:#8c8c8c;;width:50px;height:50px;position:fixed;right:10px;bottom:10px;text-align:center;line-height:50px;font-size:28px;z-index:10;display:none}
+				#scrollTop:hover{color:#fff}
+			/*formValidation*/
+				#formValidation{padding:10px;;background:rgba(250,250,250,0.7);width:400px;min-height:100px;margin:0 auto;font-family:"楷体"}
+				#form input[type="text"],#form input[type="password"]{
+					width: 284px;
+					height:18px;
+					padding:8px;
+					line-height:18px;
+					font-size:14px;
+					list-style:none;
+					background:#d1d1d1 0 0;
+				}
+				#form div{margin-top:16px;}
+				#form i{padding-left:17px;}
+				#form p,#form div{padding-left:2px;margin-top:8px}
+				#form textarea{width:300px;height:100px;}
+				#validation_p{width:111px;height:50px;margin:5px auto;line-height:50px;}
+				#form input[type="submit"],#form input[type="reset"]{padding:8px;}
+				#error{text-align:center;color:red;}
+				#selectList{width:105px;padding:8px;}
+			</style>
+			<link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css">
+			</head>
+				<body>
+					<div id="scrollTop" class="iconfont icon-up"></span></div>
+				<div id="box" style="">
+					<div id="date"></div>
+					<div id="countDown"></div>
+					<div class="countDown" id="frontEnd" ></div>
+					<div style="height:50px"></div>
+					<div id="clock" style="z-index:1"></div>
+					<div class="box_box">&nbsp;
+					<h1><a href="http://fanyi.baidu.com/translate?aldtype=16047&query=&keyfrom=baidu&smartresult=dict&lang=auto2zh#auto/zh/" target="_blank">javaScript学习笔记:(百度翻译)</a></h1>
+<!--案例:-->
+	<h3>案例:文字实现打印效果:</h3>
+		<div id="string_DaYin_box">12312</div>
+		<input autofocus="autofocus" id="onclick_DaYin_implement" type="button" value="点击执行打印文字"/>
+		<hr />
+	<h3>无缝轮播图</h3>	
+		<div id="_box">
+			<ul id="_ulBox">
+				<li><p><span>I love you</span>&nbsp;深情爱意,只愿为你~</p></li>
+				<li><p><span style="color:">就算<br />全世界都背叛了你<br />我愿<br />站在你背后背叛全世界,为你而战</span></p></li>
+				<li><p><span>愿你<br />早日成为你想成为的人<br />用努力赢得尊重,起步低,那就奋起直追<br />就算这是一条不归路,既然选择了,那就燃烧吧~<br/>屏蔽外界的一切,自己认为好就好,就像爱,感觉到了才叫爱..</span></p></li>
+				<li>伟哥两毫米</li>
+				<li>看什么看,没见过怎么帅的马么</li>
+				<li>天空之城<br />德玛西亚~</li>
+				<!--收尾的-->
+				<li><p><span>I love you</span>&nbsp;深情爱意,只愿为你~</p></li>
+				<li><p><span style="color:">就算<br />全世界都背叛了你<br />我愿<br />站在你背后背叛全世界,为你而战</span></p></li>
+				<li><p><span>愿你<br />早日成为你想成为的人<br />用努力赢得尊重,起步低,那就奋起直追<br />就算这是一条不归路,既然选择了,那就燃烧吧~<br/>屏蔽外界的一切,自己认为好就好,就像爱,感觉到了才叫爱..</span></p></li>
+			</ul>
+		</div>
+		<br />
+		<hr />
+	<h3>表单验证</h3>
+		<pre>
+				要求:验证所有项目并且打印提交给后台的数据
+		</pre>
+		<div id="formValidation">
+			<h2 id="error">&nbsp;</h2>
+			<form id="form" method="post" action="js/bbs.txt" onsubmit="return saveUser()">
+				<p style="padding-left:0">
+					<label>用户名:<input type="text" name="username"/></label>
+				</p>
+				<p>
+					<label>密<i></i>码:<input type="password" name="password"/></label>
+				</p>
+				<div>性<i></i>别:
+						<label>男<input type="radio" name="sex" value="男" title="男生"/></label>
+						<label>女<input type="radio" name="sex" value="女" title="女生"/></label>
+					
+				</div>
+				<div>爱<i></i>好:
+				
+					骑  马<input type="checkbox" name="hobby" value="骑马"/>
+					射  箭<input type="checkbox" name="hobby" value="射箭"/>
+					
+				</div>
+				<div>自我介绍:
+					<p style="margin-left:3.3em">
+						<textarea name="textarea"></textarea>
+					</p>
+				</div>
+				<div>省<i></i>份:
+						<select id="selectList" style="position:relative;;right:11px">
+							<option value="">请选择省份</option>
+							<option value="江苏省">--江苏省--</option>
+							<option value="中国">---中国---</option>
+						</select>
+				</div>
+				<p id="validation_p">
+					<label><input type="submit" value="提交"/></label>
+					<label><input type="reset" value="重置"/></label>
+				</p>
+			</form>
+		</div>
+		<hr />
+	<h3>最Low爆的画图案例</h3>
+		<div id="draw"></div>
+		<hr />
+	<h3>选项卡(重中之重)</h3>
+		<div id="tab">
+			<ul id="selectThisCard">
+				<li id="s1" class="on">选项一</li>
+				<li id="s2">选项二</li>
+				<li id="s3">选项三</li>
+				<li id="s4">选项四</li>
+			</ul>
+			<div id="selectThisCard_conter">
+				<div id="selectThisCard_conter_No1" style="display:block;min-height:500px;">
+					最小宽度500px</div>
+				<div id="selectThisCard_conter_No2">2</div>
+				<div id="selectThisCard_conter_No3">3</div>
+				<div id="selectThisCard_conter_No4">4</div>
+			</div>
+		</div>
+		<hr />
+	<h3>案例:模拟qq信息框(回车发送)</h3>
+		<div id="simulation_qq_information_box">
+			<div id="simulation_qq_information_box_show_area"></div>
+			<div class="b123">
+				<input type="text" name="input" id="information_input" />
+				<input type="button" name="button" value="提交" id="information_button"/>
+			</div>
+		</div>
+		<hr />
+<h3>案例:css3正反面翻牌效果</h3>
+		<div id="container">
+			<div class="container_box">
+				<div class="front">			<!--正面-->
+					<img src="images/psbW15D1TES.jpg" width="100%" height="100%" />
+				</div>		
+				<div class="reverseSide">	<!--反面-->
+					<p>你在卖萌么？</p>
+					<img src="images/QQ图片20170101153425.png" width="100%" height="94%" />
+				</div>
+			</div>
+
+			<div class="container_box">
+				<div class="front">			<!--正面-->
+					<img src="images/psbW15D1TES.jpg" width="100%" height="100%" />
+				</div>		
+				<div class="reverseSide">	<!--反面-->
+					<p>风起云涌，疾风而行</p>
+				</div>
+			</div>
+
+			<div class="container_box">
+				<div class="front">			<!--正面-->
+					<img src="images/psbW15D1TES.jpg" width="100%" height="100%" />
+				</div>		
+				<div class="reverseSide">	<!--反面-->
+					<p>风起云涌，疾风而行</p>
+				</div>
+			</div>
+
+			<div class="container_box">
+				<div class="front">			<!--正面-->
+					<img src="images/psbW15D1TES.jpg" width="100%" height="100%" />
+				</div>		
+				<div class="reverseSide">	<!--反面-->
+					<p>风起云涌，疾风而行</p>
+				</div>
+			</div>
+		</div>
+<hr />
+	<h3>案例:输入验证显示</h3>
+		<p>通过输入值，赋予给下面的文本，进行点击验证输出显示:</p>
+			<img height="220px;" width="615px;" src="images/a1.png"/>
+			<img height="220px;" width="615px;" src="images/a2.png"/>
+			<form action="###" method="get">
+				<input type="text" id="username" placeholder="请输入用户名" />
+				<input type="button" value="验证器" onclick="validator()"/>
+			</form>
+			<h2 id="text_show">显示区:</h2>
+			<hr />
+	<h3>案例:动态添加</h3>
+		document.getElementById("boxNoe").innerHTML = str;
+		//获取html里的id名为boxNoe对象的控制权；
+		并赋予他innerHTML里的的值；
+		而innerHTMl的值==str变量，
+		str里储存的值是字符串类型的JavaScript学习笔记；
+		<img width="600px;" height="150px;" src="images/QQ图片20160531215210.png"/>
+		<img width="600px;" src="images/5.png"/>
+		<span style="background:red" id="boxNoe"></span>
+		<hr />
+	<h3>定时器:</h3>
+		<pre>
+			setInterval(x,1000)  定时器
+			clearInterval (  )  清除定时器
+			setTimeout(  ) 也是定时器 只执行一次
+			document.write()    在文本也就是浏览器中输出
+			window.location.href = "要跳转的网址"
+		</pre>
+		<div id = "setInterval">还有<span id="spanTag">5</span>秒跳转嘿嘿嘿首页</div>
+		<input id="onclickExecite" type="button" value="点击执行" />
+		<hr />
+	<h3>案例:随机背景颜色</h3>
+		<div id="background" style="background:red;"></div>
+		<hr />
+	<h3>案例:根据人群去查找年龄范围</h3>
+		<select onchange="changePeople(this)">
+			<option value="0">--请选择年龄范围--</option>
+			<option value="1">少年</option>
+			<option value="2">青年</option>
+			<option value="3">壮年</option>
+			<option value="4">老年</option>
+		</select>
+			<h2 id="result">显示区域</h2>
+			<hr />
+	<h3>案例:九九乘法表</h3>
+		<input type="text" value="9" maxLength="2" id="num"/>
+		<input id="multiplicationTable1" type="button" onclick="multiplicationTable99()" value="生成乘法表">
+		<table id="multiplicationTable">	
+		</table>
+		<hr />
+	<h3>案例:通过id获取ui下面的li，通过点击弹出相应的索引:</h3>
+		<ul id="ull">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+		<hr />
+	<h3>案例:banNerMap</h3>
+		<pre>
+		思路:
+		    1.创建一个div，里面用img设置可视区域。
+		    2.用2个a标签分布在左右当做点击按钮，分别绑定事件，通过点击触发事件改变关联img.src=样式的值实现，
+		      点击下一张，和点击上一张。
+		    3.用ul标签创建4个小圆点按钮点击实现相对索引改变img样式的值，达到点击改变图片的功能
+		    4.用ｐ标签里面包裹span标签，形成第span页
+
+		javaScript部分
+		    通过id获取,可视区域(imgDom) 点击上一张(leftDom) 点击下一张(rightDom) ul(listDom) span(spanDom)
+
+		    1.leftDom绑定点击事件执行一个函数，定义全局变量num=1变量，每次点击num--，把num变量的值赋予给img和span实现功能...
+		      定义if判断num&lt;1执行num=4的赋值操作。当点击到了第1张图片的时候再次点击让它返回到第4张，形成以个循环...
+
+		    2.rightDom绑定点击事件执行一个函数，定义全局变量num=1变量，每次点击num++，把num变量的值赋予给img和span实现功能...
+		      定义if判断num&gt;4执行num=1的赋值操作。当点击到第4张图片的时候再次点击让它返回到第1张，形成以个循环...
+
+		    3.通过listDom获取li,再定义liDom变量接收li，这时候的li是4个li集中在一起相当于数组..
+		      用for循环(var i等于0;i小于liDom的长度;i++)动态给liDom[i]绑定一个属性index接收每次循环的i的值0-4相当于索引,
+		      然后给liDom[i]绑定点击事件并执行一个函数，因为照片是1.jpg开始,索引是从0开始的所以num从新赋值为 this.index+1，使其
+		      当前点击的num的值等于1， 对应照片1.jgp  2.jpg的需求，最后把num所点击循环的值赋予给igm和span实现其功能
+
+		    4.在给li动态添加index值的for循环内套嵌套一个for循环（var j=0;j小于liDom的长度;j++）if判断当前
+		      点击liDom的index的值等不等于当前循环j的值，等于就给liDom[j]的改变颜色，不等于就不改变,
+		      因为liDom的长度是4；内循环j会循环4次，因此根据当前点击的liDom[index的值]来匹配与j相不相等
+		      因此实现了点击liDOM改变颜色的功能；
+
+		    5.leftDom点击事件 和 rightDom点击事件分别用for循环来关联，并且实现点击事前使liDom也改变相对应的位置的颜色；
+		      for(var j=0;j&lt;liDom.length;j++){
+		        if(num-1==j){   <span style="color:blue">//因为num在外面定义的值是1；而索引是0开始所以-1</span>；
+			    liDom[j].style.background="#fff";
+			}else{
+			    liDom[j].style.background="gray";
+			}
+		</pre>
+		<div class="banNerMapBox">
+			<img id="banNerMap" src="images1/1.jpg"/>
+			<a href="javascript:void(0);" id="left">&lt;</a>
+			<a href="javascript:void(0);" id="right">&gt;</a>
+			<ul id="list">
+				<li></li><li></li><li></li><li></li>
+			</ul>
+		</div>
+		<p class="pTag">第<span id="span1">1</span>页</p>
+		<hr />
+	<h3>案例:计算:</h3>
+		<input type="text" id="text1"/>+
+		<input type="text" id="text2"/>=
+		<input type="text" id="text3"/>
+		<input type="button" id="button" value="计算"/>
+		<hr />
+	<h3>案例:32-100ascii编码:</h3>
+		<div class="fl" id="ask"></div>
+		<input id="askOnclick" style="width:200px;" type="button" value="ascii编码生成"/>
+		<hr />
+	<h3>案例:验证qq输入的号码；</h3>
+		<input type="text" placeholder="请输入qq号码" maxLength="11" id="txt"/>
+		<input type="button" value="验证" id="btn"> 
+		<hr />
+	<h3>案例:查询需要字符串，出现在文本索引以及次数</h3>
+		<div class="fl" id="text_div" contenteditable="true">请输入需要查询的文章:【请勿直接复制，因为会把源代码复制过来，此bug还未解决】</div>
+		<input id="query1" type="text" placeholder="请输入你要查询的字符">
+		<input class="query" type="button" onclick="query()" value="查询"><br /><br />
+		<span id="show_div" >结果:查询的字符串的出现的索引位置和次数<br /></span>
+		<div style="clear:both" ></div>
+		<hr />
+	<h3>案例:查询数组自定义方法</h3>
+		<pre>
+	    思路:
+		constructor  查看构造函数
+		toString()   转换字符串格式方法
+		toLowerCase()转换字符串全部小写方法
+		indexOf()    查找this目标字符串的值 有就返回相对应的索引下标，没有就返回-1；
+		总结:
+		    定义一个函数名为isArray方法  返回值是 查看数据类param的值 等于输入pram的值，&&查看输入的
+		param的值构造函数.转换成字符串格式.转换全部小写.匹配字符串里有没有array，有就返回ture没有就返回false
+		</pre>
+		<input type="text" style="width:400px;" name="文本输入框" value="{}对象需要字符串解析，待解决" id="validatorArrayText">
+		<input type="button" value="验证数组" id="validatorArray" style="width:120px;">
+		<hr />
+	<h3>案例:数组一键排序</h3>
+		<pre style="position:relative;left:-89px;">
+		总结:
+			1.通过这个案例学习了sort()
+		    2.数组排序是通过sort这个方法，比较input.value属性的数字大小进行排序，方法见1108-1110
+		      通过sort给个函数a.value-b.value为正排序，b.value-a.value为反排序(原理待学习）;
+		    3.学习到了通过对象.getElementsByTagName()；方法可以获取对象中的子元素，类似于数组；
+		    4.也可以用对象.children这个属性来获取对象的子元素。
+		    5.可以用空数组循环添加对象里的子元素，方法见1105-1107;
+		    6.可以用对象.innerHTML = ""清空对象里的子元素；
+		    7.拼接数组显示时对象.innerHTML是无法拼接对象的，可以用appendChild()方法拼接，详见1113-1116
+		</pre>
+		<div id="compositorBox" style="width:575px;height:56px;">
+			<input type="text" style="width:100px;margin-left:5px;" value="5">
+			<input type="text" style="width:100px;margin-left:5px;" value="2">
+			<input type="text" style="width:100px;margin-left:5px;" value="3">
+			<input type="text" style="width:100px;margin-left:5px;" value="1">
+			<input type="text" style="width:100px;margin-left:5px;" value="4">
+		</div>	
+		<input type="button" class="fl" style="width:150px; margin-left:577px; margin-top:-53px;" value="一键排序" onclick=compositor()>
+		<hr />
+	<h3>案例，demo for ni遍历以及原型动态绑定div</h3>
+		<div style="min-height:200px">
+			<div id="for_ni">for in动态绑定</div>
+			<div id="for_ni1">window原型 for in动态绑定</div>
+		</div>
+		<hr />
+	<h3>根据输入的字符查找相对应的字符</h3>
+			<p style="padding-left:45px;">
+				demo:输入框、显示框、点击事件按钮、<br />
+				需求:通过输入框输入的字符，点击事件执行查找显示框中相对应的字符位置，和键盘联动变色、
+			</p>
+			<div id="seekSting">
+				<pre>
+		需求:
+			1.根据输入框输入的查询字找到文本相对应字符，并且显示变色，和输入联动
+
+			2.split('x')这个方法是把字符串x为切割点，以，代替切割的字符,并且转换成数组
+			  可以新建一个var变量接收是切割的x返回值..
+
+			3.join('x')数组转换成字符串并且以x作为拼接 就像+一样、根据这两个知识点实现需求
+
+		总结:多练！
+				</pre>
+			</div>
+			<p style="text-align:center" >
+				<input type="text" id="otext"  placeholder="请输入您需要查询的字符"/>
+				<input type="button" id="ovalue" value="点击查询"/>
+			</p>
+			<hr />
+	<h3>案例:全选和反选复选框:正选、反选、全选合并反选</h3>
+		<p>
+			demo:获取input文本框的元素动态添加绑定checked属性；用按钮的值来合并判断全选与反选
+		</p>
+		<input type="button" value="正选" id="checkAllOne">
+		<input type="button" value="反选" id="checkAllTwo">
+		<input type="button" value="全选" id="checkAllThree">
+		<div id = "checkbox_five">
+			<label><input type="checkbox"/>做案例</label>
+			<label><input type="checkbox"/>做美食</label>
+			<label><input type="checkbox"/>玩游戏</label>
+			<label><input type="checkbox"/>泡酒吧</label>
+			<label><input type="checkbox"/>喜安静</label>
+		</div>
+			<hr />
+	<h3>链式调用:</h3>
+		<p>
+			设计一个函数.实现$().html.css().css()方法的封装<br />
+			 涉及到的知识点,获取id 创建$函数 封装 返回对象 this <br />
+			 实现一个100px宽;100px长;边框实线红颜色;背景黑颜色;
+		</p>
+		<div id="Call_Chain" ></div>
+		<hr />
+	<h3>案例:1.通过类名称获取对象dom只支持Ie678..<br /><span style="padding-left:50px;color:#000;font-size:22px">2</span>.因为支持ie678 通过标签名想办法写出一个能获取所有浏览器都能通过类名称获取的方式</h3>
+		<div class="className">点击【0】弹窗0</div>
+		<div class="className    dd  sdf">点击【1】弹窗1</div>
+		<hr />
+	<h3>nodeConfiration:</h3>
+		<div style="position:relative">
+		<img src="images/node节点类型.png" style="width:280px;height:230px;position:absolute;top:614px;left:969px;"/>
+		<pre>
+		obj.nodeType			查看节点类型1元素节点 2属性节点. 3文本节点; 等等9中类型,查看文档
+		obj.childNodes 			拿到对象里面所有的子节点 Ie678拿到的只有元素节点,其他浏览器包括其他节点
+
+		obj.children			拿到所有子元素的元素节点 推荐使用.ie678,支持
+
+		obj.firstChild			拿到子元素第一个节点,     ie678直接获取元素节点
+		obj.firstElementChild		拿到子元素第一个元素节点Ie678不支持
+		obj.lastElementChild		拿到子元素最后一个元素节点 Ie678不支持   以此类推,举一反三 123456......节点
+
+		obj.nextSibling			拿到下一个同级节点;ie678直接获取下一个元素节点,主流浏览器下一个节点
+		obj.previousSibling		拿到上一个同级节点 和nextsibling相对应前后
+		obj.nextElementSibling		拿到下一个元素节点.Ie678不支持 
+
+		obj.parentNode			拿到父级节点.
+
+		callback.call(obj,形参,形参)	回调函数指定作用域 
+		callback.apply(obj,[形参,形参])回调函数,指定作用域 以数组的形式传参
+
+		obj.offsetParent  \		在元素没有定位的情况下是找到最外面的body,有定位的话就找到父级定位
+		obj.offsetLeft    |>		ie67里面如果包裹的元素改变宽高,就会受到一个叫layout(雷欧特)属性的影响,就不
+		obj.offsetTop     /		会找到最外面的body ,其他浏览器是到html的距离
+
+		obj.offsetHeight		获取dom的真实高度的值,没有单位
+		obj.offsetWidth			获取dom的真实宽的的值,没有单位
+
+		obj.clientHeight		获取可视高度加上内边距 注意只有值,没有单位
+		obj.clientWidth			获取可视宽度加上内边距 注意只有值,没有单位
+
+		first  validation:<span id="one_nodeType">[clickOnMe_one]</span>   viewNodeType;				obj.nodeType;
+		second validation:<span id="two_childNOdes">[clickOnMe_two]</span>   getUlEnglishNumberAndNodeLength;		obj.childNodes;
+		third  validation:<span id="three_firstChild">[clickOnMe_three]</span> getUlFirstChildElementContent-one;		obj.firstChild
+		fourth validation:<span id="four_firstElementChild">[clickOnMe_four]</span>  getUlFirstElementChildNode;		obj.firstElementChild
+		fifth  validation:<span id="five_lastElementChild">[clickOnMe_five]</span>  getUlLastElementChildNode;			obj.lastElementChild
+		sixth  validation:<span id="six_nextSibling">[clickOnMe_six]</span>   getUlNextSiblingNodeType-3textType;	obj.nextSibling
+		seventhValidation:<span id="seven_previousSibling">[clickOnMe_seven]</span> getPreviousSiblingNOdeType-3textType;	obj.perviousSibling
+		eighth validation:<span id="eight_parentNode">[clickOnMe_eight]</span> getparentNode-pre;				obj.parentNode
+		</pre>	
+		<div style="margin-left:50px;" id="sb">
+			<ul>&lt;ui&gt;
+				<li id="一点寒芒先到">&lt;li&gt;one&lt;/li&gt;</li>
+				<li>&lt;li&gt;two&lt;/li&gt;</li>
+				<li id="随后枪出如龙">&lt;li&gt;three&lt;/li&gt;</li>
+			</ul>&lt;/ui&gt;
+		</div>
+		<hr />
+		</div>
+				<pre>
+<!--基础知识:-->	<span class="span">基础知识:</span>
+	<span>为什么要学Js</span>
+		1、为什么要学习javascript   
+		   js 控制 行为 动作事件
+		   为了解决一个问题:html+css是静态的。
+		   网页dtd定义xml文件规范和标准---xml---xhtml---html演变
+		2、java和Javascript有什么关系 都是语言 
+		   Javascript之前的名字叫livescript、他是王景公司一名人员开发的。王景公司(现在的火狐)--浏览器的鼻祖
+		   早期ie开发了vbscript.开始的时候每个公司都有自己的一套标准这样给开发人员造成了很大的困扰，为了解决这个问题。
+		   sun ibm mirc wang--形成了一个组织w3c，他下面的分支ecmascript（最新的版本到7了，我们现在学的是4.1版本）
+		   下面的2个产品javascript和actionscript所谓的flash（最早提出面向对象javascript）
+		3、什么是语言 java php javascript    css c++ ruby r go c 等等
+		    它们都是语言，就是进行人机交互的一个工具一个方式。
+		    人--通过编译语言--让计算机认识
+		4、如何学习Javascript
+		5、变量，数据类型，操作符，条件判断，循环，数组
+		6、九九乘法表(为什么要做九九乘法表，目的何在)
+		<hr class="hr">
+	<span>变量定义的规则:</span>
+		变量定义的规则:以字母, _ , $其他随便(除了关键字)
+		<hr class="hr">
+	<span>窗口弹窗:</span>
+		alert()
+		<hr class="hr">
+	<span>控制台打印:</span>
+		console.log();
+		<hr class="hr">
+	<span>查看具体类型用typeof 变量</span>
+		列:alert(typeof 变量名)
+		<hr class="hr">
+	<span>特殊字符:</span>
+		换  行:\n
+		回车符:\r
+		制表符:\t  //代表tab键
+
+		在字符串要转译的语法的字符:\" \' \\；
+		  列:"我的名字叫:\"小明\",今年18岁."
+
+		"":外双内单/外单内双；
+		  列:'我的名字叫:"小明",今年18岁.'
+		<hr class="hr">
+	<span>Infinity和NaN的区别在于:</span>
+		NaN是代表一个非正常四则运算而出来的结果数字替代；
+		Infinity:它是正常计算过程中,一个数字除不尽的时候就得到无穷数,或者你计算结果超出数字的最大值也得到Infinity;
+	 
+		最大值:Number.MAX_VALUE
+		<hr class="hr">
+	<span>指数</span>
+		2e + 3 = 2000；
+		2 * 10*10*10
+		
+		2e - 3 = 0.002;
+		2 /10/10/10 = 0.002
+		<hr class="hr">
+	<span>操作符:</span>
+		算术运算符:
+		    + , - , * , / , %
+		逻辑运符:
+		    && , || , !
+		比较运算符:
+		    >  , < ,  <= , >= , != , = , ===
+		递增递减运算符:
+			++ --
+			在值前面就是先运算再赋值
+			在值后面就是先赋值在运算
+		<hr class="hr" />
+	<span>==和===的区别:</span>
+		var str = "0"; 值是0，类型是字符串string;
+		var mun = 0;   值是0，类型是数字类型number;
+		srr==mun	只比较值
+		srr===mun	值和类型都比较
+		<hr class="hr" />
+	<span>逻辑运算符:</span>
+		&&:与（并且）
+			true && true == true
+			true && false == false
+			false && true == false
+			false && false == false
+			总结:只要条件中有一个为false那么就是false，只有全部为true才是true;
+		||:或（或者）
+			true || true == true
+			true || false == true
+			false || true == true
+			false || false == false
+			总结:只要条件中有一个为true那么就是true，只有全部为false才是false
+		！:逻辑非运算符（真亦假，假亦真）（去反）
+
+		1.逻辑判断举列:
+			var aaa = "男人"
+			var bbb = "30"
+			var ccc = "别墅"
+			var ddd = "帅哥"
+			
+			 true      &&   true  &&   true      &&    true  都满足true如有有一条不满足就else执行
+			if(aaa=="男人" && bbb==30 && ccc=="别墅" && ddd=="帅哥"){
+				log(满足条件if执行)
+			}else{
+				log(不满足条件else执行)
+			}
+
+				true   ||   false ||   true      ||    true   只要有一个满足就就执行if条件里面的值
+			if(aaa=="男人" || bbb==20 || ccc=="别墅" || ddd=="帅哥"){
+				log(满足条件if执行)
+			}else{
+				log(不满足条件else执行)
+			}
+		2.逻辑判断举列:只要满足一条，剩下的全部忽略
+			少年0-16; 青年17-30-; 壮年31-60; 老年60+;
+			var age = 0;
+			if(age>=0　&& age&lt;=16){
+				alert("少年")
+			}else if(age>=17 && age&lt;=30){
+				alert("青年")
+			}else if(age>=31 && age&lt;=60){
+				alert("壮年")
+			}else{
+				alert("老年")
+			}
+		switch语句的基本形式:
+			switch(变量){
+			case 变量表达式1:代码;break
+			case 变量表达式2:代码;break
+			default:代码;break
+
+			说明: 
+			     switch后面的括号内的表达式,ANSI标准允许为任何类型.当表达式与某一个case后面的常量表达式相等时,
+			     就执行case后面的语句,若没有匹配,则执行default后面的语句.
+
+			     每一个case的常量表达式的值须互不相同,否则便会出现矛盾.各个case和default的出现次序不影响结果.
+
+			     执行完一个case语句,流程就转移到下一个case并继续执行.因此在case的分支后,加break语句来跳出switch语句.
+		<hr class="hr" />
+	<span>惰性求值:</span>
+		var str = "";<span class="a1"> //"",0,false,null,undefined,NaN===返回值都是false所以是faksy </span>
+		var str2= str || "keke" <span class="a1">//keke 是给他的默认值解释为下:
+			if(!str){
+			   str2="keke";
+			}else{
+			   str2=str;
+			}</span>
+		结果为str2==keke
+		<hr class="hr" />
+	<span>数字类型的转换</span>
+		数字加字符串自动转换成字符串
+		数字的字符串运算之后自动转换成数字类型
+		string换成Number整数:数字除外的直接忽略，并且只能开头是数字不然就返回值是NaN
+			parseInt(字符串变量) 
+		string转换成number数字:只能转字符串数字
+			var str = "200"
+			var s = Number(str);
+			alert(typeof s)；数字类型
+		string转换成小数:parseFloat();
+		    示例:
+			alert(parseFloat(str));返回值是200
+			parseFloat("-2") 返回 -2
+			parseFloat("2.5") 返回 2.5
+			parseFloat("3.5e6") 返回 3.5e6，或 3500000
+			parseFloat("foobar") 返回 NaN
+			parseFloat(" 5.1") 返回 5.1
+			parseFloat("3.75math") 返回 3.75
+			parseFloat("0garbage") 返回 0
+			var j = "2/2"----eval(j)//可以使J里面的字符转运算；
+			小数取整:字符串只能是数字否则返回值是NaN
+			    Math.floor()；向下取整
+			    Math.ceil();向上取整
+			    Math.round();四舍五入取整
+			值得注意的是:parseFloat("1.0") 返回 1parseFloat 可用性 Flash Player 5。 用法parseFloat(string) 
+			    参数 string 要读取并转换为浮点数的字符串。
+			    返回 无。 说明 函数；将字符串转换为浮点数。此函数读取（或“分析”）并返回字符串中的数字，直到它
+			    到达不是数字（其初始含义为数字）部分的字符。如果字符串不是以一个可以分析的数字开始的，
+			    则 parseFloat 返回 NaN。有效整数前面的空白将被忽略，有效整数后面的非数值字符也将被忽略	
+			字符串数字与字符串数字比较的时候只会比较第一位比如"2"&lt;"10"  返回值是false 比较时是2&lt;1
+			如果字符转是"2"&lt;"200000" 返回值是ture,比较时因为是2=2是ture 这里是小于所以是false 
+			然而字符串"200000"比较"2"就会用后面的0000的长度再比较"2"所以字符串200000大于2所以返回值是tuer
+
+			不是数字isNaN 根据Number 转换后 再判断是不是一个数字  
+			    alert(isNaN("sfds"))//true  alert(isNaN("123132"))//false;
+				true经过转换后是1  false转换后是0
+				<hr class="hr" />
+	<span>设置样式属性和获取元素:</span>
+		获取id:	
+			var obj = document.getElementById("obj");
+
+		给id添加class:	
+			obj.className ="class名称" 
+			
+		给id添加内容:
+			obj.innerHTML = "xx"
+
+		给id添加样式:
+			obj.style.cssText = "可以添加多个样式,就像是在&lt;div style = "xxx;xxx;一样"&gt;&lt;/div&gt;"
+
+		获取内联属性:
+			obj.style.width/height/等等...
+
+		获取id的属性的宽度:
+			getComputedStyle(obj).width;只支持ie9以上的,不兼容ie678
+
+		获取id的属性的宽度:
+			obj.currentStyle.width只支持ie678不兼容其他
+
+		封装合并getComputedStyle和currentStyle:
+			function getStyle(obj,attr//属性){
+				if(obj.currentSthle){
+					return obj.currentStyle[attr];
+				}else{
+					returm getComputedStyle(obj)[attr];
+				}
+			}
+		<hr class="hr" />
+	<span>知识点补充:</span>	
+		获取目标的索引下标:
+			var sindex = obj.selectedIndex;
+		获取目标的文本内容:
+			var text = obj.options[sindex].innerHTML;
+
+		获取浏览器的高度与宽度
+			height=window.innerHeight
+			width=window.innerWidth
+		
+		HTML5新特性
+			placeholder="请输入"  用户体验:提示的功能
+
+		focus();获得焦点 也就是光标刚点的位置 用户体验
+		获得属性:getAttribute()
+
+		window.onload = function(){} 当前窗口全都加载完成之后在执行里面的js jq 代码块
+
+		akert(oDOm.getAttibute("id")) 通过o对象，获取它的id属性里面的值
+		
+		document.write() 在浏览器输出里面的内容
+
+		obj.style.width="xx"	给donId添加宽度样式 其他是同样的格式;
+
+		obj.offsetLeft-1+"px"		don对象与左边浏览器的距离移动-1px/右边应该一样
+
+		obj.offsetWidth				获取dom对象的宽度(只获取值没有单位),举一反三以,获取其他的值应该是一样的
+
+
+
+		<hr class="hr">
+		<hr style="position:relative;left:55px;;padding:0px;border:4px solid #000000;margin:0;"/>
+<!-----数据类型:-->	<span class="span">数据类型:</span>
+	<span>string:字符串类型</span>
+		只要是被:""或者 ""引起来的就是字符串
+		在计算里面除了+号，其他运算会让值为数字的字符串，自动转换成number数字类型进行计算。。
+
+		拿字符串相对应的值: 
+		    var str = "阿根  达斯" str.charAt(0-6超过字符串长度就会返回undefined,如果在长度之内却没有内容就返回一个Null)
+
+		拿到对应字符串阿斯克编码:var str1 = "012345" str1.charCodeAt(从索引0开始)
+
+		编码转成字符转:var num = 48; alert(String.fromCharCode(num));可以转多个用,分隔开
+
+		字符串的连接:var a = "一二"； var b = "三四"  alert(a.concat(b)); 结果为一二三四；可以传多个用,分隔//数组也可以传
+
+		获取字符串的索引下标:var a = "一二三四"；alert(a.indexOf("四")) 结果为3;//如果多个字符就返回第一个字符；
+		    如果超过字符串内容就会返回-1；
+
+		indexOf获取索引下标的原理:var a = "一二三四"；
+		    string.prototype.indexOf = function(key){
+		        <span style="color:blue">//this代表谁调用了就指向谁，在这里是a调用就指向a</span>
+		        var len =this.length;
+		        var index = -1;
+		         <span style="color:blue">//i小于字符串的长度,this指向a并把长度赋值给了len</span>
+		        for(var i=0;i&lt;len;i++){
+		             <span style="color:blue">用循环和charAt(i)拿到a变量里面的值进行判断，如果字符串的值，
+		               等于自己传进去的值，就把循环得到的ｉ赋值给index并且跳出循环</span>
+		            if(this.charAt(i) == key){
+		                index = i;
+		                break;//或者用return index 也是一样的
+		            }
+		        }
+		         <span style="color:blue">如果没有判断结果就返回-1，否则就把循环i赋予给index的值给返回出来</span>
+		        return index;
+		    };
+		    alert(a.indexOf("一",1))<span> 返回值是-1 因为带了1参数就从1的位置开始找了决定了索引从几开始，
+			不影响长度比如在2开始找 四的索引还是3</span>
+
+			indexOf时候从字符串前面开始匹配
+			laStIndexOf是从字符串后面开始匹配
+			列:var a = "Jery老J师jery"
+			    alert(a.indexOf("Je")); 返回索引下标是0
+			    alert(a.lastIndexOf("Je")) 返回值索引下标是7
+			
+		字符串的截取substring(action,end)
+		    substring:
+			1.如果start和end为负数的时候，他们会被当做0；
+			2.如果长度大于length,则会被视为length
+			3.如果end小于start，他们会自动交互彼此的值
+			列:var str = "0123456789"
+			    alert(str.substring(4,-1))返回值是0123 第一，因为-1被当做0，第二，4和-1的值自动交互了
+		    
+		字符串转换成大写 toUpperCase()
+		<hr class="hr" />
+	<span>number:数字类型</span>
+		0开头为八进制、0x开头为十六进制
+		在除法里除不尽的返回值为浮点数，除的尽的返回值为整数。
+
+		进制转换toString 2/8/10/16
+		    列: var a = parseInt(255).toString(16);
+		        var b = parseInt(255).tostring(8);
+
+		Infinite:无穷数类型由number扩展而来
+		--无穷数---number类型，如果某次计算的结果超出JavaScript数值的范围，
+		则这个数值自动转换成特殊的Infinity值，正值位Infinity,负值为-Infinity;
+
+		NaN:无法计算类型
+		---not a number 不是一个数字  
+		无法计算？1-"keke"==NaN
+		typeof NaN == number
+		<hr class="hr" />
+	<span>object:对象类型:</span>
+		<span class="aa">null:空</span>
+		<span class="aa">Array:数组</span>
+		    什么是数组:相当于一个筐子里面装着N个数据类型，简单来说就是一件教室，里面的学生就是数据......
+		    数组不是一种数据类型，它用来装数据类型的！每个语言都有数组，每个语言的数组都是装各自语言的数据类型，
+			比如:javascript数组可以装string number boolean function object(数组，date,Regex,Errror,obj) undefined......
+
+		    java中数组只能装同种数据类型，不过List集合可以装java任何数据类型，bate short int long float doubie 
+			boolean char 对象，封装数据类型......
+
+		    数组的定义方式:
+			var arr = [];推荐使用这一种因为占内存小，返回值是undefined类型，没有长度
+			var arr = new Array();这一种会申请额外的内存空间
+		    
+		    数组的初始化:
+			var arr = [1,2,3,4,5,6]
+			var arr = new Array(1,2,3,4,5,6)
+
+		    用数组装载起来的数据，可以很方便进行控制和管理。
+		    用数组装载起来的数据，同时去执行一个方法和行为。
+		   
+		    数组的增 删 查 改
+			var = books[]; //创建一个数组
+			增:push是在栈底添加；数组的长度（books.length）对应数组里有几个数据,
+			    books.push("数据1");
+			    books.push("数据2")；
+			    books.push("数据3")；
+			    books.push("数据4,数据5,数据6");多个添加。
+			增:unshift是在栈头添加和push书写格式一样；
+
+			改/查:数组的数据一旦添加到内存,就会给他们创建一个索引，这个索引就方便去查询元素和控制元素，索引从0开始.....
+			    books[0] = "数据10"  //对应索引0就可以把数据1，修改成数据10
+
+			删:pop()栈底拿 shift()栈头拿 delete清空，每删除一个数组的数据，数组的length就相应减少
+			    var items = books.pop();  //删除数组栈底的数据，并赋予给items；返回的值是数据类型
+			    var items2 = books.shift();  //删除数组栈头的数据，并赋予给items2; 返回的值是数据类型
+			    delete books[0]清空数据1，并保存空间返回值是undefined
+	
+			多个数据的操作、复制slice和剪切splice 返回值是:数组
+			    var= booke[数据1,数据2,数据3,数据4,数据5,数据6,数据7,数据8]
+			    对应的正索引:  0     1      2     3     4     5     6     7
+			    对应的负索引: -8    -7    -6     -5    -4    -3    -2    -1
+
+			    剪切:splice:
+				语法:splice(starIndex)全部剪切从索引0开始
+				     var nbs = booke.splice(0);
+				语法:splice(startIndex,count)根据索引剪切
+				     var nbs = booke.splice(1)  从选择索引1对应的数据2剪切后面所有的
+				     var nbs = booke.splice(1,3)  从选择的索引1-索引3剪切，至于负数待试。。。
+				语法:splice(startIndex,count,数据,数据,数据,)
+				     var nbs = booke.splice(1,3,aa,bb,cc)  把剪切的3个数据，分别用aa,bb,cc再补上去。。
+
+			    复制slice:
+				语法:slice:(startindex,endIndex)
+				     var = booke.slice(-3,-1) 相对应的负索引复制是，数据4和数据6；注意负索引只能前面大于后面；
+
+			数组合并:concat
+				var a = [1,2,3]
+				var b = [4,5,6]
+				var c = [7,8,9]
+				var d = a.concat(b).concat(c); //结果数组d = [1,2,3,4,5,6,7,8,9];也可以a.concat(b,c)结果一样；
+				   
+			打印的格式:toString()默认同的是逗号分隔，可以用join("xx")来改变分隔符号
+			     列:alert(c.join(";"));
+
+			字符串转成数组:split
+				var str = "1,2,3,4,5,6,"
+				var ar = str.split(",")
+			
+			辨别是否为数组:因为typeof 只能判断是否为对象
+				1.用长度  alert(ar.length)
+				2.alert(Array.isArray(ar));注意:Ie 6 7 8 不支持
+
+				3.自己写: alert(isArry(ar));
+				  function isArray(arr){
+					    if(typeof arr === "object" && arr.length>=0){
+						    return true;
+					    }else{
+						    return false;
+					    }
+				  };
+				4.定义一个函数 名为isArray 返回值是 查看数据类型 param的值等于输入的param的值&&（与）
+				  查看输入的param的值构造函数.转换成字符串格式.转换全部小写.匹配字符串里有没有array，
+				  有就返回ture没有就返回false
+				  constructor		查看构造函数 
+				    列:arr[1,2] alert(arr.constructor)//function array(){native code//有效的函数}
+				  toString()		转换字符转格式
+				  toLowerCase()	把字符串全部转换成小写
+				  indexOf()		查找或者说匹配字符有没有相同的，如果有返回下标，如果没有返回-1；
+				    function isArray(arr){
+				    return typeof arr==="object" && arr.constructor.toString().toLowercase.indexOf("array")!=-1)
+				    }
+
+			数组的排序:
+				reverse() 反排序 
+				  列:var arr = [1,2,3,5,4,78,69,48]; arr.reverse(); alert(arr);
+				sort()    正排序 
+				  列:var arr = [1,2,3,5,4,78,69,48]; arr.sort();    alert(arr);
+				  因为sort弹出的值是1,2,3,4,48,5,69,78正排序出现错误排序,为解决此问题需要给sort传一个函数;
+				  arr.sort(function(a,b){return a-b;});
+				    其原理是:第一次数和第二个比较
+				    if(a&gt;b){return 1;}
+				    if(b&lt;a){return -1;}
+				    return 0;
+
+			对象排序:
+				JSON.stringify() 把对象转换成字符串 
+				var json1 = {username:"饭饭",age:22};
+				var json2 = {username:"多多",age:2};
+				var json3 = {username:"饭桶",age:3};
+				var arr = [];
+				arr.push(json1,json2,json3);
+				arr.sort(function(a,b){
+				  var ageA = a.age;
+				  var ageB = b.age;
+				  return ageA-ageB;
+				});
+				alert(JSON.stringify(arr))
+
+			循环:要做的事情，或动作，在程序里叫做方法或者函数
+				for格式:
+				    for(索引变量初始化;逻辑判断;递增){
+				        执行的程序体或叫循环体
+				    };
+				    for(i=0;i&lt;;100;i++){
+				        alert(1)
+				    };
+
+ 				for嵌套循环:
+				    for(var i=0;i&lt;2;i++){
+				        for(var j=0;j&lt;2;j++){
+				            laert(2)
+				        }
+				        laert(1)
+				    }  
+					
+				for循环打印对象里面所有的值:注意只能打印对象不能打印变量
+					for(var a in oWarp){
+					    console.log(a)
+					}
+
+				while判断格式:
+				    var a = 1
+				    while(判断){
+				    	case 1:result = text+"==年龄范围是在[0-16]";break;
+				        case 2:result = text+"==年龄范围是在[17-30]";break;
+				        case 3:result = text+"==年龄范围是在[31-60]";break;				
+				        default:result = text+"请选择";break;
+			     	}
+
+				do while循环格式:
+				    do{
+				        程序题
+				    }while(判断);
+		    <hr class="hr" style="width:1150px;margin-left:98px;"/>
+		<span class="aa">Date:日期</span>
+				var xxx =new Date();
+				getFullYear()	年
+				getMonth()+1	月 从0开始计算
+				getDate()	日
+				
+				getHours()	小时
+				getMinutes()	分钟
+				getSeconds()	秒钟
+			 
+				getTime()	毫秒数,从1970年1月1号到现在时间的毫秒数
+				getDay		星期几,星期天是0
+
+				Math.floor()向下取 整数
+			<hr class="hr" style="width:1150px;margin-left:98px;"/>
+		<span class="aa">Regex:正则</span>
+			<hr class="hr" style="width:1150px;margin-left:98px;"/>
+		document---document.getElement---dom的知识
+			<hr class="hr"/>
+	<span>function:函数类型</span>
+		函数声明式: ()代表执行
+		    function sum(形参,形参,没有限制,){方法体}
+		    sum(实参,实参,对应形参,)//如果有没形参接收实参返回值就是undefined
+		    类数组用来替代形参接收实参argments[]
+		      var s = 0
+		      var b = arguments 类数组
+		      for(var i=0;i&lt;argments.length;i++){s += b[i]} 
+		    参数可以传6大数据类型的任何一种；
+
+		返回值:return
+		    函数里面默认有一个return如果函数里面什么都没有默认返回值undefined
+
+		作用域:
+		    js在解析的时候先定义【function 和var 】再执行【赋值 打印 运算等等】
+
+		indexOf("x",2)  这个方法是查询字符串x，从索引第2个开始查找.返回值是查询的索引下标，没有查询到  就返回-1；
+
+		split("x")	这个方法是把字符串x为切割点，以，代替切割的字符，并且转换成数组 可以新建一个var变量
+				接收是切割的x返回值；
+		
+		join("x")		数组转换成字符串并且以x作为拼接 就像+一样			 
+		toUpperCase()	字符串转换成大写
+		
+		concat()		连接数组
+
+		Array.isArray()	系统自带的查看是否数组方法
+		
+		JSON.stringify(xx) 查看对象里面具体的值
+	
+		即时函数(function(形参,形参){})(实参,实参):所谓的闭包
+		    在即时函数创建的过程 用一个var xx = (function(){})();//调用即执行,返回值是Udfande
+		    即时函数解决的全局了变量重复命名的问题,同时它不能别外面访问,里面创建的变量是安全的
+			经典案例:一般用于jq插件
+				var T = (function(){
+					function tab(){
+						function init(){
+							alert(2)
+							return T
+						};
+						alert(1)
+						return init;
+					}
+					return tab
+				})();
+				alert(T()()())
+
+			经典案例:回调函数
+				(function(callback){
+					p = {name:"cc"};
+					callback(p);
+					alert(p.name);
+				})(function(obj){
+					obj.name = "aa";
+					obj = {name:"bb"}
+				});
+		
+		xx.trim() 把字符前后空格给取消掉..也可以split(" ")剪切成数组,然后用join("") 代替 这样就能实现取消字符串的空格;	
+
+		
+		children()	获取子元素
+		getAttribute()									获取自定义dom类数组
+		dom.attributes[index].name						获取对象[类数组]的属性;
+		dom.getAttribute("propertyName")					获取自定义属性的值
+		dom.setAttribute("name","value")					设置自定义属性的值
+		dom.removeAttribute("name")						删除自定义属性
+		autofocus="autofocus"							加载自动获取焦点
+
+		obj.trim()								清除前后空格
+		outline:none;								取消输入框里的蓝色边框
+
+		obj.onchange = function(){}		
+			text 								当表单value的值发生变化的时候触发
+			radio								当选中的时候触发
+			checkbox							当选择的时候触发
+			select								当切换后后触发
+
+		window.open("http://","默认:_blank;当前页面打开:_self或者_new")	新打开一个页面跳转指定页面
+		window.close();								关闭当前窗口
+		window.navigator.userAgent						获取浏览器内核信息可以作为兼容性的判断条件
+		window.location.href							获取浏览器的路径,可以改变href属性 当open用
+		window.location.hash							获取路径#后面的路径 锚点连接
+		window.location.search							获取浏览器?后面的地址涉及到后台,了解就好
+
+		document.documentElement.scrollTop					获取文档元素的高度ie 数据类是number
+		document.body.scrollTop							获取文档的body高度谷歌 数据类是number
+
+		obj.currentStyle["attr"]						获取#xx{}样式的值带单位的 只支持ie
+		getcomputedStyle(obj,null)["attr"]					获取#xx{}样式的值带单位的 谷歌
+
+		obj.clientHeight							获取可视高度,本身高度加内边距
+		obj.offsetHeight							获取真实高度,本身高度加内边距加外边距
+		obj.scroollHeight			  heighlyinfluenced by content 因每个浏览器内核不一样 不建议使用
+
+		window.noresize = function(){}						当窗口大小发生变化的时候执行一个函数
+		window.onscroll = function(){}						当浏览器高度滚动的时候执行一个函数...
+		obj.onfocus =function(){}						当获取焦点的时候执行一个方法
+		obj.onblur =function(){}						当失去焦点的时候执行一个方法
+
+		www.github.com								需要玩转的地方	
+		www.iconfont.cn								阿狸图集字符
+
+		&lt;link rel="stylesheet" type="text/css" href="http://www.xxx.com"&gt;	导入css
+
+		obj.onsubmit = function(){}						表单提交
+		obj.onreset = function(){}						表单重置
+		<hr class="hr"/>
+	<span>undefined:空数据类型</span> 
+		undefinde和null的区别
+			1。从数据类型层面，
+			   undefined是一个undefinde数据类型，null它是一object数据类型
+			2。内存分配层面
+				undefined如果是一个变量没有赋值操作就是undefinedfined；
+				null代表的是对象默认值，可以清空对象，如果要清空对象，就给它赋null；
+			3。运算区别
+				null在运算中代表0；
+				undefined在运算中返回值NaN无法计算；	
+		<hr class="hr" />
+	<span>boolean:布尔类型类型</span>
+		true（真）和false（假）
+		逻辑判断:如果(if) 否则(else)
+		格式:
+			if(){
+				
+			}else{
+			
+			};
+		<hr class="hr" />
+	<span>事件分类:</span>
+		创建点击事件 在body里可以:
+			onchange="changePeople(this)"/定义方法时changePeople(obj)
+
+		onclick			点击				
+		ondbclick		双击		
+		onmouseover		悬浮		
+		onmouseout		悬浮离开	
+		onmousemove		悬浮里移动		
+		onmousedown		点击左键	
+		onmousepress		点击不松		
+		onmouseup		松开左键		
+		onkeyup			松开键盘		
+		onresieze		窗口变化			
+		onload			加载的时候			
+		onkeydownobkeyperss	按住键盘		
+
+		window.noresize = function(){}			当窗口大小发生变化的时候执行一个函数
+		window.onscroll = function(){}			当浏览器高度滚动的时候执行一个函数...
+
+		obj.onmousemove = function(){}   		当鼠标移动的时候触发一个事件
+		obj.oncontextmenu = function(){}		点击鼠标右键执行一个方法 return false 为阻止默认事件
+		obj.onfocus =function(){}			当获取焦点的时候执行一个方法
+		obj.onblur =function(){}			当失去焦点的时候执行一个方法
+		
+		obj.onsubmit = function(){}			表单提交
+		obj.onreset = function(){}			表单重置
+		obj.onchange = function(){}		
+			text 		当表单value的值发生变化的时候触发
+			radio		当选中的时候触发
+			checkbox	当选择的时候触发
+			select		当切换后后触发
+		
+		outline:none;					取消输入框里的蓝色边框
+		autofocus="autofocus"				加载自动获取焦点
+		obj.trim()					清除前后空格
+		绑定事件: 元素后面.事件 = 执行函数 不要带( )  ；( )代表执行函数 
+		<hr class="hr" />
+					</pre>
+				</div>
+			</div>
+<!--javaScript-->
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<script src="js/jQuery.js"></script>
+	<script type="text/javascript">
+		//无缝轮播图
+			var ulBoxDom = document.getElementById("_ulBox");
+			var len = ulBoxDom.children.length;//获取图片的数量
+			var timer = null;
+			//根据有多少张图片动态给ulBoxDom盒子添加宽度
+			ulBoxDom.style.width = "400"*len+"px";
+			
+			//让图片向左动起来
+			timer =	setInterval(function(){
+				if(ulBoxDom.offsetLeft < -ulBoxDom.offsetWidth+1200){
+					ulBoxDom.style.left = 0	
+				}
+				ulBoxDom.style.left = ulBoxDom.offsetLeft-1+"px";
+			},8);
+		//打印日期
+			var datedom = document.getElementById("date");
+			setInterval(function(){
+				function time(){
+					var time = new Date();
+					var fullyear = time.getFullYear();	//年
+					var month = time.getMonth();		//月
+					var date = time.getDate();			//日
+
+					var hours = time.getHours();		//小时
+					var minutes = time.getMinutes();	//分钟
+					var seconds = time.getSeconds();	//秒
+
+					var _time = time.getTime();			//获取从1970.1.1到目前事件的毫秒
+					var day = time.getDay();			//获取星期几0-6
+					//while				
+					switch(day){
+						case 0:day = "星期天";break;
+						case 1:day = "星期一";break;
+						case 2:day = "星期二";break;
+						case 3:day = "星期三";break;
+						case 4:day = "星期四";break;
+						case 5:day = "星期五";break;
+						case 6:day = "星期六";break;
+					};
+					
+					function of(obj){
+						return obj<10?"0"+obj:obj;
+					}
+
+					datedom.innerHTML = fullyear+"年"+of(month+1)+"月"+of(date)+"日 "+of(day+hours)+":"+of(minutes)+":"+of(seconds);
+				};
+				time();
+			},1000);
+		//打印距离过年还有多少天,多少小时,多少分,多少秒的倒计时
+			var countdownDom = document.getElementById("countDown");
+			//打印学习前端已有多少时间
+			var frontEndDom = document.getElementById("frontEnd");
+
+			setInterval(countdown,1000);
+			function countdown(oobj,ft){
+				var time = new Date();
+				var timeEnd = new Date(2017,1-1,28);	//用目标时间减去现在时间
+				var fullYear = time.getFullYear()+1;	//获取年
+				var nowCountdown = timeEnd.getTime() - time.getTime();//获取毫秒
+				var sec = nowCountdown/1000;			//获取秒
+				var day = Math.floor(sec/60/60/24);//向下取整获取天数
+				var hours = Math.floor(sec/60/60%24);	//向下取整获取小时
+				var minutes =Math.floor(sec/60%60);		//获取分钟
+				var	seconds = Math.floor(sec%60);		//获取秒数
+				function of(obj){
+					return obj<10?"0"+obj:obj;
+				};
+				countdownDom.innerHTML = "距离"+fullYear+"春节还有<br /><span style ='color:#fff;'>"+of(day)+"天"+of(+hours)+"小时"+of(minutes)+"分"+of(seconds)+"秒</span>"
+
+				//打印已学时间
+
+				var timeAction = new Date(2016,4,21);
+				var nowTime = time - timeAction;
+				
+				var nowFullyear = time.getFullYear()-timeAction.getFullYear();//获取已过年
+				var nowMonth = time.getMonth()-timeAction.getMonth()%12;//获取已经过的月
+				var futureTime = nowTime/1000;
+
+				var nowDay = Math.floor((futureTime/60/60/24)%(365/12));		//向下取整获取天数
+
+				var nowHours = Math.floor(futureTime/60/60%24);		//向下取整获取小时
+				var nowMinutes =Math.floor(futureTime/60%60);		//获取分钟
+				var	nowSeconds = Math.floor(futureTime%60);			//获取秒数
+
+				frontEndDom.innerHTML = "学习前端已有<br />"+of(nowFullyear)+"年"+of(nowMonth)+"个月"+of(nowDay)+"天"+of(nowHours)+"小时"+of(nowMinutes)+"分"+of(nowSeconds)+"秒"
+			}	
+		/*定时器
+			setInterval(xx,1000)多少毫秒执行一次
+			setTimeout (xx,1000)多少毫秒之后执行
+			clearInterval()		清除定时器
+			window.location.href = "http://www.xxx.com"要跳转的地址*/
+			var setIntervalDom = document.getElementById("setInterval");
+			var onclickExeciteDom = document.getElementById("onclickExecite");
+			var spanTagDom = document.getElementById("spanTag");
+
+			onclickExeciteDom.onclick = function(){
+				var  number= 5;
+				var timer = setInterval(function(){
+					number--;
+					spanTagDom.innerHTML = number
+					if(number == 0){
+						clearInterval(timer);
+						window.location.href = "http://www.baidu.com";		
+					};
+				},1000);
+			};
+		//文字实现打印效果
+			/*思路:
+			第一步:点击事件,执行dom.innerHTML = 数组[index].substring(0,pos);
+			第二步:打印出数组第一个index的,对象所有的字符,也就是arr[0].substring(0,pos)
+			第三步:当pos打印的长度,等于该自己字符对象的,长度的时候,index+1的作用就是arr[0+1]的作用,同时		   把str = arr[0=index++].lengrh 重新赋值,当作选循环if判断str等不等于pos的依据;
+			第四步:给str = arr[0=index++].lengrh 重新赋值,当作选循环if判断str等不等于pos的依				   据;加一个条件,否则会一直index++,因为数组里只有3个对象字符,加到第4个的时候就是			   undefined,因为没有第数组里没有第4个对象
+			第五步:虽然setTimeout定时器不会在执行,但是会占内存,所以当全部字符打印完成后要清除
+			第六步:创建一个变量p赋值为空,拼接pp = pp+obj[row++]+"<br />"
+			*/
+			
+			var string_DaYin_boxDom = document.getElementById("string_DaYin_box");
+			var onclick_DaYin_implementDom = document.getElementById("onclick_DaYin_implement");
+			var obj = [];
+			obj.push("大家好我是小莫");
+			obj.push("欢迎来到我的javascript学习笔记");
+			obj.push("在这里你会查看到我成学习过程,以及总结的案例");
+			var pos = 0;	//记录字符对象的位置
+			var stringLength = obj[0].length;//记录 对应字符串的长度
+			var index = 0;	//记录数组的索引下标
+			var pp = ""
+			var len =obj.length;//记录数组的长度
+			var row = 0; 
+			var doubi = null;
+			onclick_DaYin_implementDom.onclick = function(){
+				function implement(){
+					while(row<index){
+						pp = pp+obj[row++]+"<br />"
+					}
+					string_DaYin_boxDom.innerHTML = pp+obj[index].substring(0,pos);
+					if(stringLength == pos){
+						index++;
+						pos =0;
+						if(index<len){
+							stringLength = obj[index].length;
+							doubi = setTimeout(implement,500);
+						}else{
+							doubi = setTimeout(implement,500)
+							clearInterval(doubi);
+						}	
+					}else{
+						pos++;
+						 doubi = setTimeout(implement,100);
+						
+					}
+					
+				};
+				implement();
+			}
+			onclick_DaYin_implementDom.click();		
+		//控制台简写log
+				function log(content){
+					if(content){
+						console.log(content);
+					}else{
+					 alert(content);
+					}
+				} 
+		//案例:动态添加
+			var str = "JavaScript学习笔记"
+			document.getElementById("boxNoe").innerHTML = str;
+		/*案例:输入验证显示
+			  通过输入值，赋予给下面的文本，进行点击验证输出显示:获取input文本的值，
+			  falsy的简写判断和注意点,默认给予
+			//方式一:
+				function validator(){
+				  //类型 变量名  = 文本    .获得,元素，通过id(用户名).值
+					var show = document.getElementById("text_show");
+					var username = document.getElementById("username").value;
+					//如果元素为空的话在show区中显示:没有输入，否则显示文本输入的值；
+					if(username!="" && username.length>0){
+					show.innerHTML = username;
+					}else{
+						show.innerHTML = "没有输入"
+					}		
+				}*/
+			/*方式二:parseInt(username)==0 字符串的数字转换
+				function validator(){
+					var username = document.getElementById("username").value;
+					var show = document.getElementById("text_show");
+					if(username){
+						show.innerHTML = username;
+					}else{
+						show.innerHTML = "没有输入";
+					}
+				}*/
+			/*方式三:
+				function validator(){
+					var username = document.getElementById("username").value || "没有输入";
+					var show = document.getElementById("text_show");
+					show.innerHTML = username;
+				};*/
+			//方式四:三木运算符，是if else的一种替代 语法:boolena?if(体 ):else(体)
+				function validator(){
+					var username = document.getElementById("username").value;
+					var show = document.getElementById("text_show");
+					username?show.innerHTML = username:show.innerHTML = "没有输入";
+				};
+		//案例:随机背景颜色
+			//定义方法 获得随机颜色
+			function getRandomColor(){
+				var rr = parseInt(Math.floor(Math.random()*256)).toString(16);
+				var gg = parseInt(Math.floor(Math.random()*256)).toString(16);
+				var bb = parseInt(Math.floor(Math.random()*256)).toString(16);
+				return "#"+rr+gg+bb;
+			}
+				timer1 = setInterval(function(){
+					var c = getRandomColor();
+					document.getElementById("background").style.background = c;
+				},1000);	
+		/*if else判断
+			var age =0;
+			if(age>=0　&& age<=16){
+				alert("少年")
+			}else if(age>=17 && age<=30){
+				alert("青年")
+			}else if(age>=31 && age<=60){
+				alert("壮年")
+			}else{
+				alert("老年")
+			}*/
+		//案例:根据人群去查找年龄范围
+			//if else 写法
+				/*function changePeople(obj){
+					var value = obj.value;
+					var resultDom = document.getElementById("result");
+					var result = "ok"
+					if(value==1){
+						result = value+"年龄0-16";
+					}else if(value==2){
+						result = value+"年龄17-30";
+					}else if(value==3){
+						result = value+"年龄31-60";
+					}else if(value==4){
+						result = value+"年龄60+";
+					}else{
+						result = value+"请选择";
+					};
+					resultDom.innerHTML= result;
+				}*/
+			//switch 写法
+				/*思路:第一 获取下拉列表的值
+						第二 获取要显示内容的id
+						第三 创建一个变量关联要显示内容的id 以便修改赋予的内容
+						第四 通过选择的option的值来判断并且控制赋予给显示内容id的文本内容
+						第五 获取obj_option的索引下标并且通过索引下标获取索引所对应的文本内容并赋予给输出内容；*/
+				function changePeople(obj){
+					var value = obj.value;//关键option的value值
+					var resultDom = document.getElementById("result");//获取显示区的id
+					var result = "ok"
+					var sindex = obj.selectedIndex;//获取索引下标
+					var text = obj.options[sindex].innerHTML;//获取根据索引下标的目标里面的文本内容，在火狐里面不支持，只支持textContent;
+					//在jquery里面的写法:$(obj).find("[option:selected]").text();
+					switch(parseInt(value)){
+						case 1:result = text+"==年龄范围是在[0-16]";break;
+						case 2:result = text+"==年龄范围是在[17-30]";break;
+						case 3:result = text+"==年龄范围是在[31-60]";break;
+						case 4:result = text+"==年龄范围是在[60+]";break;
+						default:result = text+"请选择";break;
+					}
+					resultDom.innerHTML= result;
+				}
+		//案例:根据时间改变背景图片
+			/*根据时间进行换肤操作,并显示当前时间；
+			1.06:00 -- 09:00 中切换一种早晨的图片
+			2.10:00 -- 12:00 切换成中午的图片
+			3.13:00 -- 18:00 切换下午的图片
+			4.19:00 -- 00:00 晚上的图片*/
+			/* if else 写法
+				function changeBackground(){
+				var changeBackgroundPicture = document.getElementById("box");
+				var name = "4.jpg"
+				var preDom = document.getElementById("pre");
+				//日期函数
+				var date = new Date();
+				var ss = date.getSeconds();
+				if(ss>=0 && ss<=10){
+					name = "1.jpg";preDom.style.color="#000"
+				}else if(ss>=11 && ss<=20){
+					name = "2.jpg";
+				}else if(ss>=21 && ss<=30){
+					name = "3.gif";
+				}else if(ss>=31&& ss<=40){
+					name = "4.gif";
+				}else if(ss>=41&& ss<=50){
+					name = "5.gif";preDom.style.color="#000"
+				}else{
+					name = "6.jpg";preDom.style.color="#fff"
+				}
+				changeBackgroundPicture.style.backgroundImage="url('images/"+name+"')";
+				};*/
+			//三元运算写法 根据时间切换背景图片 
+					function changeBackground(){
+						var name = "1.jpg";
+						boxDom_chengeBackgroundPicture = document.getElementById("box");
+						var second =new Date();
+						var secondDom =second.getSeconds();
+						secondDom>=0 && secondDom<=20?name="3.gif":name;
+						secondDom>=21 && secondDom<=40?name="4.gif":name;
+						secondDom>=41 && secondDom<=60?name="6.jpg":name;
+					boxDom_chengeBackgroundPicture.style.backgroundImage="url('images/"+name+"')";
+					};
+			//打印时间if案例
+				/* if 写法var clockDom = document.getElementById("clock");
+					var timer = setInterval(function(){
+					var d = new Date();
+					var h = d.getHours();
+					var m = d.getMinutes();
+					var s = d.getSeconds();
+					if(h<10){
+						h = "0"+h;
+					};
+					if(m<10){
+						m = "0"+m;
+					};
+					if(s<10){
+						s = "0"+s;
+					};
+					clockDom.innerHTML = h+":"+m+":"+s;
+					},1000);*/	
+			//实施打印日期  三元运算案例:
+				var clockDom = document.getElementById("clock");
+				var timer = setInterval(function(){
+					var d = new Date();
+					var h = d.getHours();
+					var m = d.getMinutes();
+					var s = d.getSeconds();
+					clockDom.innerHTML = (h<10?"0"+h:h)+":"+(m<10?"0"+m:m)+":"+(s<10?"0"+s:s);
+					changeBackground();
+				},1000);
+		//九九乘法表
+			function multiplicationTable99(){
+				var multiplicationTableDom = document.getElementById("multiplicationTable");
+				var trDom = "";
+				var mun = document.getElementById("num").value;
+					if(!mun){
+						document.getElementById("num").focus();
+						alert("请输出数字1-20");
+					};
+					if(isNaN(mun)){//判断是不是一个数字，如果是返回false 如果不是返回ture)
+						document.getElementById("num").focus();
+						alert("请输出数字1-20");
+					}
+					for(var i=1;i<=mun;i++){
+						trDom +="<tr>";
+						for(var j=1;j<=i;j++){
+							trDom += "<td>"+j+"*"+i+"="+i*j+"</td>";
+						}
+						trDom +="</tr>";
+					};
+					multiplicationTableDom.innerHTML = trDom;
+			};
+			
+			multiplicationTable99();
+		//案例:通过id获取ui下面的li，通过点击弹出相应的索引
+			//第一步先通过id获取ui的控制权
+				var ulDom = document.getElementById("ull");
+			//第二步通过ulDom获取下面的子元素多个，li是数组的形式，不过并不是数组
+				var liDoms = ulDom.getElementsByTagName("li");
+			//用ul对象的元素的长度通过for循环，动态事件绑定赋予每次循环i的值，点击 不同的li 显示i 的值
+				//i小于ul里面li的数量i++
+				for(var i=0;i<liDoms.length;i++){
+					//动态绑定i 的变量
+					liDoms[i].index = i;
+					//绑定事件并且执行一个方法
+					liDoms[i].onclick = function(){
+						//点击弹出相对应的索引
+						alert(this.index);
+					}
+				}		
+		//banNerMap	
+				var banNerMapDom = document.getElementById("banNerMap");
+				var leftDom = document.getElementById("left");
+				var rightDom = document.getElementById("right");
+				var span1Dom = document.getElementById("span1")
+				var listDom = document.getElementById("list");
+				var liDom = listDom.getElementsByTagName("li")
+				var num =1;
+				//点击下一张
+				rightDom.onclick = function(){	
+					num++
+					if(num>4){
+						num = 1;
+					}
+					banNerMapDom.src="images1/"+num+".jpg";
+					span1Dom.innerHTML = num;
+					//点击right根据定义mum变量每点击一次num++的特性判断是否改变Li的颜色
+					for(var j=0;j<liDom.length;j++){
+						if(num-1==j){
+							liDom[j].style.background="#fff";
+						}else{
+							liDom[j].style.background="gray";
+						}
+					}
+				
+				//点击上一张
+				leftDom.onclick = function(){
+					num--;
+					if(num<1){
+						num=4;
+					}
+					banNerMapDom.src="images1/"+num+".jpg";
+					span1Dom.innerHTML = num;
+					//点击right根据定义mum变量每点击一次num--的特性判断是否改变Li的颜色
+					imgTag();
+					/*for(var j=0;j<liDom.length;j++){
+						if(num-1==j){
+							liDom[j].style.background="#fff";
+						}else{
+							liDom[j].style.background="gray";
+						}
+					}*/
+				}
+				//给每个li动态添加属性index
+				for(var i=0;i<liDom.length;i++){
+					liDom[i].index=i;
+					liDom[i].onclick = function(){
+						num = this.index+1;
+						banNerMapDom.src="images1/"+num+".jpg";
+						span1Dom.innerHTML = num;
+						//根据点击的当前点击index里面的值来判断是否改变颜色
+						imgTag();//因为点击li[]函数里已经定义了num = this.index+1是等于1，正好num-1=0，对应索引0开始；
+						/*for(var j=0;j<liDom.length;j++){
+							if(this.index==j){
+								liDom[j].style.background="#fff"
+							}else{
+								liDom[j].style.background="gray"
+							}
+						}*/
+					}	
+				}
+				function imgTag(){
+					for(var j=0;j<liDom.length;j++){
+						if(num-1==j){
+							liDom[j].style.background="#fff";
+						}else{
+							liDom[j].style.background="gray";
+						}
+					}
+				}
+			}
+		//计算
+			var text1Dom = document.getElementById("text1");
+			var text2Dom = document.getElementById("text2");
+			var text3Dom = document.getElementById("text3");
+			var buttonDom = document.getElementById("button");
+			buttonDom.onclick = function(){
+				text3Dom.value = Number(text1Dom.value)+ Number(text2Dom.value);//或者把值乘以1隐形转换 
+			}
+		//ascii编码生成
+			document.getElementById("askOnclick").onclick = function(){
+				var askDom = document.getElementById("ask");
+				var sum = ""
+				for(i=33;i<100;i++){
+					sum += String.fromCharCode(i)
+					//console.log(charCodeAt("daa"))
+					askDom.innerHTML =sum ;
+				}
+			}
+		//验证qq输入的号码
+			var txtDom = document.getElementById("txt");
+			var btnDom = document.getElementById("btn");
+			btnDom.onclick = function(){
+				var val =  txtDom.value;
+				if(val == ""){
+					alert("请输入qq号码")
+					txtDom.focus();
+					return;
+				}
+				if(val.charCodeAt(0) == 48){
+					alert("第一个不能为数字0")
+					txtDom.focus();
+					return;
+				}
+				if(val.length<5 || val.length>10){
+					alert("qq号码长度错误");
+					txtDom.focus();
+					return;
+				}
+				//文本里的内容的长度，在用循环用charCodeAt转换拿到阿斯克编码在判断0-9的阿斯克编码是48-57
+				for(i=0;i<val.length;i++){
+					var valCode = val.charCodeAt(i);
+					if(valCode<48 || valCode>57){
+						alert("验证失败！，第"+(i+1)+"个位置出现错误")
+						txtDom.focus();
+						return alert("逗比错了");
+						
+					}
+					
+				}
+				
+				alert("验证成功")
+			}	
+		//查询需要字符串，出现在文本索引以及次数	
+			function query(){
+				var text_divDom = document.getElementById("text_div").innerHTML;
+				var query1Dom = document.getElementById("query1").value;
+				var show_divDom = document.getElementById("show_div");
+				var index = 0;
+				var j = 0;
+				while(text_divDom.indexOf(query1Dom,index)!=-1){
+					if(query1Dom == ""){
+						alert("请输入字符")
+						return
+					}
+					j++
+					var s = text_divDom.indexOf(query1Dom,index);
+					alert("你输入的文章是:"+"\n"+text_divDom+"\n\n你查询的"+"\""+query1Dom+"\""+"第"+j+"个索引下标位置是"+s+";在文章中出现"+j+"次")
+					//show_divDom.innerHTML = text_divDom
+					//alert("你查询的字符串的索引是"+s+";在文章中出现"+j+"次")
+					show_divDom.innerHTML += "你查询的"+"\""+query1Dom+"\""+"第"+j+"个索引位置是"+s+";在文章中出现"+j+"次"+"<br />"
+					index = text_divDom.indexOf(query1Dom,index)+query1Dom.length;
+					}	
+			}
+		//查询数组自定义方法	
+			var validatorArrayDom = document.getElementById("validatorArray");	
+			validatorArrayDom.onclick = function(){
+				var validatorArrayTextDom = document.getElementById("validatorArrayText");
+				alert(isArray(validatorArrayTextDom.value));
+				alert(typeof(validatorArrayTextDom.value));
+				
+			}			
+			function isArray(param){
+				return typeof param == "objec" && param.constructor.toString().indexOF("array")!=-1;		
+			}
+		//数组一键排序 //获取子元素的方法
+			function compositor(){
+				var compositorBoxDom = document.getElementById("compositorBox");
+				//var inputs = compositorBoxDom.getElementsByTagName("input"); 第一种获得子元素的方法
+				//alert(inputs.length)
+				//alert(compositorBoxDom.children.length);					   第二种获得子元素的方法
+				var inputs = compositorBoxDom.children;
+				var arr = [];
+				//arr.push(inputs[0],inputs[1],inputs[2],inputs[3],inputs[4])  比较low的添加上方法
+				//alert(arr);
+				var len = inputs.length									//获取inputs对象的长度
+				for(var i=0;i<len;i++){									//用len接收inputs长度
+					arr.push(inputs[i]);                                //arr循环添加inputs里的对象
+				}
+				arr.sort(function(a,b){									//sort给个函数可以正反排序
+					return a.value - b.value;
+				})
+				
+				compositorBoxDom.innerHTML = "";						//清空div id='compositorBox'
+				for(var i=0;i<arr.length;i++){
+					//compositorBoxDom.innerHTML += arr[i];				//无法拼接只显示对象
+					compositorBoxDom.appendChild(arr[i]);				//appendChild拼接对象的方法
+				}
+			}	
+			/*总结:
+				数组排序是通过sort这个方法，比较input.value属性的数字大小进行排序，方法见1108-1110
+				通过sort给个函数a.value-b.value为正排序，b.value-a.value为反排序(原理待学习）;
+				学习到了通过对象.getElementsByTagName()；方法可以获取对象中的子元素，类似于数组；
+				也可以用对象.children这个属性来获取对象的子元素。
+				可以用空数组循环添加对象里的子元素，方法见1105-1107;
+				可以用对象.innerHTML = ""清空对象里的子元素；
+				拼接数组显示时对象.innerHTML是无法拼接对象的，可以用appendChild()方法拼接，详见1113-1116
+			*/
+		//JSON与for in循环的讲解
+			var json = {//json数据格式，属于Js原生态数据格式，在执行中不需要API和工具
+				"username":"一坨",
+				"age":0,
+				"say":function(){
+					alert("好吃")
+					return "好吃"
+				},
+				
+				"obj":{
+					"hobby":[0,1,2]
+				},
+				"a,b":"哈哈哈"
+			}; 
+			//alert(json.username+"===="+json.age+"=="+json.say()+"==="+json.obj.hobby+"==="+json["a,b"])
+			
+			//for in循环的讲解
+			//for(var key in json){
+				//alert(typeof key) 这个key是 用户名 比如json[0]username
+			//	alert(key+"===="+json[key])
+		    //}
+
+
+			//for(var key in document){
+			//	console.log(key+"===="+document[key])//第一个key拿到的是对象的里面的属性名，第二个是值
+			//}
+		//案例，demo动态绑定div
+			var for_niDom = document.getElementById("for_ni");
+			function css(json,obj){
+				for(var key in json){
+					var value = json[key];
+					if(typeof value=="number")value=value+"px"
+					obj.style[key] = value;
+				}
+			}
+			
+			css({
+				"width":"100px",
+				"height":"100px",
+				"border":"1px solid red",
+				"background":"yellow"
+			},for_niDom);
+		//案例，demo原型 动态绑定div 必须在window.onload = fiunction中才能运行
+			window.onload = function(){ 
+				var for_niDom1 = document.getElementById("for_ni1");
+				for_niDom1.css({
+					"width":"100px",
+					"height":"100px",
+					"border":"1px solid red",
+					"background":"red"
+				});
+			};
+
+			Object.prototype.css = function(json){
+				for(var key in json){
+					this.style[key] = json[key];
+				}
+			}
+		//案例根据输入的字符查找相对应的字符,用js动态绑定css
+			var seekStingDom = document.getElementById("seekSting");
+			var textDom = document.getElementById("otext");
+			var ovalueDom = document.getElementById("ovalue");
+			var seekSting_pDom = document.getElementById("seekSting_p");
+			
+			/*遍历for方法第一个key代表的name是变量，也是字符串类型，第二个key是json的值*/
+				function css(json,obj){
+					for(var key in json){
+						obj.style[key] = json[key];
+					}
+				};
+			//seekStingDom显示文本框css
+				css({
+					"width":"80%",
+					"height":"300px",
+					"border":"1px solid red",
+					"margin":"0 auto",
+					"margin-top":"10px",
+					"background":"rgba(166,188,255,.5)"
+				},seekStingDom);
+			//textDom输入文本框css
+				css({
+					"height":"20px",
+					"width":"290px"
+				},textDom);	
+			//ovalueDom点击查询按钮css
+				css({
+					"height":"30px",
+					"position":"relative",
+					"top":"4px",
+					"margin-bottom":"5px",
+					"width":"116px",
+					"padding-bottom":"28px"
+
+				},ovalueDom);
+			//点击按钮执行一个方法
+				var oseekStingDom = seekStingDom.innerHTML
+					ovalueDom.onclick = function(){
+							var otextDom = textDom.value //动态获取输入框的值
+							search(otextDom,oseekStingDom)//调用
+						
+				}
+
+				//联动
+						textDom.onfocus = function(){
+							document.onkeyup =function(){
+								var otextDom = textDom.value //动态获取输入框的值
+								search(otextDom,oseekStingDom)//调用	
+							} 
+									 
+						}
+
+				//查询方法封装
+					function search(text,html){
+						if(text){//null undefined '' "" 0 false NaN 这些都为假，字符串的0为真；
+							seekStingDom.innerHTML = html.split(text).join("<span style='color:red'>"+text+"</span>");
+						}else{
+							seekStingDom.innerHTML = oseekStingDom;
+						};
+					}
+		//案例，全选和反选复选框	
+			var checkAllOneDom = document.getElementById("checkAllOne");
+			var checkAllTwoDom = document.getElementById("checkAllTwo");
+			var checkAllThreeDom = document.getElementById("checkAllThree");
+			var checkbox_fiveDom = document.getElementById("checkbox_five");
+			var ocheckbox_fiveDom = checkbox_fiveDom.getElementsByTagName("input");//通过div获取子元素
+			//alert(ocheckbox_fiveDom.length);
+			//正选
+				checkAllOneDom.onclick = function(){
+					for(var i=0;i<ocheckbox_fiveDom.length;i++){
+						ocheckbox_fiveDom[i].checked = "ture";
+					}
+				};
+			//反选
+				checkAllTwoDom.onclick = function(){
+					for(var i=0;i<ocheckbox_fiveDom.length;i++){
+						ocheckbox_fiveDom[i].checked = !ocheckbox_fiveDom[i].checked;
+					}
+				};
+			//全选
+				checkAllThreeDom.onclick = function(){
+					if(checkAllThreeDom.value == "全选"){
+						for(var i=0;i<ocheckbox_fiveDom.length;i++){
+							ocheckbox_fiveDom[i].checked = "ture";
+							checkAllThreeDom.value = "反选";
+						}
+					}else{
+						for(var i=0;i<ocheckbox_fiveDom.length;i++){
+							ocheckbox_fiveDom[i].checked = !ocheckbox_fiveDom[i].checked;
+							checkAllThreeDom.value = "全选";
+						}
+					}
+				};	
+		//链式调用	封装函数名为lianShi_transfer
+			lianShi_transfer("Call_Chain").html("sdfsd").css("border","1px solid red").css("width","100px").css("height","100px").css("backgroundColor","black").css("color","#f0f0f0");
+		/*案例:通过类名称获取对象dom 不支持Ie678，
+		   因为不支持ie678通过标签名想办法写出一个能获取所有浏览器都能通过类名称获取的方式
+		   document.getElementsByClassName();通过类名称获取的方式不支持IE678
+		   document.getElementsByTagName();通过标签名称获取的方式支持所有浏览器*/
+	   
+			/*通过类名称获取class
+				var classDom = document.getElementsByClassName("className");
+				
+				遍历ClassDom对象
+				for(var key in classDom){						
+					console.log(key+"====="+classDom[key].innerHTML)
+				}*/
+
+			/*动态绑定以及弹出相对应的索引、Es5的思路
+				var loop = function(i){
+					classDom[i].onclick = function(){
+						alert(i)
+					}
+				}
+				 
+				for(var i=0;i<classDom.length;i++){
+					loop(i)
+				}*/
+
+			/*动态绑定以及弹出相对应的索引、let定义的变量只对｛｝里的代码块起作用
+				for(let i=0;i<classDom.length;i++){
+					classDom[i].onclick = function(){
+						alert(i)
+					}
+				}*/
+			
+			/*动态绑定以及弹出相对应的索引、()()即时函数 闭包
+				(function(j){
+					for(var i=0;i<classDom.length;i++){
+						j(i)
+					}
+				})(function(i){
+					classDom[i].onclick = function(){
+						alert(i)
+					}
+				});*/
+		
+			/*通过闭包传参,返回一个函数方式
+				for(var i=0;i<punctuation_liDOmLength;i++){
+					punctuation_liDOm[i].onclick = (function(i){
+						return function(){
+							alert(i)
+						}
+					})(i);
+				}
+			
+			*/
+
+			/*通过标签名称获取所有元素，通过className获取class 用闭包绑定事件打印出相对应的索引下标，支持所有浏览器
+				var classDom = document.getElementsByTagName("*");
+				
+				for(var key in classDom){ 查看classdom的内容
+					console.log(key+"........."+classDom[key].innerHTML)
+				}
+
+				var classDomClass = [];
+				for(var i=0;i<classDom.length;i++){
+					if(classDom[i].className == "className"){
+						classDomClass.push(classDom[i]);
+					}
+				}
+				
+				(function(obj){
+					for(var i=0;i<classDomClass.length;i++){
+						obj(i)
+					}
+				})(function(i){
+					classDomClass[i].onclick = function(){
+						alert(i)
+					}
+				});*/
+			
+			//通过标签名称获取所有元素，通过className获取class 添加条件(假设不止一个className 怎么获取添加)，split切割成数组进行判断，在join拼接，在进行绑定事件，支持所有浏览器
+				/*封装js 的代码
+				function $(param,obj){
+					var oparam = typeof param;//判断类型
+					if(oparam == "function"){//第一个条件，如果是函数直接返回window绑定onload 这个还没学原理
+						window.onload = param;
+					}else if(oparam.toUpperCase() == "STRING"){//第二个条件，判断string兼容all浏览器，满足执行
+						var fparam = param.charAt();//charAt方法获传进来的param的第一个字符
+						if(fparam == "#"){//判断是不是#，满足执行
+							param = param.substring(1,param.length)//substring方法，截取除第一个字符剩下的重新赋值param 
+							return document.getElementById(param);//返回 document.getElementById（param）
+			----------------------------------------------------
+						}else if(fparam == "."){//判断是不是#，满足执行
+							param = param.substring(1,param.length)//substring方法，截取除第一个字符剩下的重新赋值param
+							obj = obj||document //惰性赋值，如果没传obj  obj就等于document
+							if(document.getElementsByClassName){//判断浏览器是否支持className这个方法，支持就返回方法
+								return obj.getElementsByClassName(param);
+							}
+							var classDom = obj.getElementsByTagName("*");
+							var arrClass = [];
+							for(var i=0;i<classDom.length;i++){
+								var arr = classDom[i].className.split(" ");
+								for(var j=0;j<arr.length;j++){
+									if(arr[j] == param){
+										arrClass.push(classDom[i])
+									}
+								}
+							}
+							return arrClass
+						}
+					}
+					}*///这个封装终结下来用到了toUpperCase() charAt() substring() 和双for循环
+				
+			//闭包动态绑定点击事件
+								(function(obj,_function){
+									var objDom = obj.length;
+									for(var i=0;i<objDom;i++){
+										_function(obj,i)
+									}
+								})($(".className"),function(obj,i){
+									obj[i].onclick = function(){
+										alert(i)
+									}
+								});
+		//nodeValidation验证
+			var one_nodeTypeDOm = document.getElementById("one_nodeType");
+			one_nodeTypeDOm.onclick = function(){
+				alert(one_nodeTypeDOm.nodeType+"==1是元素类型");
+			};
+
+			var two_childNodesDom = document.getElementById("two_childNOdes");
+			two_childNodesDom.onclick =function(){
+				if(two_childNodesDom.parentNode.nextElementSibling.children[0].children.length){
+					alert(two_childNodesDom.parentNode.nextElementSibling.children[0].children.length)
+				}else{
+					alert(two_childNodesDom.parentNode.nextSibling.children[0].children.length)
+				}
+				
+			};
+
+			var three_firstChildDom = document.getElementById("three_firstChild");
+			three_firstChildDom.onclick = function(){
+				alert(three_firstChildDom.parentNode.nextElementSibling.firstElementChild.firstChild.nextSibling.innerHTML)
+			};
+
+			var four_firstElementChildDom = document.getElementById("four_firstElementChild");
+			four_firstElementChildDom.onclick = function(){
+				alert(four_firstElementChild.parentNode.nextElementSibling.children[0].firstElementChild)
+				alert(three_firstChildDom.parentNode.nextElementSibling.firstElementChild.firstChild.nextSibling.id)
+			};
+
+			var five_lastElementChildDom = document.getElementById("five_lastElementChild");
+			five_lastElementChildDom.onclick = function(){
+				alert(five_lastElementChildDom.parentNode.nextElementSibling.firstElementChild.lastElementChild);
+				alert(five_lastElementChildDom.parentNode.nextElementSibling.firstElementChild.lastElementChild.id);
+				};
+					
+			var six_nextSiblingDom =document.getElementById("six_nextSibling");
+			six_nextSiblingDom.onclick = function(){
+				alert(six_nextSiblingDom.parentNode.nextElementSibling.firstElementChild.nextSibling.nodeType)
+			}
+																
+			var seven_previousSiblingDom = document.getElementById("seven_previousSibling");
+			seven_previousSiblingDom.onclick = function(){
+				alert(seven_previousSibling.parentNode.nextElementSibling.firstElementChild.previousSibling.nodeType)
+			}
+
+			var eight_parentNodeDom = document.getElementById("eight_parentNode");
+				eight_parentNodeDom.onclick = function(){
+					alert(eight_parentNode.parentNode)
+				};
+		//clickReturnTop
+			$(function(){
+				$(window).scroll(function(){
+					if($(this).scrollTop()>=1500){
+						$("#scrollTop").show();
+					}else{
+						$("#scrollTop").hide();
+					};
+				});
+				$("#scrollTop").click(function(){
+					$("html,body").scrollTop(0);
+				});
+			});
+
+			
+		//formValidation
+			var rvar = ""
+			
+			function saveUser(){
+				if(!_saveUser()){
+					alert("没有通过")
+					 return false
+					
+				}
+				alert("通过验证")
+				var a = {};
+				var b = $$("#form").username.value;
+				var c = $$("#form").password.value;
+				var d = $$("#form").textarea.value;
+				var e = $$("#selectList").value;
+				var hobbyDom = $$("#form").hobby;
+				var hobby = [];
+				for(var i=0;i<hobbyDom.length;i++){
+						if(hobbyDom[i].checked){
+							hobbyLock = true;
+							hobby.push(hobbyDom[i].value)
+						}
+					}
+				a.username = b;	
+				a.password = c;
+				a.sex = rvar;		
+				a.hobby = hobby;			
+				a.textarea = d;			
+				a.selectList = e;
+				alert(a.hobby)
+				alert("提交后台的成数据"+JSON.stringify(a))
+				return false;
+			}
+
+			function _saveUser(){
+				//userName
+					var usernameDom = $$("#form").username.value;
+					$$("#error").innerHTML = "&nbsp;"
+					if(!usernameDom.trim()){
+						$$("#error").innerHTML = "用户名不能为空"
+						$$("#form").username.focus();
+						return false
+					}
+				//password
+					var passwordDom = $$("#form").password.value;
+					if(!passwordDom.trim()){
+						$$("#error").innerHTML = "密码不能为空"
+						$$("#form").password.focus();
+						return false
+					}
+				//sex	
+					var sexDom = $$("#form").sex;
+					var sexLock = false;
+					
+					for(var i=0;i<sexDom.length;i++){
+						if(sexDom[i].checked){
+							rvar = sexDom[i].value;
+							sexLock = true;
+							break;;
+						}
+					}
+					if(!sexLock){
+						$$("#error").innerHTML = "请选择性别"
+						return false;
+					}
+				//hobby
+					var hobbyDom = $$("#form").hobby;
+					var hobbyLock = false
+					var hobby = [];
+					for(var i=0;i<hobbyDom.length;i++){
+						if(hobbyDom[i].checked){
+							hobbyLock = true;
+							hobby.push(hobbyDom[i].value)
+						}
+					}
+					if(!hobbyLock){
+						$$("#error").innerHTML = "请选择爱好"
+						return false
+					}			
+				//textarea
+					var textareaDom = $$("#form").textarea.value;
+					if(!textareaDom.trim()){
+						$$("#error").innerHTML = "请输入自我介绍"
+						return false
+					}
+				//selectList 
+					var selectListDom = $$("#selectList").value;
+					//var listIndex = $$("#selectList").selectedIndex;		//getClickListIndex
+					//var optionDom = $$("#selectList").options[listIndex]	//getOptionObj
+				   //alert(optionDom.value+optionDom.text+listIndex)//printoutSelectList andOptionProterty
+					if(!selectListDom){								   //打印 喷特尔特
+						$$("#error").innerHTML = "请选择省份"	
+						return false;
+					}
+				return true;
+			}
+		//最low的 画图(draw)案例  create(创造)
+			var drawDom = document.getElementById("draw");
+			drawDom.onmousemove = function(event){
+				var ev = event ||window.event;
+				var x = ev.clientX;
+				var y = ev.clientY;
+				var create = document.createElement("div"); //动态创造元素
+				drawDom.appendChild(create)					//把创建好的元素添加到指定位置
+				drawDom.style.position = "relative"	
+
+				var top_y = drawDom.getBoundingClientRect().top;//单词翻译过来是 获取 包围 显示 区
+				var left_x =drawDom.offsetLeft;
+
+				var left_xx = drawDom.getBoundingClientRect().right//因为我用了相对定位 移动了外面盒子所以次方法不适合还是得要用offsetLeft 来获取左边的距离
+
+				create.style.cssText = "width:5px;height:5px;background:#000;position:absolute;top:"+(y-top_y)+"px;left:"+(x-left_x)+"px"
+				//总结:event的事件获取的值是可视浏览器到鼠标的距离
+				//getBoundingClientRect()的方法获取的是元素本身距离浏览器可视的距离
+				//offsetLeft或则Top获取的是在没有定位的情况下是Ie获取的是html的距离其他是body的距离
+			}		
+		//选项卡
+			/*选项卡(面向过程思想编写)
+				var selectThisCard_and_content = (function(){
+					return function(){
+						var selectThisCardDom = document.getElementById("selectThisCard");
+						var liDom = selectThisCardDom.children
+						var len = liDom.length
+						for(var i=0;i<len;i++){
+							liDom[i].index = i;
+							//fom循环中闭包加传参的方式打印点击事件索引
+							//	liDom[i].onclick = (function(i){
+							//		return function(){
+							//			alert(liDom[i].index)
+							//		}
+							//	})(i)
+							liDom[i].onclick = function(){
+								var STCDom_content = document.getElementById("selectThisCard_conter");
+								//当前点击显示内容
+								var currentOnlick_displayContent = STCDom_content.children[this.index];
+								currentOnlick_displayContent.style.display = "block"
+								//给点击的选项背景添加class然后隐藏同级元素的class
+								this.className = "on"
+								var liDomChild = this.parentNode.children;
+								var len = liDomChild.length
+								for(var i=0;i<len;i++){
+									if(liDomChild[i]!=this){
+										liDomChild[i].className = " "	
+									}
+								}
+								//获取当前点击显示内容的父节点然后获取所有子元素
+								var selectThisCard_current_div_patentNode_child = currentOnlick_displayContent.parentNode.children;
+								//循环遍历获取的内容子元素，然后加条件判断是不是当前点击显示的div，不是隐藏
+								var len = selectThisCard_current_div_patentNode_child.length;
+								for(var i=0;i<len;i++){
+									if(selectThisCard_current_div_patentNode_child[i]!=currentOnlick_displayContent){
+										selectThisCard_current_div_patentNode_child[i].style.display="none"
+									}
+								}	
+							}
+						}
+					}
+					();
+				})();*/
+			/*选项卡(面向对象思想编写)	
+				var selectThisCardAndContent = (function(){
+					return function(){
+						var selectThisCarDom = $$("#selectThisCard");
+						var STCDom_child = selectThisCarDom.children;
+						var len = STCDom_child.length;
+						for(var i=0;i<len;i++){
+							STCDom_child[i].index = i;
+							//循环绑定事件，并执行代码块
+							STCDom_child[i].onclick = function(){
+								//当点击当先事件的时候，当前的目标的clss为no，然后调用siblings隐藏其他
+								this.className = "on"
+								siblings(this,function(){
+									this.className = "";
+								});
+								//当点击当先事件的时候，获取该对应div显示，然后调用siblings隐藏其他
+								var STC_content = $$("#selectThisCard_conter").children[this.index];
+								STC_content.style.display = "block";
+								sibling(STC_content,function(){
+									this.style.display = "none";
+								})
+
+							}
+						}			
+					}
+					//()   实践得知这里()也能执行上面的匿名函数 外面的也行
+				})()();*/
+
+				//封装siblings方法
+					function siblings(dom,callback){
+						var dom_child = dom.parentNode.children;
+						var len = dom_child.length;
+						for(var i=0;i<len;i++){
+							if(dom_child[i] != dom){
+								callback.call(dom_child[i])
+								
+							}
+						}
+					};
+			
+				//封装siblings数组思路方法
+					function sibling(dom,callback){
+						var dom_child = dom.parentNode.children;
+						//创建一个空数组用slice方法和call指针偏移到dom_child
+						var get_dom_child = [].slice.call(dom_child);
+						//数组过滤filter()方法，传进去一个匿名函数执行一个方法
+						get_dom_child.filter(function(obj){
+							if(obj != dom){
+								callback.call(obj);
+							}
+						})
+					}
+					/*[].slice.call(obj)的数组原理
+					  用中文的解释就是:
+						 数组。原型。剪切 = 方法函数（）｛
+							var arr = [];
+							for(var i=0;i<this.length;i++){  这里的this因指针偏移到obj对象上
+								arr.push(this[i])
+							}
+							return arr;
+						 ｝
+						 
+						array.prototype.slice = function(){
+							var arr = [];
+							var len = this.length
+							for(var i=0;i<len;i++){
+								arr.push(this[i]);
+							}
+							return arr;
+						} 
+						 
+						经过剪切slice方法加指针偏移 把获取数组是，的obj类数组的所有子对象 
+						 */
+			//选项卡(jQuery框架编写)
+				$("#selectThisCard").children().click(function(){
+					var li_dom = $(this)			//get current onclick element event obj
+					var li_index = li_dom.index();	//get current onclick obj index
+					li_dom.addClass("on").siblings().removeClass("on");
+					$("#selectThisCard_conter").children().eq(li_index).show().siblings().hide();
+					
+				});	
+				
+				/*jQuery函数方法
+					obj.children()				get obj child element
+					obj.addClass("xx")			give(给)obj add class
+					obj.siblings()				get vis-a-vis(同级) element
+					obj.removeClass("xx")		remove obj class
+					obj.eq("number")			theory(原理) Individual(个人) Comprehend(理解) 
+												obj[eq("number")] 一个数组或类数组根据eq的值显示
+
+					obj.show()					相当于display:block
+					obj.hide()					相当于display:none
+				*/
+		//simulation_qq_information_box
+			var S_qq_I_b_showAreaDom = document.getElementById("simulation_qq_information_box_show_area");
+			var asdfddd = document.getElementById("simulation_qq_information_box_show_area");
+			var information_inputDom = document.getElementById("information_input");
+			var information_buttonDom = document.getElementById("information_button");
+
+			information_buttonDom.onclick = fnn;	
+			information_inputDom.onkeyup = function(ev){
+				var ev = ev||window.event;
+				if(ev.keyCode == 13){
+					fnn();
+				}
+			}
+			
+			function fnn(){
+				var value = information_inputDom.value;
+				information_inputDom.value = "";
+				if(value.trim()){
+					var p = document.createElement("p");
+					p.innerHTML = "小莫:<br /><span style='padding-left:2em'></span>"+value;
+					p.style.margin = "4px"
+					S_qq_I_b_showAreaDom.appendChild(p);
+					information_inputDom.focus();
+					S_qq_I_b_showAreaDom.scrollTop = "999999"
+				}
+
+				//scrolltop兼容写法
+				var scrollTop = window.pageYOffset|| document.documentElement.scrollTop || document.body.scrollTop;
+				/*此方法可以显示上面 和下面 待研究，不过还是没解决需求
+				 document.querySelector("#simulation_qq_information_box_show_area_child").scrollIntoView(false);*/
+			}
+			alert("sdfsf d dffd方法")
+		</script>
+		</body>
+		</html>
+<!--知识点:--> 
+	<!--报错					
+		捕获:Uncaught			引用错误:ReferenceError			定义:defined			
+		语法错误:SyntaxError	参数要求:arguments required		标记:token
+		不能:Cannot				设置:set						属性property
+		阅读:read				标识符:identifier				执行:execite
+		未能:failed				元素:element					意外:Unexpected
+		执行:implement			开始:start						保存:save 
+		用户user				省份:province							
+
+	日常单词:(长)
+		轮播:carousel		购物:shopping		导航:navigation		常用:common
+		属性:Properties		透明:transparent	车:trolley			封装:Encapsulation
+		验证器:validator	用户名:username		文件:document		随机的:Random
+		准备:prepare		返回:return			替换:change			改变:change
+		照片:picture		小时:Hours			分钟:minutes		秒钟:Seconds
+		乘法:multiplication	查询:query			过滤:filter			当前:current
+
+	日常单词:(短)
+		图:map		盒子:box	最少值:min	点击:click	定时器:timer	播放:play
+		内:inner	电话:phone	显示:show	获得:get	元素:element	通过:by
+		值:value	的:of		我:i		做:make		个:individual	数学:Math
+		年龄:age	钟:clock	区:district	标签:tag	开始:start	
+Good morning I hope you have a good time every.and you will become you want once day
+	颜色:
+		红色:red	蓝色:blue	绿色:green	粉色:pink	白色:white	紫色:purple	黑色:black
+		灰色:gray
+
+	英文1-20:
+		01:one			02:two			03:three		04:four			05:five			06:six	
+		07:seven		08:eight		09:nine			10:ten			11:eleven		12:twelve		13:thirteen		14:fourteen		15:fifteen		16:sixteen		17:seventeen	18:eighteen 
+		19:nineteen		20:twenty
+
+	css知识点:
+		在前面添加一个盒子:before{content:"";}
+		在后面添加一个盒子:after{content:"";}
+			  同元素选择器:nth-child(1){}
+			  行内块级元素:display:inline-block
+					透明度:opacity
+				  清除浮动:<div style="clear:both"></div>
+					  字体:font-family:"Arial"
+		  鼠标样式跳转小手:cursor: pointer;
+		-->
+<!-- 中文翻译-->
+	<!--
+	<script type="text/JavaScript" src="js/jquery.js"></script>
+		<script type="text/JavaScript">
+	声明一个变量-索引_在栈内存声明_nidex，指向堆内存_变量0 
+		var _nidex=0;
+	当网页加载完成之后执行一个方法
+		$(function(){
+	找到轮播图---------------下面的ul li-----------------------------点击---执行一个方法
+		$(".carouselMapBox_box").find(".carouselMapBox_box_ulTwo li").click(function(){
+	当点击li的时候添加一个clss(背景定位),---同时移除掉同级元素的class(背景定位)
+		$(this).addClass("backgroundPosition").siblings().removeClass("backgroundPosition")
+	获得索引下标
+		_index=$(this).index();
+	找到轮播图------------------下面的ulOne li
+		$(".carouselMapBox_box").find(".carouselMapBox_box_ulOne li")
+	通过_index来筛选，显示，同时移除同级元素
+		.eq(_index).fadeIn().siblings().fadeOut();
+			})
+		})
+	</script>
+		
+	注意:格式  function() 是一个整体	"()"好像是封装:具体等学到在再注释。。
+	$(function(){  内容  })
+	索引下标:
+		var _nidex=0;
+		$(function(){
+			_index=$(this).index();alert(_index);
+		})
+	-->	
